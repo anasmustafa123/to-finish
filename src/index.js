@@ -1,17 +1,11 @@
-import { footer } from "./script/footer";
-import { header } from "./script/header";
 import "./styles/normalize.css";
-
-// Import our custom CSS
-import "./scss/styles.scss";
-
-// Import all of Bootstrap's JS
-import * as bootstrap from "bootstrap";
+import { mainContainer } from "./script/main-container";
+import { taskoverlay } from "./script/taskoverlay";
+import { projectoverlay } from "./script/projectoverlay";
 
 const content = document.querySelector("#content");
 
-content.appendChild(header);
-
-content.appendChild(footer);
-
-console.log(" to do");
+content.appendChild(mainContainer);
+content.appendChild(taskoverlay);
+content.appendChild(projectoverlay);
+console.log(" to finish");

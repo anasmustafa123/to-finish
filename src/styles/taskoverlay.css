@@ -1,0 +1,118 @@
+.input-button-container{
+    display: flex;
+    gap: 20px;
+   --input-button-height: 30px;
+}
+.add-task-form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 20px;
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: var(--light-grey);
+    color: var(--dark-grey);
+}
+.input-button-container > div{
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    height: var(--input-button-height);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 4px 6px 4px 4px;
+}
+#taskName{
+    font-size: 18px;
+    padding-left: 5px;
+}
+#taskName, #description{
+    border: none;
+}
+.add-task-footer{
+    display: flex;
+    justify-content: space-between;
+    gap: 7px;
+}
+
+/* priority  */
+.priority-container, .label-container{
+    position: relative;
+}
+.priority-list,.label-list{
+    display: none;
+    position: absolute;
+    top: var(--input-button-height);
+    background-color: white;
+    padding: 3px;
+    border-radius: 6px;
+}
+.priority-list{
+    width: 78px;
+}
+.priority-list > li{
+    padding: 4px;
+}
+
+li:active{
+    background: rgb(228, 226, 226);
+    border-radius: 6px;
+}
+
+/* label */
+.label-list{
+    width: 100px;
+}
+.label-list > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-task-overlay{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: all;
+    background: rgba(2, 2, 26, 0.642);
+    z-index: 1;
+    transform: scale(1);
+    transition: transform 300ms ease-in-out ;
+}
+.add-task-overlay.hide{
+    transform: scale(0);
+    pointer-events: none;
+}
+.project-container{
+    align-self: flex-start;
+}
+@media (max-width: 450px){
+    .add-task-form{
+        display: flex;
+        flex-direction: column;
+        width: 281px;
+        gap: 20px;
+        border: 2px solid black;
+        padding: 15px;
+        border-radius: 15px;
+        background-color: var(--light-grey);
+        color: var(--dark-grey);
+        font-size: 14px;
+    }
+    #taskName, #description {
+        border: none;
+        font-size: 17px;
+    }
+    .input-button-container {
+        display: flex;
+        gap: 0px;
+        --input-button-height: 30px;
+    }
+}

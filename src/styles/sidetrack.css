@@ -1,0 +1,77 @@
+.sidetrack{
+    grid-column: 1/span 2;
+    background-color: var(--meduim-grey);
+    display: grid;
+    justify-content: center;
+}
+.all-projects{
+    display: grid;
+    grid-auto-rows: 35px;
+    grid-auto-columns: 220px;
+    padding-top: 50px;
+}
+
+.Inbox , .projects{
+    font-weight: bold;
+    color: var(--dark-red);
+}
+.projects-container{
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    align-items: center;
+}
+.projects-container > .new-project{
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+.projects > .project{
+    padding-left: 15px;
+    color: var(--light-grey);
+    padding: 15px;
+}
+@media (max-width: 910px){
+    .all-projects{
+        display: grid;
+        grid-auto-rows: 24px;
+        grid-auto-columns: 189px;
+        padding-top: 50px;
+    }
+}
+@media (max-width: 650px){
+    .all-projects{
+        display: grid;
+        grid-auto-rows: 20px;
+        grid-auto-columns: 112px;
+        padding-top: 50px;
+    }
+    .projects > .project{
+        padding-left: 15px;
+        color: var(--light-grey);
+        font-size: smaller;
+    }
+    .Inbox , .projects{
+        font-weight: bold;
+        color: var(--dark-red);
+        font-size: small;
+    }
+}
+@media (max-width: 455px){
+    .all-projects{
+        display: grid;
+        grid-auto-rows: 20px;
+        grid-auto-columns: 78px;
+        padding-top: 50px;
+    }
+    .projects > .project{
+        padding-left: 15px;
+        color: var(--light-grey);
+        font-size: x-small;
+    }
+    .Inbox , .projects{
+        font-weight: bold;
+        color: var(--dark-red);
+        font-size: smaller;
+    }
+}
