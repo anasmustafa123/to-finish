@@ -3,6 +3,9 @@
     gap: 20px;
    --input-button-height: 30px;
 }
+
+
+
 .add-task-form{
     display: flex;
     flex-direction: column;
@@ -14,6 +17,8 @@
     background-color: var(--light-grey);
     color: var(--dark-grey);
 }
+
+
 .input-button-container > div{
     border: 1px solid black;
     justify-content: center;
@@ -29,6 +34,7 @@
     font-size: 18px;
     padding-left: 5px;
 }
+
 #taskName, #description{
     border: none;
 }
@@ -55,22 +61,30 @@
 }
 .priority-list > li{
     padding: 4px;
+    color: var(--dark-grey);
 }
 
-li:active{
-    background: rgb(228, 226, 226);
+li:hover{
+    background:  var(--meduim-grey);
+    color: var(--light-grey);
     border-radius: 6px;
 }
+
+
+
 
 /* label */
 .label-list{
     width: 100px;
 }
-.label-list > div{
+.label-list > div.label{
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+    gap: 8px;
+    color: var(--dark-grey);
 }
+
 .add-task-overlay{
     position: fixed;
     left: 0;
@@ -92,6 +106,32 @@ li:active{
 }
 .project-container{
     align-self: flex-start;
+}
+button.add-label-button:active { 
+    background: var(--dark-red); 
+}; 
+button.add-label-button:hover { 
+    background: var(--meduim-grey); 
+};
+button.add-label-button {
+    border: none;
+    font-size: smaller;
+    font-weight: bolder;
+    width: 50%;
+    background: var(--dark-grey);
+    color: var(--light-grey);
+}
+
+.input-button-container > div:hover {
+    background: var(--meduim-grey);
+    color: var(--light-grey);
+}
+
+.priority-container:hover .priority-list {
+    display: block;
+}
+.label-container:hover .label-list {
+    display: block;
 }
 @media (max-width: 450px){
     .add-task-form{

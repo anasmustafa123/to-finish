@@ -8,13 +8,28 @@
     background-color: var(--light-grey);
 }
 .p-container{
-    display: flex;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
     padding: 7px;
     outline: 1px dashed var(--meduim-grey);
     position: relative;
     gap: 5px;
 }
-
+.task-first-line{
+    display: flex;
+    gap: 7px;
+}
+.labels-list{
+    display: flex;
+    gap: 7px;
+}
+.labels-list > .label{
+    background: var(--meduim-grey);
+    color: var(--light-grey);
+    border-radius: 7px;
+    padding: 2px;
+}
 .p-title{
     font-weight: bold;
     font-size: large;
@@ -59,6 +74,9 @@
         right: 7px; 
         font-size: small;
     }
+    .labels-list{
+        font-size: small;
+    }
 }
 @media  (max-width: 380px) {
     .all-tasks{
@@ -80,6 +98,9 @@
         position: absolute;
         bottom: 7px;
         right: 7px; 
+        font-size: x-small;
+    }
+    .labels-list{
         font-size: x-small;
     }
 }

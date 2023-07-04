@@ -1,4 +1,4 @@
-import "../styles/taskoverlay.css";
+import "../../styles/taskoverlay.css";
 const taskoverlay = document.createElement("div");
 taskoverlay.classList.add("add-task-overlay");
 taskoverlay.classList.add("hide");
@@ -26,8 +26,11 @@ taskoverlay.innerHTML =
         <div class="label-text">Labels</div>
         <div class="num-of-labels">0</div>
         <ul class="label-list">
-            <div class="label1"><input type="checkbox" name="" id="" value ="some label1">some label1</div>
-            <div class="label2"><input type="checkbox" name="" id="" value ="some label2">some label2</div>
+            <div class="label"><input type="checkbox" name="" id="" value ="some label1">some label1</div>
+            <div class="label"><input type="checkbox" name="" id="" value ="some label2">some label2</div>
+            <div class="add-new-label">
+              <button type="button" class="add-label-button">new</button>
+            </div>
         </ul>
     </div>
     <div class="more-container">

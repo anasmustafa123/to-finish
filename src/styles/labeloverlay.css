@@ -1,0 +1,57 @@
+.add-label-form{
+    display: flex;
+    flex-direction: column;
+    --label-width: 500px;
+    width: var(--label-width);
+    border-radius: 15px;
+    border: 1px solid black;
+}
+.add-label-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--light-grey);
+    height: 40px;
+    padding: 10px;
+}
+
+#labelName { 
+    height: 40px; 
+    width: calc(var(--label-width) - 50px); 
+    font-size: 18px; margin: 0; 
+    align-self: center;
+    border: 1px solid grey; 
+    padding: 0px  10px; 
+    border-radius: 5px; 
+    margin: 15px; 
+    background: var(--dark-grey);
+    color: var(--light-grey); 
+}
+button.add-label, .cansel-add-label {
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    height: 60%;
+}
+.add-label-header > button {
+    background-color: var(--dark-grey);
+    color: var(--light-grey);
+}
+.add-label-overlay{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1);
+    transition: transform 300ms ease-in-out;
+    background-color: rgba(43, 43, 43, 0.877);
+    pointer-events: all;
+}
+.add-label-overlay.hide{
+    transform: scale(0);
+    pointer-events: none;
+}

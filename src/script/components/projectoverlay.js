@@ -1,4 +1,4 @@
-import "../styles/projectoverlay.css";
+import "../../styles/projectoverlay.css";
 const projectoverlay = document.createElement("div");
 projectoverlay.classList.add("add-project-overlay");
 projectoverlay.classList.add("hide");

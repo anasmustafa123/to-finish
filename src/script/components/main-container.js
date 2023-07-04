@@ -1,4 +1,4 @@
-import "../styles/main-container.css";
+import "../../styles/main-container.css";
 import {header} from "./header"
 import { sidetrack } from "./sidetrack";
 import { alltasks } from "./alltasks";
