@@ -1,16 +1,12 @@
-import {taskList } from "./taskList"
-import {newProjectModule } from  "./newProjectModule"
-import {newTaskModule } from "./newTaskModule"
-import {newLabelModule } from "./newLabelModule"
+import {addTask, addProject} from "./taskList"
+import {clearAddProject, newProjectData, addNewProjectOption, hideProjectForm, showProjectForm, addNewProjectNode } from  "./newProjectModule"
+import {clearAddTask, addTaskData, hideTaskForm, showTaskForm, selectDefaultDate, addNewTaskNode,selectDefaultPiority, getCheckedLabelsCount } from "./newTaskModule"
+import {clearAddLabel, newLabelName, showLabelForm, hideLabelForm, addNewLabelNode } from "./newLabelModule"
 import {task} from "./task"
 const displayController = () => {
-    const mytaskmanager = taskList(); 
-    const addingProjectModule = newProjectModule(); 
-    const addingTaskModule = newTaskModule();
-    const addingLabelModule = newLabelModule();
     /* selecting today as a default date */
-    addingTaskModule.selectDefaultDate();
-    addingTaskModule.selectDefaultPiority();
+    selectDefaultDate();
+    selectDefaultPiority();
 
     const addNewProject = document.querySelector("button.new-project");
     const projectInput = document.querySelector(".add-project-form");
@@ -23,45 +19,45 @@ const displayController = () => {
     const addLabelForm = document.querySelector(".add-label-form");
     /* openning addproject form */
     addNewProject.addEventListener("click", () => {
-        addingProjectModule.showProjectForm();
+        showProjectForm();
     });    
     /* closing addproject form */
     closeAddProject.addEventListener("click", () =>{
-        addingProjectModule.clearAddProject();
-        addingProjectModule.hideProjectForm();
+        clearAddProject();
+        hideProjectForm();
     })
     /* submit addproject form*/
     projectInput.addEventListener("submit", (event) => {
         event.preventDefault(); 
-        const {projectName} = addingProjectModule.newProjectData();
-        addingProjectModule.addNewProjectNode(projectName);
-        addingProjectModule.clearAddProject();
-        mytaskmanager.addProject(projectName);
-        console.log(mytaskmanager)
-        addingProjectModule.addNewProjectOption(projectName);
-        addingProjectModule.hideProjectForm();
+        const {projectName} = newProjectData();
+        addNewProjectNode(projectName);
+        clearAddProject();
+        addProject(projectName);
+        console.log(null)
+        addNewProjectOption(projectName);
+        hideProjectForm();
     });
 
     /* close addtask form */
     closeAddTaskButton.addEventListener ("click", ()=>{
-        addingTaskModule.hideTaskForm();
-        addingTaskModule.clearAddTask();
+        hideTaskForm();
+        clearAddTask();
     })
     /* openning addtask form */
     addTaskButton.addEventListener("click", () =>{
-        addingTaskModule.showTaskForm();
+        showTaskForm();
     });
     /* submit addtask form */
     taskInput.addEventListener("submit", (event) => {
         event.preventDefault();
-        const {taskName, description, date, project, priority, labels} = addingTaskModule.addTaskData();
+        const {taskName, description, date, project, priority, labels} = addTaskData();
         const newTask = new task (taskName, description, date, priority, labels, project);
-        mytaskmanager.addTask(newTask);
-        addingTaskModule.addNewTaskNode(taskName, newTask.project, labels);
-        addingTaskModule.clearAddTask();
-        addingTaskModule.hideTaskForm();
+        addTask(newTask);
+        addNewTaskNode(taskName, newTask.project, labels);
+        clearAddTask();
+        hideTaskForm();
         console.log(newTask);
-        console.log(mytaskmanager)
+        console.log(null)
     });
 
 
@@ -101,42 +97,42 @@ const displayController = () => {
 
     document.querySelectorAll(".label-list input").forEach(box =>{
         box.addEventListener("click", ()=>{
-            document.querySelector(".num-of-labels").textContent =addingTaskModule.getCheckedLabelsCount();
+            document.querySelector(".num-of-labels").textContent =getCheckedLabelsCount();
         })
     })
     /* openning addproject form */
     addNewLabelButton.addEventListener("click", () => {
-        addingTaskModule.hideTaskForm();
-        addingLabelModule.showLabelForm();
+        hideTaskForm();
+        showLabelForm();
     });    
     /* closing addproject form */
     closeNewLabelButton.addEventListener("click", () =>{
-        addingLabelModule.clearAddLabel();
-        addingLabelModule.hideLabelForm();
-        addingTaskModule.showTaskForm();
+        clearAddLabel();
+        hideLabelForm();
+        showTaskForm();
     })
     /* submit addproject form*/
     addLabelForm.addEventListener("submit", (event) => {
         event.preventDefault(); 
-        const {labelName} = addingLabelModule.newLabelName();
-        addingLabelModule.addNewLabelNode(labelName);
+        const {labelName} = newLabelName();
+        addNewLabelNode(labelName);
         /* changing number of selected labels */
         const lastLabel = document.querySelector(".label-list div:nth-last-child(2)");
         lastLabel.addEventListener("click", ()=>{
-            document.querySelector(".num-of-labels").textContent =addingTaskModule.getCheckedLabelsCount();
+            document.querySelector(".num-of-labels").textContent =getCheckedLabelsCount();
         })
         console.log(lastLabel);
-        addingLabelModule.hideLabelForm();
-        addingLabelModule.clearAddLabel();
-        addingTaskModule.showTaskForm();
+        hideLabelForm();
+        clearAddLabel();
+        showTaskForm();
     });
 
     /* adding preexisted project */
     const projects = document.querySelectorAll(".projects > .project");
     projects.forEach(project => {
-        mytaskmanager.addProject(project.textContent);
-        addingProjectModule.addNewProjectOption(project.textContent);
-        console.log(mytaskmanager);
+        addProject(project.textContent);
+        addNewProjectOption(project.textContent);
+        console.log(null);
     })
 };
 
