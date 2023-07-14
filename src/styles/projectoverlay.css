@@ -1,25 +1,20 @@
-.add-project-header{
-    display: flex;
-    justify-content: space-between;
-    
-}
 .add-project-header > button{
-    background-color: var(--dark-grey);
-    color: var(--light-grey);
+    background-color: var(--dark-soft);
+    color: var(--dark-black);
 }
 .add-project-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 40px;
-    background: var(--light-grey);
+    background: var(--dark-black);
     padding: 10px;
 }
 .add-project-title{
     font-weight: 700;
     font-size: 25px;
     line-height: 1.1;
-    color: var(--dark-red);
+    color: var(--dark-soft);
 }
 
 
@@ -39,8 +34,8 @@ button.add-project, .cansel-add-project{
     padding: 0px  10px; 
     border-radius: 5px; 
     margin: 15px; 
-    background: var(--dark-grey);
-    color: var(--light-grey); 
+    background: var(--meduim-soft);
+    color: var(--dark-black); 
 }
 
 
@@ -49,8 +44,8 @@ button.add-project, .cansel-add-project{
     flex-direction: column;
     width: var(--project-width);
     --project-width: 500px;
-    border: 1px solid black;
     border-radius: 15px;
+    background: var(--light-soft);
 }
 .add-project-overlay{
     position: fixed;

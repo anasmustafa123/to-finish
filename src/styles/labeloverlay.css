@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--light-grey);
+    background: var(--light-soft);
     height: 40px;
     padding: 10px;
 }
@@ -24,8 +24,8 @@
     padding: 0px  10px; 
     border-radius: 5px; 
     margin: 15px; 
-    background: var(--dark-grey);
-    color: var(--light-grey); 
+    background: var(--dark-black);
+    color: var(--light-soft); 
 }
 button.add-label, .cansel-add-label {
     border-radius: 10px;
@@ -34,8 +34,8 @@ button.add-label, .cansel-add-label {
     height: 60%;
 }
 .add-label-header > button {
-    background-color: var(--dark-grey);
-    color: var(--light-grey);
+    background-color: var(--dark-black);
+    color: var(--light-soft);
 }
 .add-label-overlay{
     position: fixed;

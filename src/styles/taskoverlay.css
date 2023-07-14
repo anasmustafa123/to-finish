@@ -14,8 +14,8 @@
     border: 2px solid black;
     padding: 15px;
     border-radius: 15px;
-    background-color: var(--light-grey);
-    color: var(--dark-grey);
+    background-color: var(--light-soft);
+    color: var(--dark-black);
 }
 
 
@@ -61,12 +61,12 @@
 }
 .priority-list > li{
     padding: 4px;
-    color: var(--dark-grey);
+    color: var(--dark-black);
 }
 
 li:hover{
-    background:  var(--meduim-grey);
-    color: var(--light-grey);
+    background:  var(--dark-black);
+    color: var(--light-soft);
     border-radius: 6px;
 }
 
@@ -82,7 +82,7 @@ li:hover{
     justify-content: start;
     align-items: center;
     gap: 8px;
-    color: var(--dark-grey);
+    color: var(--dark-black);
 }
 
 .add-task-overlay{
@@ -108,23 +108,23 @@ li:hover{
     align-self: flex-start;
 }
 button.add-label-button:active { 
-    background: var(--dark-red); 
+    background: var(--dark-soft); 
 }; 
 button.add-label-button:hover { 
-    background: var(--meduim-grey); 
+    background: var(--dark-black); 
 };
 button.add-label-button {
     border: none;
     font-size: smaller;
     font-weight: bolder;
     width: 50%;
-    background: var(--dark-grey);
-    color: var(--light-grey);
+    background: var(--dark-black);
+    color: var(--light-soft);
 }
 
 .input-button-container > div:hover {
-    background: var(--meduim-grey);
-    color: var(--light-grey);
+    background: var(--dark-black);
+    color: var(--light-soft);
 }
 
 .priority-container:hover .priority-list {
@@ -142,8 +142,8 @@ button.add-label-button {
         border: 2px solid black;
         padding: 15px;
         border-radius: 15px;
-        background-color: var(--light-grey);
-        color: var(--dark-grey);
+        background-color: var(--light-soft);
+        color: var(--dark-black);
         font-size: 14px;
     }
     #taskName, #description {

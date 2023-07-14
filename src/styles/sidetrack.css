@@ -1,6 +1,6 @@
 .sidetrack{
     grid-column: 1/span 2;
-    background-color: var(--meduim-grey);
+    background-color: var(--dark-black);
     display: grid;
     justify-content: center;
 }
@@ -13,7 +13,7 @@
 
 .Inbox , .projects{
     font-weight: bold;
-    color: var(--dark-red);
+    color: var(--dark-soft);
 }
 .projects-container{
     display: flex;
@@ -25,10 +25,11 @@
     border-radius: 20px;
     border: none;
     cursor: pointer;
+    background-color: var(--dark-soft);
 }
 .projects > .project{
     padding-left: 15px;
-    color: var(--light-grey);
+    color: var(--dark-soft);
     padding: 15px;
 }
 @media (max-width: 910px){
@@ -48,12 +49,11 @@
     }
     .projects > .project{
         padding-left: 15px;
-        color: var(--light-grey);
+        color: var(--light-soft);
         font-size: smaller;
     }
     .Inbox , .projects{
         font-weight: bold;
-        color: var(--dark-red);
         font-size: small;
     }
 }
@@ -66,12 +66,12 @@
     }
     .projects > .project{
         padding-left: 15px;
-        color: var(--light-grey);
+        color: var(--light-soft);
         font-size: x-small;
     }
     .Inbox , .projects{
         font-weight: bold;
-        color: var(--dark-red);
+        color: var(--dark-soft);
         font-size: smaller;
     }
 }
