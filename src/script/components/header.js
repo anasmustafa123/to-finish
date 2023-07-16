@@ -7,6 +7,6 @@ header.innerHTML = `
       <img src="#" alt="" class="header-img">
       <div class="header-text">to finish</div>
 </div>
-<button class="add-task-button">&plus;</button>
+<div class = "add-task-button"><i class='bx bx-plus'></i></div>
 `;
 export { header };

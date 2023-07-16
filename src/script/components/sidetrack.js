@@ -7,7 +7,9 @@ sidetrack.innerHTML =
 <div class="projects">
 <div class="projects-container">
     <div class="projects-title">Projects</div>
-    <button class="new-project">&plus;</button>
+    <div class = "new-project">
+        <i class='bx bx-plus'></i>  
+    </div>
 </div>
 <div class="project" id="1">college</div>
 </div>

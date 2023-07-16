@@ -22,10 +22,15 @@
     align-items: center;
 }
 .projects-container > .new-project{
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--dark-soft);
+    padding: 0.2rem;
+    border-radius: 50%;
+    font-size: 1rem;
+    color: var(--dark-black);
+    cursor: pointer;
 }
 .projects > .project{
     padding-left: 15px;
@@ -50,11 +55,11 @@
     .projects > .project{
         padding-left: 15px;
         color: var(--light-soft);
-        font-size: smaller;
+        /* font-size: smaller; */
     }
     .Inbox , .projects{
         font-weight: bold;
-        font-size: small;
+        /* font-size: small; */
     }
 }
 @media (max-width: 455px){
@@ -67,11 +72,11 @@
     .projects > .project{
         padding-left: 15px;
         color: var(--light-soft);
-        font-size: x-small;
+        /* font-size: x-small; */
     }
     .Inbox , .projects{
         font-weight: bold;
         color: var(--dark-soft);
-        font-size: smaller;
+/*         font-size: smaller; */
     }
 }
