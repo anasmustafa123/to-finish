@@ -171,23 +171,19 @@ const displayController = () => {
     addNewProjectOption(project.textContent)
   })
 
-  document
-    .querySelector('.sort-container #s0')
+  document.querySelector('.sort-container #s0')
     .addEventListener('click', () => {
       sortByDefault()
     })
-  document
-    .querySelector('.sort-container #s1')
+  document.querySelector('.sort-container #s1')
     .addEventListener('click', () => {
       sortByDate()
     })
-  document
-    .querySelector('.group-container #g0')
+  document.querySelector('.group-container #g0')
     .addEventListener('click', () => {
       groupByDefault()
     })
-  document
-    .querySelector('.group-container #g1')
+  document.querySelector('.group-container #g1')
     .addEventListener('click', () => {
       groupByPriotiry()
     })

@@ -1,6 +1,8 @@
 import { tasks as originalTasks } from './taskList'
 import { groupTasks } from './groupBy'
 import { compareAsc } from 'date-fns'
+
+
 const sortAll = (x, tasks = originalTasks) => {
   return Array.from(tasks).sort((t1, t2) => {
     return sort[x](t1, t2)

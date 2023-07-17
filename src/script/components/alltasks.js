@@ -16,33 +16,20 @@ alltasks.innerHTML=
 <div class = "view">
    view
 </div>
-<div class="view-option-container">
+<div class="view-option-container hide">
     <div class="sort-container">
         <h2 class="header">sort by:</h2>
-        <h3 class="sort-option">Default (None)</h3>
-        <h3 class="sort-option">Date</h3>
+        <h3  id = "s0" class="sort-option" selected = "t" >Default (None)</h3>
+        <h3 class="sort-option" id = "s1" selected = "f">Date</h3>
     </div>
     <div class="group-container">
-        <h2 class="header">sort by:</h2>
-        <h3 class="sort-option">Default (None)</h3>
-        <h3 class="sort-option">priority</h3>
+        <h2 class="header">group by:</h2>
+        <h3 id = "g0" class="group-option" selected = "t">Default (None)</h3>
+        <h3 id = "g1" class="group-option" selected = "f">priority</h3>
     </div>
 </div>
 </div>
 </div> 
-<div class="p-container" id="1">
-<div class="task-first-line">
-    <input type="checkbox" id="task" value="task">
-    <div class="p-title">some title1</div>
-    <div class="labels-list">
-        <div class="label">hj</div>
-        <div class="label">adfs</div>
-    </div>
-</div>
-<div class="task-second-line">
-    <div class="p-name">project1</div>
-</div>
-</div>
 </div>`;
 
 export {alltasks};

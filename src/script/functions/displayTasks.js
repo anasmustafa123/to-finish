@@ -8,56 +8,46 @@ import {
 
 const sortByDefault = () => {
   const defaultSort = document.querySelector('.sort-container #s0')
-  const defaultGroup = document.querySelector('.group-container #g0')
-
   if (!isSelected(defaultSort)) {
-    if (isSelected(defaultGroup)) {
-      appendTasks(tasks)
+    if (isGrouped()) {
+      appendGroups(groupTasks)
     } else {
-      appendGroups(sortGroups('date'))
+      appendTasks(tasks)
     }
-    toggleSelectAttribute(selecetdSortObtion())
-    toggleSelectAttribute(defaultSort)
+    toggleSortOption(defaultSort)
   }
 }
 const sortByDate = () => {
   const dateSort = document.querySelector('.sort-container #s1')
-  const defaultGroup = document.querySelector('.group-container #g0')
-
   if (!isSelected(dateSort)) {
-    if (isSelected(defaultGroup)) {
-      appendTasks(sortAll('date'))
+    if (isGrouped()) {
+      appendGroups(sortGroups('date'))
     } else {
-      appendGroups(groupTasks)
+      appendTasks(sortAll('date'))
     }
-    toggleSelectAttribute(selecetdSortObtion())
-    toggleSelectAttribute(dateSort)
+    toggleSortOption(dateSort);
   }
 }
 const groupByDefault = () => {
-  const defaultSort = document.querySelector('.sort-container #s0')
   const defaultGroup = document.querySelector('.group-container #g0')
   if (!isSelected(defaultGroup)) {
-    if (isSelected(defaultSort)) {
-      appendTasks(tasks)
-    } else {
+    if (isSorted()) {
       appendTasks(sortAll(currentSortType()))
+    } else {
+      appendTasks(tasks)
     }
-    toggleSelectAttribute(selecetedGroupObtion())
-    toggleSelectAttribute(defaultGroup)
+    toggleGroupOption(defaultGroup);
   }
 }
 const groupByPriotiry = () => {
-  const defaultSort = document.querySelector('.sort-container #s0')
   const priorityGroup = document.querySelector('.group-container #g1')
   if (!isSelected(priorityGroup)) {
     group('priority')
-    if (!isSelected(defaultSort)) {
+    if (isSorted()) {
       sortGroups(currentSortType())
     }
     appendGroups(groupTasks)
-    toggleSelectAttribute(selecetedGroupObtion())
-    toggleSelectAttribute(priorityGroup)
+    toggleGroupOption(priorityGroup)
   }
 }
 const toggleSelectAttribute = (node) => {
@@ -79,5 +69,19 @@ const selecetedGroupObtion = () => {
 }
 const currentSortType = () => {
   return selecetdSortObtion().textContent.replaceAll(' ', '').toLowerCase()
+}
+const isSorted = () => {
+  return !isSelected(document.querySelector('.sort-option#s0'));
+}
+const isGrouped = () => {
+  return !isSelected(document.querySelector('.group-option#g0'));
+}
+const toggleSortOption = (newOption) => {
+  toggleSelectAttribute(selecetdSortObtion())
+  toggleSelectAttribute(newOption)
+}
+const toggleGroupOption = (newOption) => {
+  toggleSelectAttribute(selecetedGroupObtion())
+  toggleSelectAttribute(newOption)
 }
 export { sortByDefault, sortByDate, groupByDefault, groupByPriotiry }
