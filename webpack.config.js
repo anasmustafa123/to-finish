@@ -2,8 +2,8 @@
 
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-/* const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
- */
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+
 module.exports = {
   mode: "development",
   entry: {
@@ -26,6 +26,7 @@ module.exports = {
     hot: true,
     compress: true,
     historyApiFallback: true,
+    port: 3000
   },
   /* module for adding the loaders init*/
   module: {
@@ -59,7 +60,7 @@ module.exports = {
         type: "asset/resource",
       },
       {
-        test: /\.css$/i,
+        test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },
       {
@@ -82,6 +83,6 @@ module.exports = {
       filename: "index.html",
       template: "src/template.html",
     }),
-    /* new BundleAnalyzerPlugin(), */
+    new BundleAnalyzerPlugin(), 
   ],
 };
