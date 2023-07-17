@@ -82,7 +82,7 @@ h2.header{
   position: relative;
   gap: 5px;
   background: var(--light-soft);
-  box-shadow: 0 0 23px 0px var(--dark-black);
+  box-shadow: 0 0 0.5rem var(--dark-black);
   height: 50px;
   border-radius: 10px;
 }
@@ -123,12 +123,12 @@ h2.priority-header{
   .view-option-container {
     width: 170px;
   }
-  h3.sort-option {
+/*   h3.sort-option {
     font-size: medium;
   }
   h2.header {
     font-size: medium;
-  }
+  } */
 }
 @media (max-width: 550px) {
 
@@ -149,9 +149,6 @@ h2.priority-header{
     right: 7px;
     font-size: small;
   }
-  .labels-list {
-    font-size: small;
-  }
 }
 @media (max-width: 380px) {
   .all-tasks {
@@ -159,19 +156,10 @@ h2.priority-header{
     grid-auto-columns: 192px;
     padding-top: 40px;
   }
-  .p-title {
-    font-weight: bold;
-    font-size: small;
-    align-self: center;
-    color: var(--dark-black);
-  }
   .p-name {
     position: absolute;
     bottom: 7px;
     right: 7px;
-    font-size: x-small;
   }
-  .labels-list {
-    font-size: x-small;
-  }
+
 }

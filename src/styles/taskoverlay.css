@@ -144,11 +144,9 @@ button.add-label-button {
         border-radius: 15px;
         background-color: var(--light-soft);
         color: var(--dark-black);
-        font-size: 14px;
     }
     #taskName, #description {
         border: none;
-        font-size: 17px;
     }
     .input-button-container {
         display: flex;
