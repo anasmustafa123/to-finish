@@ -1,10 +1,53 @@
 import { tasks } from './taskList'
 import { sortAll, sortGroups } from './sortBy'
-import { group, groupTasks } from './groupBy'
+import { group, groupTasks, addOneTaskToGroup } from './groupBy'
 import {
   addAllGroups as appendGroups,
-  addAllTasks as appendTasks
+  addAllTasks as appendTasks,
+  addNewTaskNode,
 } from './view-task-controller'
+
+const appendNewTaskNode = (newTask) => {
+  /* add to all tasks as default used with(appendGroups, appendTasks)  */
+  addNewTaskNode(newTask.name, newTask.project, newTask.label)
+  if (isGrouped()){
+    const {key} = addOneTaskToGroup(newTask)
+    console.log(groupTasks[key])
+    appendGroups(groupTasks)
+    if (isSorted()){
+      /* sort only that group */
+      let copyGroupTasks = {...groupTasks}
+      copyGroupTasks[key] = sortAll(currentSortType(), copyGroupTasks[key])
+      appendGroups(copyGroupTasks)
+    }
+  }else{
+    if(isSorted()){
+      appendTasks(sortAll(currentSortType(),tasks))
+    }
+  }
+/* 
+    if grouped{
+        addSingleTask(newTask)
+        if sorted{
+          sortGroups()
+          removeAllTaskNodes()
+          addGroupNodes(sorted)
+        }else{
+          removeAllTaskNodes()
+          addGroupNodes(defaultGroups)
+        }
+    }else{
+      if sorted{
+        sort(tasks)
+        removeAllTaskNodes()
+        addsortedTAsks
+      }else{
+        append (newTask)
+      }
+    }
+    
+    */
+}
 
 const sortByDefault = () => {
   const defaultSort = document.querySelector('.sort-container #s0')
@@ -44,9 +87,11 @@ const groupByPriotiry = () => {
   if (!isSelected(priorityGroup)) {
     group('priority')
     if (isSorted()) {
-      sortGroups(currentSortType())
+      let sortedGroups = sortGroups(currentSortType())
+      appendGroups(sortedGroups)
+    }else{
+      appendGroups(groupTasks)
     }
-    appendGroups(groupTasks)
     toggleGroupOption(priorityGroup)
   }
 }
@@ -84,4 +129,4 @@ const toggleGroupOption = (newOption) => {
   toggleSelectAttribute(selecetedGroupObtion())
   toggleSelectAttribute(newOption)
 }
-export { sortByDefault, sortByDate, groupByDefault, groupByPriotiry }
+export { sortByDefault, sortByDate, groupByDefault, groupByPriotiry, appendNewTaskNode }

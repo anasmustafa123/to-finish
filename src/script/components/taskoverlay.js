@@ -1,9 +1,8 @@
-import "../../styles/taskoverlay.css";
-const taskoverlay = document.createElement("div");
-taskoverlay.classList.add("add-task-overlay");
-taskoverlay.classList.add("hide");
-taskoverlay.innerHTML =   
-` <form class = "add-task-form">
+import '../../styles/taskoverlay.css'
+const taskoverlay = document.createElement('div')
+taskoverlay.classList.add('add-task-overlay')
+taskoverlay.classList.add('hide')
+taskoverlay.innerHTML = ` <form class = "add-task-form">
 <input type="text" id="taskName" name="task-name" placeholder="Task Name" required>
 <input type="text" name="description" id="description" placeholder="description">
 <div class="input-button-container">
@@ -48,5 +47,5 @@ taskoverlay.innerHTML =
     </div>
 </div>
 </form> 
-`;
-export { taskoverlay };
+`
+export { taskoverlay }

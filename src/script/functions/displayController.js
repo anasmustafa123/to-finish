@@ -14,7 +14,6 @@ import {
   hideTaskForm,
   showTaskForm,
   selectDefaultDate,
-  addNewTaskNode,
   selectDefaultPiority,
   getCheckedLabelsCount
 } from './newTaskModule'
@@ -26,12 +25,12 @@ import {
   addNewLabelNode
 } from './newLabelModule'
 import { task } from './task'
-/* import {} from "./displayTasks" */
 import {
   sortByDefault,
   sortByDate,
   groupByDefault,
-  groupByPriotiry
+  groupByPriotiry,
+  appendNewTaskNode
 } from './displayTasks'
 const displayController = () => {
   /* selecting today as a default date */
@@ -91,8 +90,10 @@ const displayController = () => {
       labels,
       project
     )
+    /* first add to (default) tasks */
     addTask(newTask)
-    addNewTaskNode(taskName, newTask.project, labels)
+    /* till here working */
+    appendNewTaskNode(newTask)
     clearAddTask()
     hideTaskForm()
   })

@@ -41,16 +41,20 @@
   border-radius: 10px;
   color: var(--dark-black);
   box-shadow: 0px 0px 23px -2px #5c5950;
-  transition: transform 150ms ease-in;
+  transition: transform 300ms ease;
 }
 .view-option-container.hide{
   transform: scale(0);
-  transition: transform 150ms ease-in;
 }
 .sort-container,
 .group-container {
   display: flex;
   flex-direction: column;
+}
+
+.sort-option[selected = 't'],
+.group-option[selected = 't']{
+  background-color: var(--dark-soft);
 }
 
 h3.sort-option,
@@ -83,7 +87,7 @@ h2.header{
   gap: 5px;
   background: var(--light-soft);
   box-shadow: 0 0 0.5rem var(--dark-black);
-  height: 50px;
+  min-height: 50px;
   border-radius: 10px;
 }
 .task-first-line {

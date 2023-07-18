@@ -13,6 +13,11 @@ const clearGroupTasks = () => {
     priority4: []
   }
 }
+const addOneTaskToGroup = (task) => {
+  let key = `${'priority' + task.priority}`.replaceAll(' ','').toLowerCase()
+  groupTasks[key].push(tasks[tasks.length - 1])
+  return {key}
+}
 const group = (x) => {
   clearGroupTasks()
   tasks.forEach((task) => {
@@ -21,4 +26,4 @@ const group = (x) => {
     ].push(task)
   })
 }
-export { group, groupTasks }
+export { group, groupTasks, addOneTaskToGroup }
