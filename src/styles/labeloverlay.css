@@ -5,14 +5,16 @@
     width: var(--label-width);
     border-radius: 15px;
     border: 1px solid black;
+    background-color: var(--dark-black);
 }
 .add-label-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--light-soft);
+    background: var(--dark-black);
     height: 40px;
     padding: 10px;
+    border-bottom: 0.1rem solid var(--dark-soft);
 }
 
 #labelName { 
@@ -24,8 +26,11 @@
     padding: 0px  10px; 
     border-radius: 5px; 
     margin: 15px; 
-    background: var(--dark-black);
-    color: var(--light-soft); 
+    background: var(--dark-soft);
+    color: var(--dark-black); 
+}
+#labelName::placeholder{
+    color: var(--dark-black);   
 }
 button.add-label, .cansel-add-label {
     border-radius: 10px;
@@ -34,8 +39,8 @@ button.add-label, .cansel-add-label {
     height: 60%;
 }
 .add-label-header > button {
-    background-color: var(--dark-black);
-    color: var(--light-soft);
+    background-color: var(--dark-soft);
+    color: var(--dark-black);
 }
 .add-label-overlay{
     position: fixed;

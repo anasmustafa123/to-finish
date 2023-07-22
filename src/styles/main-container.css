@@ -2,10 +2,10 @@
     margin: 0;
 }
 :root{
-    --dark-black: rgb(7, 7, 7);
-    --light-soft: #f5f5f5;
-    --meduim-soft: #f2ead3;
-    --dark-soft: #dfd7bf;
+    --dark-black: #90f6d7;
+    --light-soft: #35bcbf;
+    --meduim-soft:  #41506b;
+    --dark-soft: #263849;
 }
 ul{
     list-style: none;

@@ -5,7 +5,7 @@
   padding-top: 70px;
   justify-content: center;
   grid-column: 3/-1;
-  background-color: var(--dark-soft);
+  background-color: var(--dark-black);
   position: relative;
   gap: 35px;
 }
@@ -36,10 +36,10 @@
   width: 250px;
   display: flex;
   flex-direction: column;
-  background-color: var(--light-soft);
+  background-color: var(--dark-black);
   z-index: 2;
   border-radius: 10px;
-  color: var(--dark-black);
+  color: var(--dark-soft);
   box-shadow: 0px 0px 23px -2px #5c5950;
   transition: transform 300ms ease;
 }
@@ -55,6 +55,7 @@
 .sort-option[selected = 't'],
 .group-option[selected = 't']{
   background-color: var(--dark-soft);
+  color: var(--dark-black);
 }
 
 h3.sort-option,
@@ -85,8 +86,8 @@ h2.header{
   padding: 7px;
   position: relative;
   gap: 5px;
-  background: var(--light-soft);
-  box-shadow: 0 0 0.5rem var(--dark-black);
+  background: var(--dark-soft);
+  box-shadow: 0 0 0.5rem var(--meduim-soft);
   min-height: 50px;
   border-radius: 10px;
 }
@@ -99,8 +100,8 @@ h2.header{
   gap: 7px;
 }
 .labels-list > .label {
-  background: var(--dark-black);
-  color: var(--light-soft);
+  background: var(--light-soft);
+  color: var(--dark-soft);
   border-radius: 7px;
   padding: 2px;
 }
@@ -114,6 +115,7 @@ h2.header{
   position: absolute;
   bottom: 7px;
   right: 7px;
+  color: var(--dark-black);
 }
 h2.priority-header{
   padding-bottom: 25px;

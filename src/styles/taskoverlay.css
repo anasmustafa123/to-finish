@@ -14,8 +14,8 @@
     border: 2px solid black;
     padding: 15px;
     border-radius: 15px;
-    background-color: var(--light-soft);
-    color: var(--dark-black);
+    background-color: var(--dark-black);
+    color: var(--dark-soft);
 }
 
 
@@ -52,26 +52,24 @@
     display: none;
     position: absolute;
     top: var(--input-button-height);
-    background-color: white;
+    background-color: var(--dark-black);
     padding: 3px;
     border-radius: 6px;
 }
+
 .priority-list{
     width: 78px;
 }
 .priority-list > li{
     padding: 4px;
-    color: var(--dark-black);
+    color: var(--dark-soft);
 }
 
 li:hover{
-    background:  var(--dark-black);
-    color: var(--light-soft);
+    background:  var(--meduim-soft);
+    color: var(--dark-black);
     border-radius: 6px;
 }
-
-
-
 
 /* label */
 .label-list{
@@ -82,7 +80,8 @@ li:hover{
     justify-content: start;
     align-items: center;
     gap: 8px;
-    color: var(--dark-black);
+    color: var(--dark-soft);
+    padding: 0.5rem 0px;
 }
 
 .add-task-overlay{

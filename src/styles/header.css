@@ -6,6 +6,7 @@
   align-items: center;
   gap: 50%;
   background-color: var(--dark-black);
+  border-bottom: 0.1rem solid var(--dark-soft);
 }
 .header-title-container{   
   display: flex;

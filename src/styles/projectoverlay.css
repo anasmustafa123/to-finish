@@ -9,6 +9,7 @@
     height: 40px;
     background: var(--dark-black);
     padding: 10px;
+    border-bottom: 0.1rem solid var(--dark-soft);
 }
 .add-project-title{
     font-weight: 700;
@@ -28,16 +29,18 @@ button.add-project, .cansel-add-project{
 #projectName { 
     height: 40px; 
     width: calc(var(--project-width) - 50px); 
-    font-size: 18px; margin: 0; 
+    font-size: 19px; margin: 0; 
     align-self: center;
     border: 1px solid grey; 
     padding: 0px  10px; 
     border-radius: 5px; 
     margin: 15px; 
-    background: var(--meduim-soft);
+    background: var(--dark-soft);
     color: var(--dark-black); 
 }
-
+#projectName::placeholder{
+    color: var(--dark-black);
+}
 
 .add-project-form{
     display: flex;
@@ -45,7 +48,7 @@ button.add-project, .cansel-add-project{
     width: var(--project-width);
     --project-width: 500px;
     border-radius: 15px;
-    background: var(--light-soft);
+    background: var(--dark-black);
 }
 .add-project-overlay{
     position: fixed;

@@ -3,6 +3,7 @@
     background-color: var(--dark-black);
     display: grid;
     justify-content: center;
+    border-right: 0.1rem solid var(--dark-soft);
 }
 .all-projects{
     display: grid;
@@ -14,6 +15,7 @@
 .Inbox , .projects{
     font-weight: bold;
     color: var(--dark-soft);
+    border-bottom: 0.1rem solid var(--dark-soft);
 }
 .projects-container{
     display: flex;
