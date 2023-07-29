@@ -6,7 +6,7 @@ labeloverlay.innerHTML =
 `<form class="add-label-form">
 <div class="add-label-header">
     <button type="button" class="cansel-add-label">cancel</button>
-    <div class="add-project-title">Add Label</div>
+    <div class="add-project-title"><i class='bx bxs-tag-alt'></i>Add Label</div>
     <button type = "submit" class="add-label">add</button>
 </div>
 <input type="text" placeholder="name" name="label-name" id = "labelName" required>

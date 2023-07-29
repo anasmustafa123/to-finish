@@ -62,7 +62,19 @@
 h3.sort-option,
 h3.group-option {
   padding: 10px;
-  text-align: center;
+  justify-content: space-around;
+  display: flex;
+  position: relative;
+}
+
+.view-option-container i.bx {
+  position: absolute;
+  left: 10px;
+  color: var(--dark-soft);
+}
+.sort-option[selected = 't'] i.bx,
+.group-option[selected = 't']  i.bx{
+  color: var(--dark-black);
 }
 h3.sort-option:hover,
 h3.group-option:hover {

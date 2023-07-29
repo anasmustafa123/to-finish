@@ -19,13 +19,13 @@ alltasks.innerHTML=
 <div class="view-option-container hide">
     <div class="sort-container">
         <h2 class="header">sort by:</h2>
-        <h3  id = "s0" class="sort-option" selected = "t" >Default (None)</h3>
-        <h3 class="sort-option" id = "s1" selected = "f">Date</h3>
+        <h3  id = "s0" class="sort-option" selected = "t" ><i class='bx bx-cog' ></i>Default (None)</h3>
+        <h3 class="sort-option" id = "s1" selected = "f"><i class='bx bx-sort-down' ></i>Date</h3>
     </div>
     <div class="group-container">
         <h2 class="header">group by:</h2>
-        <h3 id = "g0" class="group-option" selected = "t">Default (None)</h3>
-        <h3 id = "g1" class="group-option" selected = "f">priority</h3>
+        <h3 id = "g0" class="group-option" selected = "t"><i class='bx bx-cog' ></i>Default (None)</h3>
+        <h3 id = "g1" class="group-option" selected = "f"><i class='bx bxs-purchase-tag-alt' ></i>priority</h3>
     </div>
 </div>
 </div>

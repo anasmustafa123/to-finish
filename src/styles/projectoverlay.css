@@ -16,6 +16,9 @@
     font-size: 25px;
     line-height: 1.1;
     color: var(--dark-soft);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
 }
 
 

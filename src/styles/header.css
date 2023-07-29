@@ -1,4 +1,4 @@
-.main-header{
+.main-header {
   grid-column: 1/-1;
   padding: 15px;
   display: flex;
@@ -8,16 +8,20 @@
   background-color: var(--dark-black);
   border-bottom: 0.1rem solid var(--dark-soft);
 }
-.header-title-container{   
+.header-title-container {
   display: flex;
-  gap: 80px;   
+  gap: 13px;
   font-size: 26px;
   font-weight: bolder;
+  align-items: center;
 }
-.header-text{
+.header-title-container > .bx.bx-task-x{
   color: var(--dark-soft);
 }
-.add-task-button{
+.header-text {
+  color: var(--dark-soft);
+}
+.add-task-button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
