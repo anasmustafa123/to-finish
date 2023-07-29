@@ -7,9 +7,15 @@ import {
   addNewTaskNode,
 } from './view-task-controller'
 
+const appendAllTasksFromStorage = () => {
+  Object.values(JSON.parse(localStorage.getItem('tasks'))).forEach(task => {
+    tasks.push(task)
+    appendNewTaskNode(task[0]);
+  })
+}
 const appendNewTaskNode = (newTask) => {
   /* add to all tasks as default used with(appendGroups, appendTasks)  */
-  addNewTaskNode(newTask.name, newTask.project, newTask.label)
+  addNewTaskNode(newTask.name, newTask.project, newTask.label);
   if (isGrouped()){
     const {key} = addOneTaskToGroup(newTask)
     console.log(groupTasks[key])
@@ -25,28 +31,6 @@ const appendNewTaskNode = (newTask) => {
       appendTasks(sortAll(currentSortType(),tasks))
     }
   }
-/* 
-    if grouped{
-        addSingleTask(newTask)
-        if sorted{
-          sortGroups()
-          removeAllTaskNodes()
-          addGroupNodes(sorted)
-        }else{
-          removeAllTaskNodes()
-          addGroupNodes(defaultGroups)
-        }
-    }else{
-      if sorted{
-        sort(tasks)
-        removeAllTaskNodes()
-        addsortedTAsks
-      }else{
-        append (newTask)
-      }
-    }
-    
-    */
 }
 
 const sortByDefault = () => {
@@ -129,4 +113,4 @@ const toggleGroupOption = (newOption) => {
   toggleSelectAttribute(selecetedGroupObtion())
   toggleSelectAttribute(newOption)
 }
-export { sortByDefault, sortByDate, groupByDefault, groupByPriotiry, appendNewTaskNode }
+export { sortByDefault, sortByDate, groupByDefault, groupByPriotiry, appendNewTaskNode, appendAllTasksFromStorage }

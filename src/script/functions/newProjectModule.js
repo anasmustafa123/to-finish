@@ -11,7 +11,7 @@ const addNewProjectOption = (projectName) =>{
     const projectOptionContainer = document.querySelector("select.project-container"); 
     const newProjectOption = projectOptionContainer.lastElementChild.cloneNode(true);
     newProjectOption.value = projectName;
-    newProjectOption.innerHTML = projectName;
+    newProjectOption.textContent = projectName;
     projectOptionContainer.appendChild(newProjectOption);
 };
 const addNewProjectNode = (projectName) =>{
@@ -19,7 +19,7 @@ const addNewProjectNode = (projectName) =>{
     const lastProject = projects.lastElementChild;
     const newProject = lastProject.cloneNode(true);
     newProject.id = Number(lastProject.id) + 1;
-    newProject.innerHTML = projectName;
+    newProject.textContent = projectName;
     projects.appendChild(newProject);
 };
 const hideProjectForm = () => {

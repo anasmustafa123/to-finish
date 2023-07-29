@@ -5,8 +5,16 @@ let tasks = [];
 const addProject = (projectName) => {
     projects[real(projectName)] = project(projectName);
 };
+
+const appendtostorage = () => {
+    localStorage.setItem('tasks', JSON.stringify(Object.assign({}, tasks)));
+/*     localStorage.setItem('labels', JSON.stringify(Object.assign({}, tasks))); */
+}  
+
+/* HERE */
 const addTask = (task)=>{
     tasks.push([task,tasks.length+1]);
+    appendtostorage();
     const projectName = task.project;
     const projectId = real(projectName);
     if(projectId == "inbox"){
@@ -24,4 +32,4 @@ const getLastTaskIndex = () => {
 const real = (str) => {
     return str.toLowerCase().replaceAll(' ','');
 };
-export {addTask, addProject, tasks, getLastTaskIndex};
+export {addTask, addProject, tasks, projects, getLastTaskIndex};

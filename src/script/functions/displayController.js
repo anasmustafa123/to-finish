@@ -1,4 +1,4 @@
-import { addTask, addProject } from './taskList'
+import { addTask, addProject, projects as theprojects } from './taskList'
 import {linkClickable} from '../../../node_modules/linkclickablenode/src/scripts/linkClickable'
 import {
   clearAddProject,
@@ -30,9 +30,32 @@ import {
   sortByDate,
   groupByDefault,
   groupByPriotiry,
-  appendNewTaskNode
+  appendNewTaskNode,
+  appendAllTasksFromStorage
 } from './displayTasks'
 const displayController = () => {
+
+  const appendAllProjectsFromStorage = () => {
+    Object.values(JSON.parse(localStorage.getItem('projects'))).forEach(project => {
+      addProject(project.name);
+      addNewProjectOption(project.name);
+      addNewProjectNode(project.name);
+    })
+  };
+  
+  const appendprojecttostorage = () => {
+    localStorage.setItem('projects', JSON.stringify(theprojects));
+  } 
+
+  if(localStorage.getItem('tasks')){
+      appendAllTasksFromStorage();
+  }
+  if(localStorage.getItem('projects')){
+    appendAllProjectsFromStorage();
+}
+
+
+
   /* selecting today as a default date */
   selectDefaultDate()
   selectDefaultPiority()
@@ -64,7 +87,8 @@ const displayController = () => {
     addNewProjectNode(projectName)
     clearAddProject()
     addProject(projectName)
-    addNewProjectOption(projectName)
+    addNewProjectOption(projectName);
+    appendprojecttostorage();
     hideProjectForm()
   })
 
@@ -91,6 +115,7 @@ const displayController = () => {
       project
     )
     /* first add to (default) tasks */
+    /* HERE */
     addTask(newTask)
     /* till here working */
     appendNewTaskNode(newTask)
@@ -165,12 +190,7 @@ const displayController = () => {
     clearAddLabel()
     showTaskForm()
   })
-  /* adding preexisted project */
-  const projects = document.querySelectorAll('.projects > .project')
-  projects.forEach((project) => {
-    addProject(project.textContent)
-    addNewProjectOption(project.textContent)
-  })
+
 
   document.querySelector('.sort-container #s0')
     .addEventListener('click', () => {
