@@ -8,6 +8,7 @@
   background-color: var(--dark-black);
   position: relative;
   gap: 35px;
+  overflow-y: scroll;
 }
 .view-container {
   position: absolute;
