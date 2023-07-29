@@ -22,6 +22,7 @@
     justify-content: space-between;
     height: 30px;
     align-items: center;
+    margin-bottom: 2rem;
 }
 .projects-container > .new-project{
     display: inline-flex;
@@ -35,9 +36,14 @@
     cursor: pointer;
 }
 .projects > .project{
-    padding-left: 15px;
     color: var(--dark-soft);
-    padding: 15px;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    margin-left: 0.5rem;
+    border-left: 1px solid;
+}
+.projects > .project:last-child{
+    padding-bottom: 0;
 }
 @media (max-width: 910px){
     .all-projects{
@@ -56,7 +62,6 @@
     }
     .projects > .project{
         padding-left: 15px;
-        color: var(--light-soft);
         /* font-size: smaller; */
     }
     .Inbox , .projects{
@@ -73,12 +78,8 @@
     }
     .projects > .project{
         padding-left: 15px;
-        color: var(--light-soft);
-        /* font-size: x-small; */
     }
     .Inbox , .projects{
         font-weight: bold;
-        color: var(--dark-soft);
-/*         font-size: smaller; */
     }
 }
