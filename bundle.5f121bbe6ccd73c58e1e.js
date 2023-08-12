@@ -16,7 +16,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var alltasks = document.createElement("div");
 alltasks.className = "all-tasks";
-alltasks.innerHTML = " \n<div class = \"view-container\">\n<div class = \"view-border\">\n<svg class = \"\" width=\"20px\" height=\"20px\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path fill=\"var(--dark-grey)\" d=\"M21.2995 7.57969H15.7195C15.3295 7.57969 15.0195 7.26969 15.0195 6.87969C15.0195 6.48969 15.3295 6.17969 15.7195 6.17969H21.2995C21.6895 6.17969 21.9995 6.48969 21.9995 6.87969C21.9995 7.26969 21.6895 7.57969 21.2995 7.57969Z\" fill=\"#292D32\"/>\n    <path fill=\"var(--dark-grey)\" d=\"M6.42 7.57969H2.7C2.31 7.57969 2 7.26969 2 6.87969C2 6.48969 2.31 6.17969 2.7 6.17969H6.42C6.81 6.17969 7.12 6.48969 7.12 6.87969C7.12 7.26969 6.8 7.57969 6.42 7.57969Z\" fill=\"#292D32\"/>\n    <path fill=\"var(--dark-grey)\" d=\"M10.1395 10.8297C12.321 10.8297 14.0895 9.06121 14.0895 6.87969C14.0895 4.69816 12.321 2.92969 10.1395 2.92969C7.95793 2.92969 6.18945 4.69816 6.18945 6.87969C6.18945 9.06121 7.95793 10.8297 10.1395 10.8297Z\" fill=\"#292D32\"/>\n    <path fill=\"var(--dark-grey)\"d=\"M21.3009 17.8102H17.5809C17.1909 17.8102 16.8809 17.5002 16.8809 17.1102C16.8809 16.7202 17.1909 16.4102 17.5809 16.4102H21.3009C21.6909 16.4102 22.0009 16.7202 22.0009 17.1102C22.0009 17.5002 21.6909 17.8102 21.3009 17.8102Z\" fill=\"#292D32\"/>\n    <path fill=\"var(--dark-grey)\"d=\"M8.28 17.8102H2.7C2.31 17.8102 2 17.5002 2 17.1102C2 16.7202 2.31 16.4102 2.7 16.4102H8.28C8.67 16.4102 8.98 16.7202 8.98 17.1102C8.98 17.5002 8.66 17.8102 8.28 17.8102Z\" fill=\"#292D32\"/>\n    <path fill=\"var(--dark-grey)\"d=\"M13.8602 21.0719C16.0417 21.0719 17.8102 19.3034 17.8102 17.1219C17.8102 14.9404 16.0417 13.1719 13.8602 13.1719C11.6786 13.1719 9.91016 14.9404 9.91016 17.1219C9.91016 19.3034 11.6786 21.0719 13.8602 21.0719Z\" fill=\"#292D32\"/>\n</svg>\n<div class = \"view\">\n   view\n</div>\n<div class=\"view-option-container\">\n    <div class=\"sort-container\">\n        <h2 class=\"header\">sort by:</h2>\n        <h3  id = \"s0\" class=\"sort-option\" selected = \"t\" >Default (None)</h3>\n        <h3 class=\"sort-option\" id = \"s1\" selected = \"f\">Date</h3>\n    </div>\n    <div class=\"group-container\">\n        <h2 class=\"header\">group by:</h2>\n        <h3 id = \"g0\" class=\"group-option\" selected = \"t\">Default (None)</h3>\n        <h3 id = \"g1\" class=\"group-option\" selected = \"f\">priority</h3>\n    </div>\n</div>\n</div>\n</div> \n\n</div>";
+alltasks.innerHTML = " \n<div class = \"view-container\">\n<div class = \"view-border\">\n<svg class = \"\" width=\"20px\" height=\"20px\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path fill=\"var(--dark-grey)\" d=\"M21.2995 7.57969H15.7195C15.3295 7.57969 15.0195 7.26969 15.0195 6.87969C15.0195 6.48969 15.3295 6.17969 15.7195 6.17969H21.2995C21.6895 6.17969 21.9995 6.48969 21.9995 6.87969C21.9995 7.26969 21.6895 7.57969 21.2995 7.57969Z\" fill=\"#292D32\"/>\n    <path fill=\"var(--dark-grey)\" d=\"M6.42 7.57969H2.7C2.31 7.57969 2 7.26969 2 6.87969C2 6.48969 2.31 6.17969 2.7 6.17969H6.42C6.81 6.17969 7.12 6.48969 7.12 6.87969C7.12 7.26969 6.8 7.57969 6.42 7.57969Z\" fill=\"#292D32\"/>\n    <path fill=\"var(--dark-grey)\" d=\"M10.1395 10.8297C12.321 10.8297 14.0895 9.06121 14.0895 6.87969C14.0895 4.69816 12.321 2.92969 10.1395 2.92969C7.95793 2.92969 6.18945 4.69816 6.18945 6.87969C6.18945 9.06121 7.95793 10.8297 10.1395 10.8297Z\" fill=\"#292D32\"/>\n    <path fill=\"var(--dark-grey)\"d=\"M21.3009 17.8102H17.5809C17.1909 17.8102 16.8809 17.5002 16.8809 17.1102C16.8809 16.7202 17.1909 16.4102 17.5809 16.4102H21.3009C21.6909 16.4102 22.0009 16.7202 22.0009 17.1102C22.0009 17.5002 21.6909 17.8102 21.3009 17.8102Z\" fill=\"#292D32\"/>\n    <path fill=\"var(--dark-grey)\"d=\"M8.28 17.8102H2.7C2.31 17.8102 2 17.5002 2 17.1102C2 16.7202 2.31 16.4102 2.7 16.4102H8.28C8.67 16.4102 8.98 16.7202 8.98 17.1102C8.98 17.5002 8.66 17.8102 8.28 17.8102Z\" fill=\"#292D32\"/>\n    <path fill=\"var(--dark-grey)\"d=\"M13.8602 21.0719C16.0417 21.0719 17.8102 19.3034 17.8102 17.1219C17.8102 14.9404 16.0417 13.1719 13.8602 13.1719C11.6786 13.1719 9.91016 14.9404 9.91016 17.1219C9.91016 19.3034 11.6786 21.0719 13.8602 21.0719Z\" fill=\"#292D32\"/>\n</svg>\n<div class = \"view\">\n   view\n</div>\n<div class=\"view-option-container hide\">\n    <div class=\"sort-container\">\n        <h2 class=\"header\">sort by:</h2>\n        <h3  id = \"s0\" class=\"sort-option\" selected = \"t\" ><i class='bx bx-cog' ></i>Default (None)</h3>\n        <h3 class=\"sort-option\" id = \"s1\" selected = \"f\"><i class='bx bx-sort-down' ></i>Date</h3>\n    </div>\n    <div class=\"group-container\">\n        <h2 class=\"header\">group by:</h2>\n        <h3 id = \"g0\" class=\"group-option\" selected = \"t\"><i class='bx bx-cog' ></i>Default (None)</h3>\n        <h3 id = \"g1\" class=\"group-option\" selected = \"f\"><i class='bx bxs-purchase-tag-alt' ></i>priority</h3>\n    </div>\n</div>\n</div>\n</div> \n</div>";
 
 
 /***/ }),
@@ -35,7 +35,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var header = document.createElement("div");
 header.classList.add("main-header");
-header.innerHTML = "\n<div class=\"header-title-container\">\n      <img src=\"#\" alt=\"\" class=\"header-img\">\n      <div class=\"header-text\">to finish</div>\n</div>\n<button class=\"add-task-button\">&plus;</button>\n";
+header.innerHTML = "\n<div class=\"header-title-container\">\n      <i class='bx bx-task-x'></i>\n      <div class=\"header-text\">to finish</div>\n</div>\n<div class = \"add-task-button\"><i class='bx bx-plus'></i></div>\n";
 
 
 /***/ }),
@@ -55,7 +55,7 @@ __webpack_require__.r(__webpack_exports__);
 var labeloverlay = document.createElement('div');
 labeloverlay.classList.add("add-label-overlay");
 labeloverlay.classList.add("hide");
-labeloverlay.innerHTML = "<form class=\"add-label-form\">\n<div class=\"add-label-header\">\n    <button type=\"button\" class=\"cansel-add-label\">cancel</button>\n    <div class=\"add-project-title\">Add Label</div>\n    <button type = \"submit\" class=\"add-label\">add</button>\n</div>\n<input type=\"text\" placeholder=\"name\" name=\"label-name\" id = \"labelName\" required>\n</form>\n";
+labeloverlay.innerHTML = "<form class=\"add-label-form\">\n<div class=\"add-label-header\">\n    <button type=\"button\" class=\"cansel-add-label\">cancel</button>\n    <div class=\"add-project-title\"><i class='bx bxs-tag-alt'></i>Add Label</div>\n    <button type = \"submit\" class=\"add-label\">add</button>\n</div>\n<input type=\"text\" placeholder=\"name\" name=\"label-name\" id = \"labelName\" required>\n</form>\n";
 
 
 /***/ }),
@@ -102,7 +102,7 @@ __webpack_require__.r(__webpack_exports__);
 var projectoverlay = document.createElement("div");
 projectoverlay.classList.add("add-project-overlay");
 projectoverlay.classList.add("hide");
-projectoverlay.innerHTML = "<form class=\"add-project-form\">\n<div class=\"add-project-header\">\n    <button type=\"button\" class=\"cansel-add-project\">cancel</button>\n    <div class=\"add-project-title\">Add Project</div>\n    <button type = \"submit\" class=\"add-project\">add</button>\n</div>\n<input type=\"text\" placeholder=\"name\" name=\"project-name\" id = \"projectName\" required>\n</form>\n";
+projectoverlay.innerHTML = "<form class=\"add-project-form\">\n<div class=\"add-project-header\">\n    <button type=\"button\" class=\"cansel-add-project\">cancel</button>\n    <div class=\"add-project-title\"><i class='bx bx-git-repo-forked' ></i>Add Project</div>\n    <button type = \"submit\" class=\"add-project\">add</button>\n</div>\n<input type=\"text\" placeholder=\"name\" name=\"project-name\" id = \"projectName\" required>\n</form>\n";
 
 
 /***/ }),
@@ -121,7 +121,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var sidetrack = document.createElement("div");
 sidetrack.className = "sidetrack";
-sidetrack.innerHTML = "<div class=\"all-projects\">\n<div class=\"Inbox\">Inbox</div>\n<div class=\"projects\">\n<div class=\"projects-container\">\n    <div class=\"projects-title\">Projects</div>\n    <button class=\"new-project\">&plus;</button>\n</div>\n<div class=\"project\" id=\"1\">college</div>\n</div>\n</div>";
+sidetrack.innerHTML = "<div class=\"all-projects\">\n<div class=\"Inbox\">Inbox</div>\n<div class=\"projects\">\n<div class=\"projects-container\">\n    <div class=\"projects-title\">Projects</div>\n    <div class = \"new-project\">\n        <i class='bx bx-plus'></i>  \n    </div>\n</div>\n<div class=\"project\" id=\"1\">college</div>\n</div>\n</div>";
 
 
 /***/ }),
@@ -157,23 +157,41 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "displayController": () => (/* binding */ displayController)
 /* harmony export */ });
 /* harmony import */ var _taskList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./taskList */ "./src/script/functions/taskList.js");
-/* harmony import */ var _newProjectModule__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./newProjectModule */ "./src/script/functions/newProjectModule.js");
-/* harmony import */ var _newTaskModule__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./newTaskModule */ "./src/script/functions/newTaskModule.js");
-/* harmony import */ var _newLabelModule__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./newLabelModule */ "./src/script/functions/newLabelModule.js");
-/* harmony import */ var _task__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./task */ "./src/script/functions/task.js");
-/* harmony import */ var _displayTasks__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./displayTasks */ "./src/script/functions/displayTasks.js");
+/* harmony import */ var _node_modules_linkclickablenode_src_scripts_linkClickable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/linkclickablenode/src/scripts/linkClickable */ "./node_modules/linkclickablenode/src/scripts/linkClickable.js");
+/* harmony import */ var _newProjectModule__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./newProjectModule */ "./src/script/functions/newProjectModule.js");
+/* harmony import */ var _newTaskModule__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./newTaskModule */ "./src/script/functions/newTaskModule.js");
+/* harmony import */ var _newLabelModule__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./newLabelModule */ "./src/script/functions/newLabelModule.js");
+/* harmony import */ var _task__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./task */ "./src/script/functions/task.js");
+/* harmony import */ var _displayTasks__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./displayTasks */ "./src/script/functions/displayTasks.js");
 
 
 
 
 
-/* import {} from "./displayTasks" */
+
 
 var displayController = function displayController() {
+  var appendAllProjectsFromStorage = function appendAllProjectsFromStorage() {
+    Object.values(JSON.parse(localStorage.getItem('projects'))).forEach(function (project) {
+      (0,_taskList__WEBPACK_IMPORTED_MODULE_0__.addProject)(project.name);
+      (0,_newProjectModule__WEBPACK_IMPORTED_MODULE_2__.addNewProjectOption)(project.name);
+      (0,_newProjectModule__WEBPACK_IMPORTED_MODULE_2__.addNewProjectNode)(project.name);
+    });
+  };
+  var appendprojecttostorage = function appendprojecttostorage() {
+    localStorage.setItem('projects', JSON.stringify(_taskList__WEBPACK_IMPORTED_MODULE_0__.projects));
+  };
+  if (localStorage.getItem('tasks')) {
+    (0,_displayTasks__WEBPACK_IMPORTED_MODULE_6__.appendAllTasksFromStorage)();
+  }
+  if (localStorage.getItem('projects')) {
+    appendAllProjectsFromStorage();
+  }
+
   /* selecting today as a default date */
-  (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_2__.selectDefaultDate)();
-  (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_2__.selectDefaultPiority)();
-  var addNewProject = document.querySelector('button.new-project');
+  (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_3__.selectDefaultDate)();
+  (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_3__.selectDefaultPiority)();
+  var addNewProject = document.querySelector('.new-project');
   var projectInput = document.querySelector('.add-project-form');
   var closeAddProject = document.querySelector('.cansel-add-project');
   var closeAddTaskButton = document.querySelector('.add-task-footer  .cansel-add-task');
@@ -184,50 +202,53 @@ var displayController = function displayController() {
   var addLabelForm = document.querySelector('.add-label-form');
   /* openning addproject form */
   addNewProject.addEventListener('click', function () {
-    (0,_newProjectModule__WEBPACK_IMPORTED_MODULE_1__.showProjectForm)();
+    (0,_newProjectModule__WEBPACK_IMPORTED_MODULE_2__.showProjectForm)();
   });
   /* closing addproject form */
   closeAddProject.addEventListener('click', function () {
-    (0,_newProjectModule__WEBPACK_IMPORTED_MODULE_1__.clearAddProject)();
-    (0,_newProjectModule__WEBPACK_IMPORTED_MODULE_1__.hideProjectForm)();
+    (0,_newProjectModule__WEBPACK_IMPORTED_MODULE_2__.clearAddProject)();
+    (0,_newProjectModule__WEBPACK_IMPORTED_MODULE_2__.hideProjectForm)();
   });
   /* submit addproject form */
   projectInput.addEventListener('submit', function (event) {
     event.preventDefault();
-    var _newProjectData = (0,_newProjectModule__WEBPACK_IMPORTED_MODULE_1__.newProjectData)(),
+    var _newProjectData = (0,_newProjectModule__WEBPACK_IMPORTED_MODULE_2__.newProjectData)(),
       projectName = _newProjectData.projectName;
-    (0,_newProjectModule__WEBPACK_IMPORTED_MODULE_1__.addNewProjectNode)(projectName);
-    (0,_newProjectModule__WEBPACK_IMPORTED_MODULE_1__.clearAddProject)();
+    (0,_newProjectModule__WEBPACK_IMPORTED_MODULE_2__.addNewProjectNode)(projectName);
+    (0,_newProjectModule__WEBPACK_IMPORTED_MODULE_2__.clearAddProject)();
     (0,_taskList__WEBPACK_IMPORTED_MODULE_0__.addProject)(projectName);
-    (0,_newProjectModule__WEBPACK_IMPORTED_MODULE_1__.addNewProjectOption)(projectName);
-    (0,_newProjectModule__WEBPACK_IMPORTED_MODULE_1__.hideProjectForm)();
+    (0,_newProjectModule__WEBPACK_IMPORTED_MODULE_2__.addNewProjectOption)(projectName);
+    appendprojecttostorage();
+    (0,_newProjectModule__WEBPACK_IMPORTED_MODULE_2__.hideProjectForm)();
   });
 
   /* close addtask form */
   closeAddTaskButton.addEventListener('click', function () {
-    (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_2__.hideTaskForm)();
-    (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_2__.clearAddTask)();
+    (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_3__.hideTaskForm)();
+    (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_3__.clearAddTask)();
   });
   /* openning addtask form */
   addTaskButton.addEventListener('click', function () {
-    (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_2__.showTaskForm)();
+    (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_3__.showTaskForm)();
   });
   /* submit addtask form */
   taskInput.addEventListener('submit', function (event) {
     event.preventDefault();
-    var _addTaskData = (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_2__.addTaskData)(),
+    var _addTaskData = (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_3__.addTaskData)(),
       taskName = _addTaskData.taskName,
       description = _addTaskData.description,
       date = _addTaskData.date,
       project = _addTaskData.project,
       priority = _addTaskData.priority,
       labels = _addTaskData.labels;
-    var newTask = new _task__WEBPACK_IMPORTED_MODULE_4__.task(taskName, description, date, priority, labels, project);
+    var newTask = new _task__WEBPACK_IMPORTED_MODULE_5__.task(taskName, description, date, priority, labels, project);
+    /* first add to (default) tasks */
+    /* HERE */
     (0,_taskList__WEBPACK_IMPORTED_MODULE_0__.addTask)(newTask);
-    (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_2__.addNewTaskNode)(taskName, newTask.project, labels);
-    (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_2__.clearAddTask)();
-    (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_2__.hideTaskForm)();
-    console.log(newTask);
+    /* till here working */
+    (0,_displayTasks__WEBPACK_IMPORTED_MODULE_6__.appendNewTaskNode)(newTask);
+    (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_3__.clearAddTask)();
+    (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_3__.hideTaskForm)();
   });
   var priorityList = document.querySelector('.priority-list');
   var labelList = document.querySelector('.label-list');
@@ -259,55 +280,49 @@ var displayController = function displayController() {
   });
   document.querySelectorAll('.label-list input').forEach(function (box) {
     box.addEventListener('click', function () {
-      document.querySelector('.num-of-labels').textContent = (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_2__.getCheckedLabelsCount)();
+      document.querySelector('.num-of-labels').textContent = (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_3__.getCheckedLabelsCount)();
     });
   });
   /* openning addproject form */
   addNewLabelButton.addEventListener('click', function () {
-    (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_2__.hideTaskForm)();
-    (0,_newLabelModule__WEBPACK_IMPORTED_MODULE_3__.showLabelForm)();
+    (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_3__.hideTaskForm)();
+    (0,_newLabelModule__WEBPACK_IMPORTED_MODULE_4__.showLabelForm)();
   });
   /* closing addproject form */
   closeNewLabelButton.addEventListener('click', function () {
-    (0,_newLabelModule__WEBPACK_IMPORTED_MODULE_3__.clearAddLabel)();
-    (0,_newLabelModule__WEBPACK_IMPORTED_MODULE_3__.hideLabelForm)();
-    (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_2__.showTaskForm)();
+    (0,_newLabelModule__WEBPACK_IMPORTED_MODULE_4__.clearAddLabel)();
+    (0,_newLabelModule__WEBPACK_IMPORTED_MODULE_4__.hideLabelForm)();
+    (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_3__.showTaskForm)();
   });
   /* submit addproject form */
   addLabelForm.addEventListener('submit', function (event) {
     event.preventDefault();
-    var _newLabelName = (0,_newLabelModule__WEBPACK_IMPORTED_MODULE_3__.newLabelName)(),
+    var _newLabelName = (0,_newLabelModule__WEBPACK_IMPORTED_MODULE_4__.newLabelName)(),
       labelName = _newLabelName.labelName;
-    (0,_newLabelModule__WEBPACK_IMPORTED_MODULE_3__.addNewLabelNode)(labelName);
+    (0,_newLabelModule__WEBPACK_IMPORTED_MODULE_4__.addNewLabelNode)(labelName);
     /* changing number of selected labels */
     var lastLabel = document.querySelector('.label-list div:nth-last-child(2)');
     lastLabel.addEventListener('click', function () {
-      document.querySelector('.num-of-labels').textContent = (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_2__.getCheckedLabelsCount)();
+      document.querySelector('.num-of-labels').textContent = (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_3__.getCheckedLabelsCount)();
     });
-    console.log(lastLabel);
-    (0,_newLabelModule__WEBPACK_IMPORTED_MODULE_3__.hideLabelForm)();
-    (0,_newLabelModule__WEBPACK_IMPORTED_MODULE_3__.clearAddLabel)();
-    (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_2__.showTaskForm)();
-  });
-  /* adding preexisted project */
-  var projects = document.querySelectorAll('.projects > .project');
-  projects.forEach(function (project) {
-    (0,_taskList__WEBPACK_IMPORTED_MODULE_0__.addProject)(project.textContent);
-    (0,_newProjectModule__WEBPACK_IMPORTED_MODULE_1__.addNewProjectOption)(project.textContent);
-    console.log(null);
+    (0,_newLabelModule__WEBPACK_IMPORTED_MODULE_4__.hideLabelForm)();
+    (0,_newLabelModule__WEBPACK_IMPORTED_MODULE_4__.clearAddLabel)();
+    (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_3__.showTaskForm)();
   });
   document.querySelector('.sort-container #s0').addEventListener('click', function () {
-    (0,_displayTasks__WEBPACK_IMPORTED_MODULE_5__.sortByDefault)();
+    (0,_displayTasks__WEBPACK_IMPORTED_MODULE_6__.sortByDefault)();
   });
   document.querySelector('.sort-container #s1').addEventListener('click', function () {
-    (0,_displayTasks__WEBPACK_IMPORTED_MODULE_5__.sortByDate)();
+    (0,_displayTasks__WEBPACK_IMPORTED_MODULE_6__.sortByDate)();
   });
   document.querySelector('.group-container #g0').addEventListener('click', function () {
-    (0,_displayTasks__WEBPACK_IMPORTED_MODULE_5__.groupByDefault)();
+    (0,_displayTasks__WEBPACK_IMPORTED_MODULE_6__.groupByDefault)();
   });
   document.querySelector('.group-container #g1').addEventListener('click', function () {
-    (0,_displayTasks__WEBPACK_IMPORTED_MODULE_5__.groupByPriotiry)();
+    (0,_displayTasks__WEBPACK_IMPORTED_MODULE_6__.groupByPriotiry)();
   });
+  var viewBorder = document.querySelector('.view-border');
+  (0,_node_modules_linkclickablenode_src_scripts_linkClickable__WEBPACK_IMPORTED_MODULE_1__.linkClickable)(viewBorder, document.querySelector('.view-option-container'));
 };
 
 
@@ -321,6 +336,8 @@ var displayController = function displayController() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "appendAllTasksFromStorage": () => (/* binding */ appendAllTasksFromStorage),
+/* harmony export */   "appendNewTaskNode": () => (/* binding */ appendNewTaskNode),
 /* harmony export */   "groupByDefault": () => (/* binding */ groupByDefault),
 /* harmony export */   "groupByPriotiry": () => (/* binding */ groupByPriotiry),
 /* harmony export */   "sortByDate": () => (/* binding */ sortByDate),
@@ -330,61 +347,87 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sortBy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sortBy */ "./src/script/functions/sortBy.js");
 /* harmony import */ var _groupBy__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./groupBy */ "./src/script/functions/groupBy.js");
 /* harmony import */ var _view_task_controller__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./view-task-controller */ "./src/script/functions/view-task-controller.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 
 
 
 
-var sortByDefault = function sortByDefault() {
-  var defaultSort = document.querySelector('.sort-container #s0');
-  var defaultGroup = document.querySelector('.group-container #g0');
-  if (!isSelected(defaultSort)) {
-    if (isSelected(defaultGroup)) {
-      (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addAllTasks)(_taskList__WEBPACK_IMPORTED_MODULE_0__.tasks);
-    } else {
-      (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addAllGroups)((0,_sortBy__WEBPACK_IMPORTED_MODULE_1__.sortGroups)('date'));
+var appendAllTasksFromStorage = function appendAllTasksFromStorage() {
+  Object.values(JSON.parse(localStorage.getItem('tasks'))).forEach(function (task) {
+    _taskList__WEBPACK_IMPORTED_MODULE_0__.tasks.push(task);
+    appendNewTaskNode(task[0]);
+  });
+};
+var appendNewTaskNode = function appendNewTaskNode(newTask) {
+  /* add to all tasks as default used with(appendGroups, appendTasks)  */
+  (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addNewTaskNode)(newTask.name, newTask.project, newTask.label);
+  if (isGrouped()) {
+    var _addOneTaskToGroup = (0,_groupBy__WEBPACK_IMPORTED_MODULE_2__.addOneTaskToGroup)(newTask),
+      key = _addOneTaskToGroup.key;
+    console.log(_groupBy__WEBPACK_IMPORTED_MODULE_2__.groupTasks[key]);
+    (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addAllGroups)(_groupBy__WEBPACK_IMPORTED_MODULE_2__.groupTasks);
+    if (isSorted()) {
+      /* sort only that group */
+      var copyGroupTasks = _objectSpread({}, _groupBy__WEBPACK_IMPORTED_MODULE_2__.groupTasks);
+      copyGroupTasks[key] = (0,_sortBy__WEBPACK_IMPORTED_MODULE_1__.sortAll)(currentSortType(), copyGroupTasks[key]);
+      (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addAllGroups)(copyGroupTasks);
+    }
+  } else {
+    if (isSorted()) {
+      (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addAllTasks)((0,_sortBy__WEBPACK_IMPORTED_MODULE_1__.sortAll)(currentSortType(), _taskList__WEBPACK_IMPORTED_MODULE_0__.tasks));
     }
   }
-  toggleSelectAttribute(selecetedGroupObtion());
-  toggleSelectAttribute(defaultSort);
+};
+var sortByDefault = function sortByDefault() {
+  var defaultSort = document.querySelector('.sort-container #s0');
+  if (!isSelected(defaultSort)) {
+    if (isGrouped()) {
+      (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addAllGroups)(_groupBy__WEBPACK_IMPORTED_MODULE_2__.groupTasks);
+    } else {
+      (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addAllTasks)(_taskList__WEBPACK_IMPORTED_MODULE_0__.tasks);
+    }
+    toggleSortOption(defaultSort);
+  }
 };
 var sortByDate = function sortByDate() {
   var dateSort = document.querySelector('.sort-container #s1');
-  var defaultGroup = document.querySelector('.group-container #g0');
   if (!isSelected(dateSort)) {
-    if (isSelected(defaultGroup)) {
-      (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addAllTasks)((0,_sortBy__WEBPACK_IMPORTED_MODULE_1__.sortAll)('date'));
+    if (isGrouped()) {
+      (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addAllGroups)((0,_sortBy__WEBPACK_IMPORTED_MODULE_1__.sortGroups)('date'));
     } else {
-      (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addAllGroups)(_groupBy__WEBPACK_IMPORTED_MODULE_2__.groupTasks);
+      (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addAllTasks)((0,_sortBy__WEBPACK_IMPORTED_MODULE_1__.sortAll)('date'));
     }
+    toggleSortOption(dateSort);
   }
-  toggleSelectAttribute(selecetdSortObtion());
-  toggleSelectAttribute(dateSort);
 };
 var groupByDefault = function groupByDefault() {
-  var defaultSort = document.querySelector('.sort-container #s0');
   var defaultGroup = document.querySelector('.group-container #g0');
   if (!isSelected(defaultGroup)) {
-    if (isSelected(defaultSort)) {
-      (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addAllTasks)(_taskList__WEBPACK_IMPORTED_MODULE_0__.tasks);
-    } else {
+    if (isSorted()) {
       (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addAllTasks)((0,_sortBy__WEBPACK_IMPORTED_MODULE_1__.sortAll)(currentSortType()));
+    } else {
+      (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addAllTasks)(_taskList__WEBPACK_IMPORTED_MODULE_0__.tasks);
     }
+    toggleGroupOption(defaultGroup);
   }
-  toggleSelectAttribute(selecetedGroupObtion());
-  toggleSelectAttribute(defaultGroup);
 };
 var groupByPriotiry = function groupByPriotiry() {
-  var defaultSort = document.querySelector('.sort-container #s0');
   var priorityGroup = document.querySelector('.group-container #g1');
   if (!isSelected(priorityGroup)) {
     (0,_groupBy__WEBPACK_IMPORTED_MODULE_2__.group)('priority');
-    if (!isSelected(defaultSort)) {
-      (0,_sortBy__WEBPACK_IMPORTED_MODULE_1__.sortGroups)(currentSortType());
+    if (isSorted()) {
+      var sortedGroups = (0,_sortBy__WEBPACK_IMPORTED_MODULE_1__.sortGroups)(currentSortType());
+      (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addAllGroups)(sortedGroups);
+    } else {
+      (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addAllGroups)(_groupBy__WEBPACK_IMPORTED_MODULE_2__.groupTasks);
     }
-    (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addAllGroups)(_groupBy__WEBPACK_IMPORTED_MODULE_2__.groupTasks);
+    toggleGroupOption(priorityGroup);
   }
-  toggleSelectAttribute(selecetedGroupObtion());
-  toggleSelectAttribute(priorityGroup);
 };
 var toggleSelectAttribute = function toggleSelectAttribute(node) {
   if (node.getAttribute('selected') === 't') {
@@ -398,14 +441,27 @@ var isSelected = function isSelected(obtion) {
   return isObtionSelected === 't';
 };
 var selecetdSortObtion = function selecetdSortObtion() {
-  console.log(document.querySelector('.sort-container [selected = "t"]'));
   return document.querySelector('.sort-container [selected = "t"]');
 };
 var selecetedGroupObtion = function selecetedGroupObtion() {
   return document.querySelector('.group-container [selected = "t"]');
 };
 var currentSortType = function currentSortType() {
-  return selecetdSortObtion().textContent.replaceAll(' ', '');
+  return selecetdSortObtion().textContent.replaceAll(' ', '').toLowerCase();
+};
+var isSorted = function isSorted() {
+  return !isSelected(document.querySelector('.sort-option#s0'));
+};
+var isGrouped = function isGrouped() {
+  return !isSelected(document.querySelector('.group-option#g0'));
+};
+var toggleSortOption = function toggleSortOption(newOption) {
+  toggleSelectAttribute(selecetdSortObtion());
+  toggleSelectAttribute(newOption);
+};
+var toggleGroupOption = function toggleGroupOption(newOption) {
+  toggleSelectAttribute(selecetedGroupObtion());
+  toggleSelectAttribute(newOption);
 };
 
 
@@ -440,6 +496,7 @@ var showForm = function showForm(className) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "addOneTaskToGroup": () => (/* binding */ addOneTaskToGroup),
 /* harmony export */   "group": () => (/* binding */ group),
 /* harmony export */   "groupTasks": () => (/* binding */ groupTasks)
 /* harmony export */ });
@@ -459,17 +516,18 @@ var clearGroupTasks = function clearGroupTasks() {
     priority4: []
   };
 };
+var addOneTaskToGroup = function addOneTaskToGroup(task) {
+  var key = "".concat('priority' + task.priority).replaceAll(' ', '').toLowerCase();
+  groupTasks[key].push(_taskList__WEBPACK_IMPORTED_MODULE_0__.tasks[_taskList__WEBPACK_IMPORTED_MODULE_0__.tasks.length - 1]);
+  return {
+    key: key
+  };
+};
 var group = function group(x) {
-  console.log('entered');
   clearGroupTasks();
   _taskList__WEBPACK_IMPORTED_MODULE_0__.tasks.forEach(function (task) {
-    console.log(_taskList__WEBPACK_IMPORTED_MODULE_0__.tasks);
-    console.log(task);
-    console.log(groupTasks["".concat('priority' + task[0][x])]);
-    console.log(task[0][x]);
     groupTasks["".concat('priority' + task[0][x]).replaceAll(' ', '').toLowerCase()].push(task);
   });
-  console.log(groupTasks);
 };
 
 
@@ -557,7 +615,7 @@ var addNewProjectOption = function addNewProjectOption(projectName) {
   var projectOptionContainer = document.querySelector("select.project-container");
   var newProjectOption = projectOptionContainer.lastElementChild.cloneNode(true);
   newProjectOption.value = projectName;
-  newProjectOption.innerHTML = projectName;
+  newProjectOption.textContent = projectName;
   projectOptionContainer.appendChild(newProjectOption);
 };
 var addNewProjectNode = function addNewProjectNode(projectName) {
@@ -565,7 +623,7 @@ var addNewProjectNode = function addNewProjectNode(projectName) {
   var lastProject = projects.lastElementChild;
   var newProject = lastProject.cloneNode(true);
   newProject.id = Number(lastProject.id) + 1;
-  newProject.innerHTML = projectName;
+  newProject.textContent = projectName;
   projects.appendChild(newProject);
 };
 var hideProjectForm = function hideProjectForm() {
@@ -586,7 +644,6 @@ var showProjectForm = function showProjectForm() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "addNewTaskNode": () => (/* binding */ addNewTaskNode),
 /* harmony export */   "addTaskData": () => (/* binding */ addTaskData),
 /* harmony export */   "clearAddTask": () => (/* binding */ clearAddTask),
 /* harmony export */   "getCheckedLabelsCount": () => (/* binding */ getCheckedLabelsCount),
@@ -634,7 +691,6 @@ var getCheckedLabelsAndCount = function getCheckedLabelsAndCount() {
   var checkedLabelsCount = 0;
   document.querySelectorAll(".label-list input").forEach(function (box) {
     if (box.checked == true) {
-      console.log(checkedLabelsCount);
       checkedLabels.push(box.value);
       checkedLabelsCount += 1;
     }
@@ -654,79 +710,6 @@ var selectDefaultDate = function selectDefaultDate() {
   var date = document.getElementById("date");
   var today = new Date().toISOString().split('T')[0];
   date.value = today;
-  console.log(today);
-};
-var addNewTaskNode = function addNewTaskNode(taskName, project, labels) {
-  var taskContainer = document.querySelector(".all-tasks");
-  var lastTask = document.querySelector(".all-tasks .p-container:last-of-type");
-  var newTaskNode = undefined;
-  if (lastTask) {
-    newTaskNode = lastTask.cloneNode(true);
-    newTaskNode.setAttribute("index", "".concat(Number(lastTask.getAttribute("index")) + 1));
-    newTaskNode.querySelector(".p-title").textContent = taskName;
-    newTaskNode.querySelector(".p-name").textContent = project;
-    var labelList = newTaskNode.querySelector(".labels-list");
-    newTaskNode.querySelector("#task").checked = false;
-    labelList.textContent = "";
-    labels.forEach(function (label) {
-      labelList.appendChild(getNewLabelNode(label));
-    });
-  } else {
-    newTaskNode = getNewTaskNode("1", taskName, project, labels);
-  }
-  newTaskNode.querySelector("input").addEventListener("change", function () {
-    document.querySelector(".all-tasks").removeChild(newTaskNode);
-  });
-  taskContainer.appendChild(newTaskNode);
-};
-var getNewTaskNode = function getNewTaskNode(index, taskTitle, pName, labels) {
-  var labelsList = document.createElement("div");
-  labelsList.className = "labels-list";
-  labels.forEach(function (label) {
-    labelsList.appendChild(getNewLabelNode(label));
-  });
-  var newTaskNode = document.createElement("div");
-  var taskFirstLine = document.createElement("div");
-  taskFirstLine.classList.add("task-first-line");
-  var taskSecondLine = document.createElement("div");
-  taskSecondLine.classList.add("task-second-line");
-  newTaskNode.classList.add("p-container");
-  newTaskNode.setAttribute("index", index);
-  var checkbox = document.createElement("input");
-  var ptitle = document.createElement("div");
-  var pname = document.createElement("div");
-  ptitle.classList.add("p-title");
-  pname.classList.add("p-name");
-  ptitle.textContent = taskTitle;
-  pname.textContent = pName;
-  checkbox.type = "checkbox";
-  checkbox.id = "task";
-  checkbox.value = "task";
-  taskFirstLine.appendChild(checkbox);
-  taskFirstLine.appendChild(ptitle);
-  taskFirstLine.appendChild(labelsList);
-  taskSecondLine.appendChild(pname);
-  newTaskNode.appendChild(taskFirstLine);
-  newTaskNode.appendChild(taskSecondLine);
-  return newTaskNode;
-};
-{/* <div class="p-container" index="1">
- <div class="task-first-line">
-    <input type="checkbox" id="task" value="task">
-    <div class="p-title">some title1</div>
-    <div class="labels-list">
-        <div class="label">hj</div>
-        <div class="label">adfs</div>
-    </div>
- </div>
- <div class="task-second-line">
-    <div class="p-name">project1</div>
- </div> */}
-var getNewLabelNode = function getNewLabelNode(labelName) {
-  var labelNode = document.createElement("div");
-  labelNode.className = "label";
-  labelNode.textContent = labelName;
-  return labelNode;
 };
 var hideTaskForm = function hideTaskForm() {
   (0,_formHandler__WEBPACK_IMPORTED_MODULE_0__.hideForm)(".add-task-overlay");
@@ -776,6 +759,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _taskList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./taskList */ "./src/script/functions/taskList.js");
 /* harmony import */ var _groupBy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./groupBy */ "./src/script/functions/groupBy.js");
+/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/esm/compareAsc/index.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
@@ -784,24 +768,20 @@ function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _ty
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 
 
+
 var sortAll = function sortAll(x) {
   var tasks = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _taskList__WEBPACK_IMPORTED_MODULE_0__.tasks;
   return Array.from(tasks).sort(function (t1, t2) {
-    console.log("is :    ".concat(sort[x]));
     return sort[x](t1, t2);
   });
 };
 var dateSort = function dateSort(t1, t2) {
-  return new Date(t2[0].date) - new Date(t1[0].date);
+  return (0,date_fns__WEBPACK_IMPORTED_MODULE_2__["default"])(new Date(t1[0].date), new Date(t2[0].date));
 };
 /* mapping sort keys to sort functions for interfacing */
 var sort = {
   date: dateSort
 };
-var defaultGroup = document.querySelector('.group-container #g0');
-var priorityGroup = document.querySelector('.group-container #g1');
-console.log(defaultGroup);
-console.log(priorityGroup);
 var sortGroups = function sortGroups(x) {
   var groups = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _groupBy__WEBPACK_IMPORTED_MODULE_1__.groupTasks;
   var groupsCopy = _objectSpread({}, groups);
@@ -853,6 +833,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "addProject": () => (/* binding */ addProject),
 /* harmony export */   "addTask": () => (/* binding */ addTask),
+/* harmony export */   "getLastTaskIndex": () => (/* binding */ getLastTaskIndex),
+/* harmony export */   "projects": () => (/* binding */ projects),
 /* harmony export */   "tasks": () => (/* binding */ tasks)
 /* harmony export */ });
 /* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./project */ "./src/script/functions/project.js");
@@ -861,12 +843,17 @@ var projects = {};
 var inbox = [];
 var tasks = [];
 var addProject = function addProject(projectName) {
-  console.log(projectName);
   projects[real(projectName)] = (0,_project__WEBPACK_IMPORTED_MODULE_0__.project)(projectName);
 };
+var appendtostorage = function appendtostorage() {
+  localStorage.setItem('tasks', JSON.stringify(Object.assign({}, tasks)));
+  /*     localStorage.setItem('labels', JSON.stringify(Object.assign({}, tasks))); */
+};
+
+/* HERE */
 var addTask = function addTask(task) {
   tasks.push([task, tasks.length + 1]);
-  console.log(tasks);
+  appendtostorage();
   var projectName = task.project;
   var projectId = real(projectName);
   if (projectId == "inbox") {
@@ -876,6 +863,9 @@ var addTask = function addTask(task) {
       projects[projectId].tasks.push(task);
     }
   }
+};
+var getLastTaskIndex = function getLastTaskIndex() {
+  return tasks.length - 1;
 };
 var real = function real(str) {
   return str.toLowerCase().replaceAll(' ', '');
@@ -893,16 +883,92 @@ var real = function real(str) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "addAllGroups": () => (/* binding */ addAllGroups),
-/* harmony export */   "addAllTasks": () => (/* binding */ addAllTasks)
+/* harmony export */   "addAllTasks": () => (/* binding */ addAllTasks),
+/* harmony export */   "addNewTaskNode": () => (/* binding */ addNewTaskNode)
 /* harmony export */ });
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+/* harmony import */ var _groupBy__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./groupBy */ "./src/script/functions/groupBy.js");
+/* harmony import */ var _taskList__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./taskList */ "./src/script/functions/taskList.js");
+
+
 var createGroupNode = function createGroupNode(groupName) {
   var groupContainer = document.createElement('div');
-  groupContainer.className = "".concat(groupName);
+  groupContainer.classList.add("".concat(groupName));
+  groupContainer.classList.add('task-container');
   var title = document.createElement('h2');
+  title.className = "priority-header";
   title.textContent = groupName;
   groupContainer.appendChild(title);
   return groupContainer;
+};
+var clearEmptyRGroupNodes = function clearEmptyRGroupNodes() {
+  var groupContainers = document.querySelectorAll('.task-container');
+  groupContainers.forEach(function (groupContainer) {
+    if (groupContainer.childNodes.length === 1) {
+      groupContainer.remove();
+    }
+  });
+};
+var addNewTaskNode = function addNewTaskNode(taskName, project, labels) {
+  var taskContainer = document.querySelector(".all-tasks");
+  var lastTask = document.querySelector("[index = '".concat((0,_taskList__WEBPACK_IMPORTED_MODULE_1__.getLastTaskIndex)(), "']"));
+  var newTaskNode = undefined;
+  if (lastTask) {
+    newTaskNode = lastTask.cloneNode(true);
+    newTaskNode.setAttribute("index", "".concat(Number(lastTask.getAttribute("index")) + 1));
+    newTaskNode.querySelector(".p-title").textContent = taskName;
+    newTaskNode.querySelector(".p-name").textContent = project;
+    var labelList = newTaskNode.querySelector(".labels-list");
+    newTaskNode.querySelector("#task").checked = false;
+    labelList.textContent = "";
+    labels.forEach(function (label) {
+      labelList.appendChild(createNewLabelNode(label));
+    });
+  } else {
+    newTaskNode = createNewTaskNode("1", taskName, project, labels);
+  }
+  newTaskNode.querySelector("input").addEventListener("change", function () {
+    document.querySelector(".all-tasks").removeChild(newTaskNode);
+  });
+  taskContainer.appendChild(newTaskNode);
+  console.log("check is task added to origin:");
+  console.log(taskContainer);
+};
+var createNewTaskNode = function createNewTaskNode(index, taskTitle, pName, labels) {
+  var labelsList = document.createElement("div");
+  labelsList.className = "labels-list";
+  labels.forEach(function (label) {
+    labelsList.appendChild(createNewLabelNode(label));
+  });
+  var newTaskNode = document.createElement("div");
+  var taskFirstLine = document.createElement("div");
+  taskFirstLine.classList.add("task-first-line");
+  var taskSecondLine = document.createElement("div");
+  taskSecondLine.classList.add("task-second-line");
+  newTaskNode.classList.add("p-container");
+  newTaskNode.setAttribute("index", index);
+  var checkbox = document.createElement("input");
+  var ptitle = document.createElement("div");
+  var pname = document.createElement("div");
+  ptitle.classList.add("p-title");
+  pname.classList.add("p-name");
+  ptitle.textContent = taskTitle;
+  pname.textContent = pName;
+  checkbox.type = "checkbox";
+  checkbox.id = "task";
+  checkbox.value = "task";
+  taskFirstLine.appendChild(checkbox);
+  taskFirstLine.appendChild(ptitle);
+  taskFirstLine.appendChild(labelsList);
+  taskSecondLine.appendChild(pname);
+  newTaskNode.appendChild(taskFirstLine);
+  newTaskNode.appendChild(taskSecondLine);
+  return newTaskNode;
+};
+var createNewLabelNode = function createNewLabelNode(labelName) {
+  var labelNode = document.createElement("div");
+  labelNode.className = "label";
+  labelNode.textContent = labelName;
+  return labelNode;
 };
 var addAllTasks = function addAllTasks(tasks) {
   var allTasksNode = document.querySelector('.all-tasks');
@@ -914,22 +980,58 @@ var addAllTasks = function addAllTasks(tasks) {
       allTasksNode.appendChild(task);
     }
   });
+  clearEmptyRGroupNodes();
+  removeGroupsContainer();
+};
+/* const appendSingleTaskNodeToGroup = (singleGroup, key) =>{
+  const allTasksNode = document.querySelector('.all-tasks')
+
+    let groupNode = document.querySelector(`.${key}`)
+    if (!groupNode) {
+      groupNode = createGroupNode(key)
+    }
+    singleGroup.forEach((taskContainer) => {
+      const old = allTasksNode.querySelector(
+        `[index = '${taskContainer[1]}']`
+      )
+      const task = old.cloneNode(true)
+      old.remove()
+      groupNode.appendChild(task)
+    })
+    allTasksNode.appendChild(groupNode)
+    addGroupsContainer();
+} */
+var addGroupsContainer = function addGroupsContainer() {
+  var allTasksNode = document.querySelector('.all-tasks');
+  var groupsWrapper = document.querySelector('.groups-wrapper');
+  if (!groupsWrapper) {
+    groupsWrapper = document.createElement('div');
+    groupsWrapper.classList = 'groups-wrapper';
+  }
+  document.querySelectorAll('.task-container').forEach(function (group) {
+    var tempGroup = group.cloneNode(true);
+    group.remove();
+    groupsWrapper.appendChild(tempGroup);
+  });
+  allTasksNode.appendChild(groupsWrapper);
+};
+var removeGroupsContainer = function removeGroupsContainer() {
+  var groupsWrapper = document.querySelector('.groups-wrapper');
+  if (groupsWrapper) {
+    groupsWrapper.remove();
+  }
 };
 var addAllGroups = function addAllGroups(groupTasks) {
   var allTasksNode = document.querySelector('.all-tasks');
   var _loop = function _loop() {
     if (groupTasks[key].length !== 0) {
-      console.log(groupTasks);
       var groupNode = document.querySelector(".".concat(key));
       if (!groupNode) {
         groupNode = createGroupNode(key);
       }
       groupTasks[key].forEach(function (taskContainer) {
-        console.log(_typeof(taskContainer[1]));
         var old = allTasksNode.querySelector("[index = '".concat(taskContainer[1], "']"));
         var task = old.cloneNode(true);
-        console.log('bullshit');
-        console.log(task);
         old.remove();
         groupNode.appendChild(task);
       });
@@ -939,6 +1041,8 @@ var addAllGroups = function addAllGroups(groupTasks) {
   for (var key in groupTasks) {
     _loop();
   }
+  clearEmptyRGroupNodes();
+  addGroupsContainer();
 };
 
 
@@ -963,7 +1067,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".all-tasks {\n  display: inline-grid;\n  grid-auto-rows: 70px;\n  grid-auto-columns: 500px;\n  padding-top: 70px;\n  justify-content: center;\n  grid-column: 3/-1;\n  background-color: var(--dark-soft);\n  position: relative;\n}\n.view-container {\n  position: absolute;\n  display: flex;\n  justify-content: end;\n  align-items: center;\n  width: 100%;\n  padding-top: 10px;\n}\n.view-border {\n  display: flex;\n  gap: 5px;\n  padding: 2px;\n  margin-right: 11%;\n  position: relative;\n}\n.view-border:hover {\n  border: 1px solid var(--light-soft);\n  border-radius: 7px;\n  cursor: pointer;\n}\n.view-option-container {\n  position: absolute;\n  border: 1px solid var(--dark-black);\n  padding: 10px 20px 10px 20px;\n  top: 125px;\n  left: 50%;\n  right: 50%;\n  width: 135px;\n  transform: translate(-50%, -50%);\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n  background-color: var(--dark-black);\n  z-index: 2;\n  border-radius: 10px;\n  color: var(--dark-soft);\n}\n.view-border:hover .view-option-container {\n  display: flex;\n}\n.sort-container,\n.group-container {\n  display: flex;\n  flex-direction: column;\n  gap: 5px;\n}\n\nh3.sort-option,\nh3.group-option {\n  padding: 2px;\n  margin-left: 15px;\n  text-align: center;\n}\nh3.sort-option:hover,\nh3.group-option:hover {\n  color: var(--dark-black);\n  border-radius: 10px;\n  background: var(--meduim-soft);\n}\nh3.sort-option:active h3.group-option:active {\n  color: var(--dark-black);\n  border: 1px solid var(--dark-black);\n}\n\n.p-container {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  padding: 7px;\n  outline: 1px dashed var(--dark-black);\n  position: relative;\n  gap: 5px;\n}\n.task-first-line {\n  display: flex;\n  gap: 7px;\n}\n.labels-list {\n  display: flex;\n  gap: 7px;\n}\n.labels-list > .label {\n  background: var(--dark-black);\n  color: var(--light-soft);\n  border-radius: 7px;\n  padding: 2px;\n}\n.p-title {\n  font-weight: bold;\n  font-size: large;\n  align-self: center;\n  color: var(--dark-black);\n}\n.p-name {\n  position: absolute;\n  bottom: 7px;\n  right: 7px;\n}\n@media (max-width: 700px) {\n  .all-tasks {\n    grid-auto-rows: 64px;\n    grid-auto-columns: 400px;\n    padding-top: 40px;\n  }\n  .view-option-container {\n    width: 67px;\n  }\n  h3.sort-option {\n    font-size: medium;\n  }\n  h2.header {\n    font-size: medium;\n  }\n}\n@media (max-width: 550px) {\n  .all-tasks {\n    grid-auto-rows: 59px;\n    grid-auto-columns: 282px;\n    padding-top: 40px;\n  }\n  .p-title {\n    font-weight: bold;\n    font-size: medium;\n    align-self: center;\n    color: var(--dark-black);\n  }\n  .p-name {\n    position: absolute;\n    bottom: 7px;\n    right: 7px;\n    font-size: small;\n  }\n  .labels-list {\n    font-size: small;\n  }\n  h3.sort-option {\n    font-size: smaller;\n  }\n  h2.header {\n    font-size: smaller;\n  }\n}\n@media (max-width: 380px) {\n  .all-tasks {\n    grid-auto-rows: 40px;\n    grid-auto-columns: 192px;\n    padding-top: 40px;\n  }\n  .p-title {\n    font-weight: bold;\n    font-size: small;\n    align-self: center;\n    color: var(--dark-black);\n  }\n  .p-name {\n    position: absolute;\n    bottom: 7px;\n    right: 7px;\n    font-size: x-small;\n  }\n  .labels-list {\n    font-size: x-small;\n  }\n}\n", "",{"version":3,"sources":["webpack://./src/styles/alltasks.css"],"names":[],"mappings":"AAAA;EACE,oBAAoB;EACpB,oBAAoB;EACpB,wBAAwB;EACxB,iBAAiB;EACjB,uBAAuB;EACvB,iBAAiB;EACjB,kCAAkC;EAClC,kBAAkB;AACpB;AACA;EACE,kBAAkB;EAClB,aAAa;EACb,oBAAoB;EACpB,mBAAmB;EACnB,WAAW;EACX,iBAAiB;AACnB;AACA;EACE,aAAa;EACb,QAAQ;EACR,YAAY;EACZ,iBAAiB;EACjB,kBAAkB;AACpB;AACA;EACE,mCAAmC;EACnC,kBAAkB;EAClB,eAAe;AACjB;AACA;EACE,kBAAkB;EAClB,mCAAmC;EACnC,4BAA4B;EAC5B,UAAU;EACV,SAAS;EACT,UAAU;EACV,YAAY;EACZ,gCAAgC;EAChC,aAAa;EACb,sBAAsB;EACtB,SAAS;EACT,mCAAmC;EACnC,UAAU;EACV,mBAAmB;EACnB,uBAAuB;AACzB;AACA;EACE,aAAa;AACf;AACA;;EAEE,aAAa;EACb,sBAAsB;EACtB,QAAQ;AACV;;AAEA;;EAEE,YAAY;EACZ,iBAAiB;EACjB,kBAAkB;AACpB;AACA;;EAEE,wBAAwB;EACxB,mBAAmB;EACnB,8BAA8B;AAChC;AACA;EACE,wBAAwB;EACxB,mCAAmC;AACrC;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,8BAA8B;EAC9B,YAAY;EACZ,qCAAqC;EACrC,kBAAkB;EAClB,QAAQ;AACV;AACA;EACE,aAAa;EACb,QAAQ;AACV;AACA;EACE,aAAa;EACb,QAAQ;AACV;AACA;EACE,6BAA6B;EAC7B,wBAAwB;EACxB,kBAAkB;EAClB,YAAY;AACd;AACA;EACE,iBAAiB;EACjB,gBAAgB;EAChB,kBAAkB;EAClB,wBAAwB;AAC1B;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,UAAU;AACZ;AACA;EACE;IACE,oBAAoB;IACpB,wBAAwB;IACxB,iBAAiB;EACnB;EACA;IACE,WAAW;EACb;EACA;IACE,iBAAiB;EACnB;EACA;IACE,iBAAiB;EACnB;AACF;AACA;EACE;IACE,oBAAoB;IACpB,wBAAwB;IACxB,iBAAiB;EACnB;EACA;IACE,iBAAiB;IACjB,iBAAiB;IACjB,kBAAkB;IAClB,wBAAwB;EAC1B;EACA;IACE,kBAAkB;IAClB,WAAW;IACX,UAAU;IACV,gBAAgB;EAClB;EACA;IACE,gBAAgB;EAClB;EACA;IACE,kBAAkB;EACpB;EACA;IACE,kBAAkB;EACpB;AACF;AACA;EACE;IACE,oBAAoB;IACpB,wBAAwB;IACxB,iBAAiB;EACnB;EACA;IACE,iBAAiB;IACjB,gBAAgB;IAChB,kBAAkB;IAClB,wBAAwB;EAC1B;EACA;IACE,kBAAkB;IAClB,WAAW;IACX,UAAU;IACV,kBAAkB;EACpB;EACA;IACE,kBAAkB;EACpB;AACF","sourcesContent":[".all-tasks {\n  display: inline-grid;\n  grid-auto-rows: 70px;\n  grid-auto-columns: 500px;\n  padding-top: 70px;\n  justify-content: center;\n  grid-column: 3/-1;\n  background-color: var(--dark-soft);\n  position: relative;\n}\n.view-container {\n  position: absolute;\n  display: flex;\n  justify-content: end;\n  align-items: center;\n  width: 100%;\n  padding-top: 10px;\n}\n.view-border {\n  display: flex;\n  gap: 5px;\n  padding: 2px;\n  margin-right: 11%;\n  position: relative;\n}\n.view-border:hover {\n  border: 1px solid var(--light-soft);\n  border-radius: 7px;\n  cursor: pointer;\n}\n.view-option-container {\n  position: absolute;\n  border: 1px solid var(--dark-black);\n  padding: 10px 20px 10px 20px;\n  top: 125px;\n  left: 50%;\n  right: 50%;\n  width: 135px;\n  transform: translate(-50%, -50%);\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n  background-color: var(--dark-black);\n  z-index: 2;\n  border-radius: 10px;\n  color: var(--dark-soft);\n}\n.view-border:hover .view-option-container {\n  display: flex;\n}\n.sort-container,\n.group-container {\n  display: flex;\n  flex-direction: column;\n  gap: 5px;\n}\n\nh3.sort-option,\nh3.group-option {\n  padding: 2px;\n  margin-left: 15px;\n  text-align: center;\n}\nh3.sort-option:hover,\nh3.group-option:hover {\n  color: var(--dark-black);\n  border-radius: 10px;\n  background: var(--meduim-soft);\n}\nh3.sort-option:active h3.group-option:active {\n  color: var(--dark-black);\n  border: 1px solid var(--dark-black);\n}\n\n.p-container {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  padding: 7px;\n  outline: 1px dashed var(--dark-black);\n  position: relative;\n  gap: 5px;\n}\n.task-first-line {\n  display: flex;\n  gap: 7px;\n}\n.labels-list {\n  display: flex;\n  gap: 7px;\n}\n.labels-list > .label {\n  background: var(--dark-black);\n  color: var(--light-soft);\n  border-radius: 7px;\n  padding: 2px;\n}\n.p-title {\n  font-weight: bold;\n  font-size: large;\n  align-self: center;\n  color: var(--dark-black);\n}\n.p-name {\n  position: absolute;\n  bottom: 7px;\n  right: 7px;\n}\n@media (max-width: 700px) {\n  .all-tasks {\n    grid-auto-rows: 64px;\n    grid-auto-columns: 400px;\n    padding-top: 40px;\n  }\n  .view-option-container {\n    width: 67px;\n  }\n  h3.sort-option {\n    font-size: medium;\n  }\n  h2.header {\n    font-size: medium;\n  }\n}\n@media (max-width: 550px) {\n  .all-tasks {\n    grid-auto-rows: 59px;\n    grid-auto-columns: 282px;\n    padding-top: 40px;\n  }\n  .p-title {\n    font-weight: bold;\n    font-size: medium;\n    align-self: center;\n    color: var(--dark-black);\n  }\n  .p-name {\n    position: absolute;\n    bottom: 7px;\n    right: 7px;\n    font-size: small;\n  }\n  .labels-list {\n    font-size: small;\n  }\n  h3.sort-option {\n    font-size: smaller;\n  }\n  h2.header {\n    font-size: smaller;\n  }\n}\n@media (max-width: 380px) {\n  .all-tasks {\n    grid-auto-rows: 40px;\n    grid-auto-columns: 192px;\n    padding-top: 40px;\n  }\n  .p-title {\n    font-weight: bold;\n    font-size: small;\n    align-self: center;\n    color: var(--dark-black);\n  }\n  .p-name {\n    position: absolute;\n    bottom: 7px;\n    right: 7px;\n    font-size: x-small;\n  }\n  .labels-list {\n    font-size: x-small;\n  }\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".all-tasks {\n  display: inline-grid;\n  grid-auto-rows: 70px;\n  grid-auto-columns: 500px;\n  padding-top: 70px;\n  justify-content: center;\n  grid-column: 3/-1;\n  background-color: var(--dark-black);\n  position: relative;\n  gap: 35px;\n  overflow-y: scroll;\n}\n.view-container {\n  position: absolute;\n  display: flex;\n  justify-content: end;\n  align-items: center;\n  width: 100%;\n  padding-top: 10px;\n}\n.view-border {\n  display: flex;\n  gap: 5px;\n  padding: 2px;\n  margin-right: 11%;\n  position: relative;\n}\n.view-border:hover {\n  border: 1px solid var(--light-soft);\n  border-radius: 7px;\n  cursor: pointer;\n}\n.view-option-container {\n  position: absolute;\n  top: 30px;\n  left: -141px;\n  width: 250px;\n  display: flex;\n  flex-direction: column;\n  background-color: var(--dark-black);\n  z-index: 2;\n  border-radius: 10px;\n  color: var(--dark-soft);\n  box-shadow: 0px 0px 23px -2px #5c5950;\n  transition: transform 300ms ease;\n}\n.view-option-container.hide{\n  transform: scale(0);\n}\n.sort-container,\n.group-container {\n  display: flex;\n  flex-direction: column;\n}\n\n.sort-option[selected = 't'],\n.group-option[selected = 't']{\n  background-color: var(--dark-soft);\n  color: var(--dark-black);\n}\n\nh3.sort-option,\nh3.group-option {\n  padding: 10px;\n  justify-content: space-around;\n  display: flex;\n  position: relative;\n}\n\n.view-option-container i.bx {\n  position: absolute;\n  left: 10px;\n  color: var(--dark-soft);\n}\n.sort-option[selected = 't'] i.bx,\n.group-option[selected = 't']  i.bx{\n  color: var(--dark-black);\n}\nh3.sort-option:hover,\nh3.group-option:hover {\n  color: var(--dark-black);\n  background: var(--meduim-soft);\n}\nh3.sort-option:active h3.group-option:active {\n  color: var(--dark-black);\n  border: 1px solid var(--dark-black);\n}\nh2.header{\n  background-color: var(--dark-black);\n  margin-bottom: 7px;\n  color: var(--meduim-soft);\n  padding: 7px;\n}\n.p-container {\n  margin-bottom: 35px;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  padding: 7px;\n  position: relative;\n  gap: 5px;\n  background: var(--dark-soft);\n  box-shadow: 0 0 0.5rem var(--meduim-soft);\n  min-height: 50px;\n  border-radius: 10px;\n}\n.task-first-line {\n  display: flex;\n  gap: 7px;\n}\n.labels-list {\n  display: flex;\n  gap: 7px;\n}\n.labels-list > .label {\n  background: var(--light-soft);\n  color: var(--dark-soft);\n  border-radius: 7px;\n  padding: 2px;\n}\n.p-title {\n  font-weight: bold;\n  font-size: large;\n  align-self: center;\n  color: var(--dark-black);\n}\n.p-name {\n  position: absolute;\n  bottom: 7px;\n  right: 7px;\n  color: var(--dark-black);\n}\nh2.priority-header{\n  padding-bottom: 25px;\n}\n@media (max-width: 700px) {\n  .all-tasks {\n    grid-auto-rows: 64px;\n    grid-auto-columns: 400px;\n    padding-top: 40px;\n  }\n  .view-option-container {\n    width: 170px;\n  }\n/*   h3.sort-option {\n    font-size: medium;\n  }\n  h2.header {\n    font-size: medium;\n  } */\n}\n@media (max-width: 550px) {\n\n  .all-tasks {\n    grid-auto-rows: 59px;\n    grid-auto-columns: 282px;\n    padding-top: 40px;\n  }\n  .p-title {\n    font-weight: bold;\n    font-size: medium;\n    align-self: center;\n    color: var(--dark-black);\n  }\n  .p-name {\n    position: absolute;\n    bottom: 7px;\n    right: 7px;\n    font-size: small;\n  }\n}\n@media (max-width: 380px) {\n  .all-tasks {\n    grid-auto-rows: 40px;\n    grid-auto-columns: 192px;\n    padding-top: 40px;\n  }\n  .p-name {\n    position: absolute;\n    bottom: 7px;\n    right: 7px;\n  }\n\n}\n", "",{"version":3,"sources":["webpack://./src/styles/alltasks.css"],"names":[],"mappings":"AAAA;EACE,oBAAoB;EACpB,oBAAoB;EACpB,wBAAwB;EACxB,iBAAiB;EACjB,uBAAuB;EACvB,iBAAiB;EACjB,mCAAmC;EACnC,kBAAkB;EAClB,SAAS;EACT,kBAAkB;AACpB;AACA;EACE,kBAAkB;EAClB,aAAa;EACb,oBAAoB;EACpB,mBAAmB;EACnB,WAAW;EACX,iBAAiB;AACnB;AACA;EACE,aAAa;EACb,QAAQ;EACR,YAAY;EACZ,iBAAiB;EACjB,kBAAkB;AACpB;AACA;EACE,mCAAmC;EACnC,kBAAkB;EAClB,eAAe;AACjB;AACA;EACE,kBAAkB;EAClB,SAAS;EACT,YAAY;EACZ,YAAY;EACZ,aAAa;EACb,sBAAsB;EACtB,mCAAmC;EACnC,UAAU;EACV,mBAAmB;EACnB,uBAAuB;EACvB,qCAAqC;EACrC,gCAAgC;AAClC;AACA;EACE,mBAAmB;AACrB;AACA;;EAEE,aAAa;EACb,sBAAsB;AACxB;;AAEA;;EAEE,kCAAkC;EAClC,wBAAwB;AAC1B;;AAEA;;EAEE,aAAa;EACb,6BAA6B;EAC7B,aAAa;EACb,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,UAAU;EACV,uBAAuB;AACzB;AACA;;EAEE,wBAAwB;AAC1B;AACA;;EAEE,wBAAwB;EACxB,8BAA8B;AAChC;AACA;EACE,wBAAwB;EACxB,mCAAmC;AACrC;AACA;EACE,mCAAmC;EACnC,kBAAkB;EAClB,yBAAyB;EACzB,YAAY;AACd;AACA;EACE,mBAAmB;EACnB,aAAa;EACb,sBAAsB;EACtB,8BAA8B;EAC9B,YAAY;EACZ,kBAAkB;EAClB,QAAQ;EACR,4BAA4B;EAC5B,yCAAyC;EACzC,gBAAgB;EAChB,mBAAmB;AACrB;AACA;EACE,aAAa;EACb,QAAQ;AACV;AACA;EACE,aAAa;EACb,QAAQ;AACV;AACA;EACE,6BAA6B;EAC7B,uBAAuB;EACvB,kBAAkB;EAClB,YAAY;AACd;AACA;EACE,iBAAiB;EACjB,gBAAgB;EAChB,kBAAkB;EAClB,wBAAwB;AAC1B;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,UAAU;EACV,wBAAwB;AAC1B;AACA;EACE,oBAAoB;AACtB;AACA;EACE;IACE,oBAAoB;IACpB,wBAAwB;IACxB,iBAAiB;EACnB;EACA;IACE,YAAY;EACd;AACF;;;;;KAKK;AACL;AACA;;EAEE;IACE,oBAAoB;IACpB,wBAAwB;IACxB,iBAAiB;EACnB;EACA;IACE,iBAAiB;IACjB,iBAAiB;IACjB,kBAAkB;IAClB,wBAAwB;EAC1B;EACA;IACE,kBAAkB;IAClB,WAAW;IACX,UAAU;IACV,gBAAgB;EAClB;AACF;AACA;EACE;IACE,oBAAoB;IACpB,wBAAwB;IACxB,iBAAiB;EACnB;EACA;IACE,kBAAkB;IAClB,WAAW;IACX,UAAU;EACZ;;AAEF","sourcesContent":[".all-tasks {\n  display: inline-grid;\n  grid-auto-rows: 70px;\n  grid-auto-columns: 500px;\n  padding-top: 70px;\n  justify-content: center;\n  grid-column: 3/-1;\n  background-color: var(--dark-black);\n  position: relative;\n  gap: 35px;\n  overflow-y: scroll;\n}\n.view-container {\n  position: absolute;\n  display: flex;\n  justify-content: end;\n  align-items: center;\n  width: 100%;\n  padding-top: 10px;\n}\n.view-border {\n  display: flex;\n  gap: 5px;\n  padding: 2px;\n  margin-right: 11%;\n  position: relative;\n}\n.view-border:hover {\n  border: 1px solid var(--light-soft);\n  border-radius: 7px;\n  cursor: pointer;\n}\n.view-option-container {\n  position: absolute;\n  top: 30px;\n  left: -141px;\n  width: 250px;\n  display: flex;\n  flex-direction: column;\n  background-color: var(--dark-black);\n  z-index: 2;\n  border-radius: 10px;\n  color: var(--dark-soft);\n  box-shadow: 0px 0px 23px -2px #5c5950;\n  transition: transform 300ms ease;\n}\n.view-option-container.hide{\n  transform: scale(0);\n}\n.sort-container,\n.group-container {\n  display: flex;\n  flex-direction: column;\n}\n\n.sort-option[selected = 't'],\n.group-option[selected = 't']{\n  background-color: var(--dark-soft);\n  color: var(--dark-black);\n}\n\nh3.sort-option,\nh3.group-option {\n  padding: 10px;\n  justify-content: space-around;\n  display: flex;\n  position: relative;\n}\n\n.view-option-container i.bx {\n  position: absolute;\n  left: 10px;\n  color: var(--dark-soft);\n}\n.sort-option[selected = 't'] i.bx,\n.group-option[selected = 't']  i.bx{\n  color: var(--dark-black);\n}\nh3.sort-option:hover,\nh3.group-option:hover {\n  color: var(--dark-black);\n  background: var(--meduim-soft);\n}\nh3.sort-option:active h3.group-option:active {\n  color: var(--dark-black);\n  border: 1px solid var(--dark-black);\n}\nh2.header{\n  background-color: var(--dark-black);\n  margin-bottom: 7px;\n  color: var(--meduim-soft);\n  padding: 7px;\n}\n.p-container {\n  margin-bottom: 35px;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  padding: 7px;\n  position: relative;\n  gap: 5px;\n  background: var(--dark-soft);\n  box-shadow: 0 0 0.5rem var(--meduim-soft);\n  min-height: 50px;\n  border-radius: 10px;\n}\n.task-first-line {\n  display: flex;\n  gap: 7px;\n}\n.labels-list {\n  display: flex;\n  gap: 7px;\n}\n.labels-list > .label {\n  background: var(--light-soft);\n  color: var(--dark-soft);\n  border-radius: 7px;\n  padding: 2px;\n}\n.p-title {\n  font-weight: bold;\n  font-size: large;\n  align-self: center;\n  color: var(--dark-black);\n}\n.p-name {\n  position: absolute;\n  bottom: 7px;\n  right: 7px;\n  color: var(--dark-black);\n}\nh2.priority-header{\n  padding-bottom: 25px;\n}\n@media (max-width: 700px) {\n  .all-tasks {\n    grid-auto-rows: 64px;\n    grid-auto-columns: 400px;\n    padding-top: 40px;\n  }\n  .view-option-container {\n    width: 170px;\n  }\n/*   h3.sort-option {\n    font-size: medium;\n  }\n  h2.header {\n    font-size: medium;\n  } */\n}\n@media (max-width: 550px) {\n\n  .all-tasks {\n    grid-auto-rows: 59px;\n    grid-auto-columns: 282px;\n    padding-top: 40px;\n  }\n  .p-title {\n    font-weight: bold;\n    font-size: medium;\n    align-self: center;\n    color: var(--dark-black);\n  }\n  .p-name {\n    position: absolute;\n    bottom: 7px;\n    right: 7px;\n    font-size: small;\n  }\n}\n@media (max-width: 380px) {\n  .all-tasks {\n    grid-auto-rows: 40px;\n    grid-auto-columns: 192px;\n    padding-top: 40px;\n  }\n  .p-name {\n    position: absolute;\n    bottom: 7px;\n    right: 7px;\n  }\n\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -989,7 +1093,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".main-header{\n  grid-column: 1/-1;\n  padding: 15px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 50%;\n  background-color: var(--dark-black);\n}\n.header-title-container{   \n  display: flex;\n  gap: 80px;   \n  font-size: 26px;\n  font-weight: bolder;\n}\n.header-text{\n  color: var(--dark-soft);\n}\n.add-task-button{\n  font-size: 20px;\n  cursor: pointer;\n  border-radius: 100px;\n  border: none;\n  width: 25px;\n  background-color: var(--dark-soft);\n}", "",{"version":3,"sources":["webpack://./src/styles/header.css"],"names":[],"mappings":"AAAA;EACE,iBAAiB;EACjB,aAAa;EACb,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB,QAAQ;EACR,mCAAmC;AACrC;AACA;EACE,aAAa;EACb,SAAS;EACT,eAAe;EACf,mBAAmB;AACrB;AACA;EACE,uBAAuB;AACzB;AACA;EACE,eAAe;EACf,eAAe;EACf,oBAAoB;EACpB,YAAY;EACZ,WAAW;EACX,kCAAkC;AACpC","sourcesContent":[".main-header{\n  grid-column: 1/-1;\n  padding: 15px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 50%;\n  background-color: var(--dark-black);\n}\n.header-title-container{   \n  display: flex;\n  gap: 80px;   \n  font-size: 26px;\n  font-weight: bolder;\n}\n.header-text{\n  color: var(--dark-soft);\n}\n.add-task-button{\n  font-size: 20px;\n  cursor: pointer;\n  border-radius: 100px;\n  border: none;\n  width: 25px;\n  background-color: var(--dark-soft);\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".main-header {\n  grid-column: 1/-1;\n  padding: 15px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 50%;\n  background-color: var(--dark-black);\n  border-bottom: 0.1rem solid var(--dark-soft);\n}\n.header-title-container {\n  display: flex;\n  gap: 13px;\n  font-size: 26px;\n  font-weight: bolder;\n  align-items: center;\n}\n.header-title-container > .bx.bx-task-x{\n  color: var(--dark-soft);\n}\n.header-text {\n  color: var(--dark-soft);\n}\n.add-task-button {\n  display: inline-flex;\n  justify-content: center;\n  align-items: center;\n  background-color: var(--dark-soft);\n  padding: 0.3rem;\n  border-radius: 50%;\n  font-size: 1.1rem;\n  color: var(--dark-black);\n  cursor: pointer;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/header.css"],"names":[],"mappings":"AAAA;EACE,iBAAiB;EACjB,aAAa;EACb,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB,QAAQ;EACR,mCAAmC;EACnC,4CAA4C;AAC9C;AACA;EACE,aAAa;EACb,SAAS;EACT,eAAe;EACf,mBAAmB;EACnB,mBAAmB;AACrB;AACA;EACE,uBAAuB;AACzB;AACA;EACE,uBAAuB;AACzB;AACA;EACE,oBAAoB;EACpB,uBAAuB;EACvB,mBAAmB;EACnB,kCAAkC;EAClC,eAAe;EACf,kBAAkB;EAClB,iBAAiB;EACjB,wBAAwB;EACxB,eAAe;AACjB","sourcesContent":[".main-header {\n  grid-column: 1/-1;\n  padding: 15px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 50%;\n  background-color: var(--dark-black);\n  border-bottom: 0.1rem solid var(--dark-soft);\n}\n.header-title-container {\n  display: flex;\n  gap: 13px;\n  font-size: 26px;\n  font-weight: bolder;\n  align-items: center;\n}\n.header-title-container > .bx.bx-task-x{\n  color: var(--dark-soft);\n}\n.header-text {\n  color: var(--dark-soft);\n}\n.add-task-button {\n  display: inline-flex;\n  justify-content: center;\n  align-items: center;\n  background-color: var(--dark-soft);\n  padding: 0.3rem;\n  border-radius: 50%;\n  font-size: 1.1rem;\n  color: var(--dark-black);\n  cursor: pointer;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1015,7 +1119,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".add-label-form{\n    display: flex;\n    flex-direction: column;\n    --label-width: 500px;\n    width: var(--label-width);\n    border-radius: 15px;\n    border: 1px solid black;\n}\n.add-label-header{\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    background: var(--light-soft);\n    height: 40px;\n    padding: 10px;\n}\n\n#labelName { \n    height: 40px; \n    width: calc(var(--label-width) - 50px); \n    font-size: 18px; margin: 0; \n    align-self: center;\n    border: 1px solid grey; \n    padding: 0px  10px; \n    border-radius: 5px; \n    margin: 15px; \n    background: var(--dark-black);\n    color: var(--light-soft); \n}\nbutton.add-label, .cansel-add-label {\n    border-radius: 10px;\n    border: none;\n    cursor: pointer;\n    height: 60%;\n}\n.add-label-header > button {\n    background-color: var(--dark-black);\n    color: var(--light-soft);\n}\n.add-label-overlay{\n    position: fixed;\n    left: 0;\n    right: 0;\n    top: 0;\n    bottom: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    transform: scale(1);\n    transition: transform 300ms ease-in-out;\n    background-color: rgba(43, 43, 43, 0.877);\n    pointer-events: all;\n}\n.add-label-overlay.hide{\n    transform: scale(0);\n    pointer-events: none;\n}", "",{"version":3,"sources":["webpack://./src/styles/labeloverlay.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;IACtB,oBAAoB;IACpB,yBAAyB;IACzB,mBAAmB;IACnB,uBAAuB;AAC3B;AACA;IACI,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;IACnB,6BAA6B;IAC7B,YAAY;IACZ,aAAa;AACjB;;AAEA;IACI,YAAY;IACZ,sCAAsC;IACtC,eAAe,EAAE,SAAS;IAC1B,kBAAkB;IAClB,sBAAsB;IACtB,kBAAkB;IAClB,kBAAkB;IAClB,YAAY;IACZ,6BAA6B;IAC7B,wBAAwB;AAC5B;AACA;IACI,mBAAmB;IACnB,YAAY;IACZ,eAAe;IACf,WAAW;AACf;AACA;IACI,mCAAmC;IACnC,wBAAwB;AAC5B;AACA;IACI,eAAe;IACf,OAAO;IACP,QAAQ;IACR,MAAM;IACN,SAAS;IACT,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,mBAAmB;IACnB,uCAAuC;IACvC,yCAAyC;IACzC,mBAAmB;AACvB;AACA;IACI,mBAAmB;IACnB,oBAAoB;AACxB","sourcesContent":[".add-label-form{\n    display: flex;\n    flex-direction: column;\n    --label-width: 500px;\n    width: var(--label-width);\n    border-radius: 15px;\n    border: 1px solid black;\n}\n.add-label-header{\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    background: var(--light-soft);\n    height: 40px;\n    padding: 10px;\n}\n\n#labelName { \n    height: 40px; \n    width: calc(var(--label-width) - 50px); \n    font-size: 18px; margin: 0; \n    align-self: center;\n    border: 1px solid grey; \n    padding: 0px  10px; \n    border-radius: 5px; \n    margin: 15px; \n    background: var(--dark-black);\n    color: var(--light-soft); \n}\nbutton.add-label, .cansel-add-label {\n    border-radius: 10px;\n    border: none;\n    cursor: pointer;\n    height: 60%;\n}\n.add-label-header > button {\n    background-color: var(--dark-black);\n    color: var(--light-soft);\n}\n.add-label-overlay{\n    position: fixed;\n    left: 0;\n    right: 0;\n    top: 0;\n    bottom: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    transform: scale(1);\n    transition: transform 300ms ease-in-out;\n    background-color: rgba(43, 43, 43, 0.877);\n    pointer-events: all;\n}\n.add-label-overlay.hide{\n    transform: scale(0);\n    pointer-events: none;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".add-label-form{\n    display: flex;\n    flex-direction: column;\n    --label-width: 500px;\n    width: var(--label-width);\n    border-radius: 15px;\n    border: 1px solid black;\n    background-color: var(--dark-black);\n}\n.add-label-header{\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    background: var(--dark-black);\n    height: 40px;\n    padding: 10px;\n    border-bottom: 0.1rem solid var(--dark-soft);\n}\n\n#labelName { \n    height: 40px; \n    width: calc(var(--label-width) - 50px); \n    font-size: 18px; margin: 0; \n    align-self: center;\n    border: 1px solid grey; \n    padding: 0px  10px; \n    border-radius: 5px; \n    margin: 15px; \n    background: var(--dark-soft);\n    color: var(--dark-black); \n}\n#labelName::placeholder{\n    color: var(--dark-black);   \n}\nbutton.add-label, .cansel-add-label {\n    border-radius: 10px;\n    border: none;\n    cursor: pointer;\n    height: 60%;\n}\n.add-label-header > button {\n    background-color: var(--dark-soft);\n    color: var(--dark-black);\n}\n.add-label-overlay{\n    position: fixed;\n    left: 0;\n    right: 0;\n    top: 0;\n    bottom: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    transform: scale(1);\n    transition: transform 300ms ease-in-out;\n    background-color: rgba(43, 43, 43, 0.877);\n    pointer-events: all;\n}\n.add-label-overlay.hide{\n    transform: scale(0);\n    pointer-events: none;\n}", "",{"version":3,"sources":["webpack://./src/styles/labeloverlay.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;IACtB,oBAAoB;IACpB,yBAAyB;IACzB,mBAAmB;IACnB,uBAAuB;IACvB,mCAAmC;AACvC;AACA;IACI,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;IACnB,6BAA6B;IAC7B,YAAY;IACZ,aAAa;IACb,4CAA4C;AAChD;;AAEA;IACI,YAAY;IACZ,sCAAsC;IACtC,eAAe,EAAE,SAAS;IAC1B,kBAAkB;IAClB,sBAAsB;IACtB,kBAAkB;IAClB,kBAAkB;IAClB,YAAY;IACZ,4BAA4B;IAC5B,wBAAwB;AAC5B;AACA;IACI,wBAAwB;AAC5B;AACA;IACI,mBAAmB;IACnB,YAAY;IACZ,eAAe;IACf,WAAW;AACf;AACA;IACI,kCAAkC;IAClC,wBAAwB;AAC5B;AACA;IACI,eAAe;IACf,OAAO;IACP,QAAQ;IACR,MAAM;IACN,SAAS;IACT,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,mBAAmB;IACnB,uCAAuC;IACvC,yCAAyC;IACzC,mBAAmB;AACvB;AACA;IACI,mBAAmB;IACnB,oBAAoB;AACxB","sourcesContent":[".add-label-form{\n    display: flex;\n    flex-direction: column;\n    --label-width: 500px;\n    width: var(--label-width);\n    border-radius: 15px;\n    border: 1px solid black;\n    background-color: var(--dark-black);\n}\n.add-label-header{\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    background: var(--dark-black);\n    height: 40px;\n    padding: 10px;\n    border-bottom: 0.1rem solid var(--dark-soft);\n}\n\n#labelName { \n    height: 40px; \n    width: calc(var(--label-width) - 50px); \n    font-size: 18px; margin: 0; \n    align-self: center;\n    border: 1px solid grey; \n    padding: 0px  10px; \n    border-radius: 5px; \n    margin: 15px; \n    background: var(--dark-soft);\n    color: var(--dark-black); \n}\n#labelName::placeholder{\n    color: var(--dark-black);   \n}\nbutton.add-label, .cansel-add-label {\n    border-radius: 10px;\n    border: none;\n    cursor: pointer;\n    height: 60%;\n}\n.add-label-header > button {\n    background-color: var(--dark-soft);\n    color: var(--dark-black);\n}\n.add-label-overlay{\n    position: fixed;\n    left: 0;\n    right: 0;\n    top: 0;\n    bottom: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    transform: scale(1);\n    transition: transform 300ms ease-in-out;\n    background-color: rgba(43, 43, 43, 0.877);\n    pointer-events: all;\n}\n.add-label-overlay.hide{\n    transform: scale(0);\n    pointer-events: none;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1041,7 +1145,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "*{\n    margin: 0;\n}\n:root{\n    --dark-black: rgb(7, 7, 7);\n    --light-soft: #f5f5f5;\n    --meduim-soft: #f2ead3;\n    --dark-soft: #dfd7bf;\n}\nul{\n    list-style: none;\n    padding: 0;\n    margin: 0;\n}\n.main-container{\n    height: 100vh;\n    display: grid;\n    grid-template-columns: repeat(8, 1fr);\n    grid-template-rows: 65px;\n    grid-auto-rows: 1fr;\n}\nh2{\n    font-size: 20px;\n    \n}\nh3{\n    font-size: 16px;\n    font-weight: 600;\n}", "",{"version":3,"sources":["webpack://./src/styles/main-container.css"],"names":[],"mappings":"AAAA;IACI,SAAS;AACb;AACA;IACI,0BAA0B;IAC1B,qBAAqB;IACrB,sBAAsB;IACtB,oBAAoB;AACxB;AACA;IACI,gBAAgB;IAChB,UAAU;IACV,SAAS;AACb;AACA;IACI,aAAa;IACb,aAAa;IACb,qCAAqC;IACrC,wBAAwB;IACxB,mBAAmB;AACvB;AACA;IACI,eAAe;;AAEnB;AACA;IACI,eAAe;IACf,gBAAgB;AACpB","sourcesContent":["*{\n    margin: 0;\n}\n:root{\n    --dark-black: rgb(7, 7, 7);\n    --light-soft: #f5f5f5;\n    --meduim-soft: #f2ead3;\n    --dark-soft: #dfd7bf;\n}\nul{\n    list-style: none;\n    padding: 0;\n    margin: 0;\n}\n.main-container{\n    height: 100vh;\n    display: grid;\n    grid-template-columns: repeat(8, 1fr);\n    grid-template-rows: 65px;\n    grid-auto-rows: 1fr;\n}\nh2{\n    font-size: 20px;\n    \n}\nh3{\n    font-size: 16px;\n    font-weight: 600;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "*{\n    margin: 0;\n}\n:root{\n    --dark-black: #90f6d7;\n    --light-soft: #35bcbf;\n    --meduim-soft:  #41506b;\n    --dark-soft: #263849;\n}\nul{\n    list-style: none;\n    padding: 0;\n    margin: 0;\n}\n.main-container{\n    height: 100vh;\n    display: grid;\n    grid-template-columns: repeat(8, 1fr);\n    grid-template-rows: 65px;\n    grid-auto-rows: 1fr;\n}\nh2{\n    font-size: 20px;\n    \n}\nh3{\n    font-size: 16px;\n    font-weight: 600;\n}\n@media(min-width: 1330px){\n    .main-container{\n        grid-template-columns: repeat(11, 1fr);\n    }\n}\n@media(max-width: 1100px){\n    .main-container{\n        grid-template-columns: repeat(8, 1fr);\n\n    }\n}", "",{"version":3,"sources":["webpack://./src/styles/main-container.css"],"names":[],"mappings":"AAAA;IACI,SAAS;AACb;AACA;IACI,qBAAqB;IACrB,qBAAqB;IACrB,uBAAuB;IACvB,oBAAoB;AACxB;AACA;IACI,gBAAgB;IAChB,UAAU;IACV,SAAS;AACb;AACA;IACI,aAAa;IACb,aAAa;IACb,qCAAqC;IACrC,wBAAwB;IACxB,mBAAmB;AACvB;AACA;IACI,eAAe;;AAEnB;AACA;IACI,eAAe;IACf,gBAAgB;AACpB;AACA;IACI;QACI,sCAAsC;IAC1C;AACJ;AACA;IACI;QACI,qCAAqC;;IAEzC;AACJ","sourcesContent":["*{\n    margin: 0;\n}\n:root{\n    --dark-black: #90f6d7;\n    --light-soft: #35bcbf;\n    --meduim-soft:  #41506b;\n    --dark-soft: #263849;\n}\nul{\n    list-style: none;\n    padding: 0;\n    margin: 0;\n}\n.main-container{\n    height: 100vh;\n    display: grid;\n    grid-template-columns: repeat(8, 1fr);\n    grid-template-rows: 65px;\n    grid-auto-rows: 1fr;\n}\nh2{\n    font-size: 20px;\n    \n}\nh3{\n    font-size: 16px;\n    font-weight: 600;\n}\n@media(min-width: 1330px){\n    .main-container{\n        grid-template-columns: repeat(11, 1fr);\n    }\n}\n@media(max-width: 1100px){\n    .main-container{\n        grid-template-columns: repeat(8, 1fr);\n\n    }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1093,7 +1197,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".add-project-header > button{\n    background-color: var(--dark-soft);\n    color: var(--dark-black);\n}\n.add-project-header {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    height: 40px;\n    background: var(--dark-black);\n    padding: 10px;\n}\n.add-project-title{\n    font-weight: 700;\n    font-size: 25px;\n    line-height: 1.1;\n    color: var(--dark-soft);\n}\n\n\nbutton.add-project, .cansel-add-project{\n    border-radius: 10px;\n    border: none;\n    cursor: pointer;\n    height: 60%;\n} \n\n#projectName { \n    height: 40px; \n    width: calc(var(--project-width) - 50px); \n    font-size: 18px; margin: 0; \n    align-self: center;\n    border: 1px solid grey; \n    padding: 0px  10px; \n    border-radius: 5px; \n    margin: 15px; \n    background: var(--meduim-soft);\n    color: var(--dark-black); \n}\n\n\n.add-project-form{\n    display: flex;\n    flex-direction: column;\n    width: var(--project-width);\n    --project-width: 500px;\n    border-radius: 15px;\n    background: var(--light-soft);\n}\n.add-project-overlay{\n    position: fixed;\n    left: 0;\n    right: 0;\n    top: 0;\n    bottom: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    transform: scale(1);\n    transition: transform 300ms ease-in-out;\n    background-color: rgba(43, 43, 43, 0.877);\n    pointer-events: all;\n}\n.add-project-overlay.hide{\n    transform: scale(0);\n    pointer-events: none;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/projectoverlay.css"],"names":[],"mappings":"AAAA;IACI,kCAAkC;IAClC,wBAAwB;AAC5B;AACA;IACI,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;IACnB,YAAY;IACZ,6BAA6B;IAC7B,aAAa;AACjB;AACA;IACI,gBAAgB;IAChB,eAAe;IACf,gBAAgB;IAChB,uBAAuB;AAC3B;;;AAGA;IACI,mBAAmB;IACnB,YAAY;IACZ,eAAe;IACf,WAAW;AACf;;AAEA;IACI,YAAY;IACZ,wCAAwC;IACxC,eAAe,EAAE,SAAS;IAC1B,kBAAkB;IAClB,sBAAsB;IACtB,kBAAkB;IAClB,kBAAkB;IAClB,YAAY;IACZ,8BAA8B;IAC9B,wBAAwB;AAC5B;;;AAGA;IACI,aAAa;IACb,sBAAsB;IACtB,2BAA2B;IAC3B,sBAAsB;IACtB,mBAAmB;IACnB,6BAA6B;AACjC;AACA;IACI,eAAe;IACf,OAAO;IACP,QAAQ;IACR,MAAM;IACN,SAAS;IACT,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,mBAAmB;IACnB,uCAAuC;IACvC,yCAAyC;IACzC,mBAAmB;AACvB;AACA;IACI,mBAAmB;IACnB,oBAAoB;AACxB","sourcesContent":[".add-project-header > button{\n    background-color: var(--dark-soft);\n    color: var(--dark-black);\n}\n.add-project-header {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    height: 40px;\n    background: var(--dark-black);\n    padding: 10px;\n}\n.add-project-title{\n    font-weight: 700;\n    font-size: 25px;\n    line-height: 1.1;\n    color: var(--dark-soft);\n}\n\n\nbutton.add-project, .cansel-add-project{\n    border-radius: 10px;\n    border: none;\n    cursor: pointer;\n    height: 60%;\n} \n\n#projectName { \n    height: 40px; \n    width: calc(var(--project-width) - 50px); \n    font-size: 18px; margin: 0; \n    align-self: center;\n    border: 1px solid grey; \n    padding: 0px  10px; \n    border-radius: 5px; \n    margin: 15px; \n    background: var(--meduim-soft);\n    color: var(--dark-black); \n}\n\n\n.add-project-form{\n    display: flex;\n    flex-direction: column;\n    width: var(--project-width);\n    --project-width: 500px;\n    border-radius: 15px;\n    background: var(--light-soft);\n}\n.add-project-overlay{\n    position: fixed;\n    left: 0;\n    right: 0;\n    top: 0;\n    bottom: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    transform: scale(1);\n    transition: transform 300ms ease-in-out;\n    background-color: rgba(43, 43, 43, 0.877);\n    pointer-events: all;\n}\n.add-project-overlay.hide{\n    transform: scale(0);\n    pointer-events: none;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".add-project-header > button{\n    background-color: var(--dark-soft);\n    color: var(--dark-black);\n}\n.add-project-header {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    height: 40px;\n    background: var(--dark-black);\n    padding: 10px;\n    border-bottom: 0.1rem solid var(--dark-soft);\n}\n.add-project-title{\n    font-weight: 700;\n    font-size: 25px;\n    line-height: 1.1;\n    color: var(--dark-soft);\n    display: inline-flex;\n    align-items: center;\n    gap: 0.4rem;\n}\n\n\nbutton.add-project, .cansel-add-project{\n    border-radius: 10px;\n    border: none;\n    cursor: pointer;\n    height: 60%;\n} \n\n#projectName { \n    height: 40px; \n    width: calc(var(--project-width) - 50px); \n    font-size: 19px; margin: 0; \n    align-self: center;\n    border: 1px solid grey; \n    padding: 0px  10px; \n    border-radius: 5px; \n    margin: 15px; \n    background: var(--dark-soft);\n    color: var(--dark-black); \n}\n#projectName::placeholder{\n    color: var(--dark-black);\n}\n\n.add-project-form{\n    display: flex;\n    flex-direction: column;\n    width: var(--project-width);\n    --project-width: 500px;\n    border-radius: 15px;\n    background: var(--dark-black);\n}\n.add-project-overlay{\n    position: fixed;\n    left: 0;\n    right: 0;\n    top: 0;\n    bottom: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    transform: scale(1);\n    transition: transform 300ms ease-in-out;\n    background-color: rgba(43, 43, 43, 0.877);\n    pointer-events: all;\n}\n.add-project-overlay.hide{\n    transform: scale(0);\n    pointer-events: none;\n}\n", "",{"version":3,"sources":["webpack://./src/styles/projectoverlay.css"],"names":[],"mappings":"AAAA;IACI,kCAAkC;IAClC,wBAAwB;AAC5B;AACA;IACI,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;IACnB,YAAY;IACZ,6BAA6B;IAC7B,aAAa;IACb,4CAA4C;AAChD;AACA;IACI,gBAAgB;IAChB,eAAe;IACf,gBAAgB;IAChB,uBAAuB;IACvB,oBAAoB;IACpB,mBAAmB;IACnB,WAAW;AACf;;;AAGA;IACI,mBAAmB;IACnB,YAAY;IACZ,eAAe;IACf,WAAW;AACf;;AAEA;IACI,YAAY;IACZ,wCAAwC;IACxC,eAAe,EAAE,SAAS;IAC1B,kBAAkB;IAClB,sBAAsB;IACtB,kBAAkB;IAClB,kBAAkB;IAClB,YAAY;IACZ,4BAA4B;IAC5B,wBAAwB;AAC5B;AACA;IACI,wBAAwB;AAC5B;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,2BAA2B;IAC3B,sBAAsB;IACtB,mBAAmB;IACnB,6BAA6B;AACjC;AACA;IACI,eAAe;IACf,OAAO;IACP,QAAQ;IACR,MAAM;IACN,SAAS;IACT,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,mBAAmB;IACnB,uCAAuC;IACvC,yCAAyC;IACzC,mBAAmB;AACvB;AACA;IACI,mBAAmB;IACnB,oBAAoB;AACxB","sourcesContent":[".add-project-header > button{\n    background-color: var(--dark-soft);\n    color: var(--dark-black);\n}\n.add-project-header {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    height: 40px;\n    background: var(--dark-black);\n    padding: 10px;\n    border-bottom: 0.1rem solid var(--dark-soft);\n}\n.add-project-title{\n    font-weight: 700;\n    font-size: 25px;\n    line-height: 1.1;\n    color: var(--dark-soft);\n    display: inline-flex;\n    align-items: center;\n    gap: 0.4rem;\n}\n\n\nbutton.add-project, .cansel-add-project{\n    border-radius: 10px;\n    border: none;\n    cursor: pointer;\n    height: 60%;\n} \n\n#projectName { \n    height: 40px; \n    width: calc(var(--project-width) - 50px); \n    font-size: 19px; margin: 0; \n    align-self: center;\n    border: 1px solid grey; \n    padding: 0px  10px; \n    border-radius: 5px; \n    margin: 15px; \n    background: var(--dark-soft);\n    color: var(--dark-black); \n}\n#projectName::placeholder{\n    color: var(--dark-black);\n}\n\n.add-project-form{\n    display: flex;\n    flex-direction: column;\n    width: var(--project-width);\n    --project-width: 500px;\n    border-radius: 15px;\n    background: var(--dark-black);\n}\n.add-project-overlay{\n    position: fixed;\n    left: 0;\n    right: 0;\n    top: 0;\n    bottom: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    transform: scale(1);\n    transition: transform 300ms ease-in-out;\n    background-color: rgba(43, 43, 43, 0.877);\n    pointer-events: all;\n}\n.add-project-overlay.hide{\n    transform: scale(0);\n    pointer-events: none;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1119,7 +1223,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".sidetrack{\n    grid-column: 1/span 2;\n    background-color: var(--dark-black);\n    display: grid;\n    justify-content: center;\n}\n.all-projects{\n    display: grid;\n    grid-auto-rows: 35px;\n    grid-auto-columns: 220px;\n    padding-top: 50px;\n}\n\n.Inbox , .projects{\n    font-weight: bold;\n    color: var(--dark-soft);\n}\n.projects-container{\n    display: flex;\n    justify-content: space-between;\n    height: 30px;\n    align-items: center;\n}\n.projects-container > .new-project{\n    border-radius: 20px;\n    border: none;\n    cursor: pointer;\n    background-color: var(--dark-soft);\n}\n.projects > .project{\n    padding-left: 15px;\n    color: var(--dark-soft);\n    padding: 15px;\n}\n@media (max-width: 910px){\n    .all-projects{\n        display: grid;\n        grid-auto-rows: 24px;\n        grid-auto-columns: 189px;\n        padding-top: 50px;\n    }\n}\n@media (max-width: 650px){\n    .all-projects{\n        display: grid;\n        grid-auto-rows: 20px;\n        grid-auto-columns: 112px;\n        padding-top: 50px;\n    }\n    .projects > .project{\n        padding-left: 15px;\n        color: var(--light-soft);\n        font-size: smaller;\n    }\n    .Inbox , .projects{\n        font-weight: bold;\n        font-size: small;\n    }\n}\n@media (max-width: 455px){\n    .all-projects{\n        display: grid;\n        grid-auto-rows: 20px;\n        grid-auto-columns: 78px;\n        padding-top: 50px;\n    }\n    .projects > .project{\n        padding-left: 15px;\n        color: var(--light-soft);\n        font-size: x-small;\n    }\n    .Inbox , .projects{\n        font-weight: bold;\n        color: var(--dark-soft);\n        font-size: smaller;\n    }\n}", "",{"version":3,"sources":["webpack://./src/styles/sidetrack.css"],"names":[],"mappings":"AAAA;IACI,qBAAqB;IACrB,mCAAmC;IACnC,aAAa;IACb,uBAAuB;AAC3B;AACA;IACI,aAAa;IACb,oBAAoB;IACpB,wBAAwB;IACxB,iBAAiB;AACrB;;AAEA;IACI,iBAAiB;IACjB,uBAAuB;AAC3B;AACA;IACI,aAAa;IACb,8BAA8B;IAC9B,YAAY;IACZ,mBAAmB;AACvB;AACA;IACI,mBAAmB;IACnB,YAAY;IACZ,eAAe;IACf,kCAAkC;AACtC;AACA;IACI,kBAAkB;IAClB,uBAAuB;IACvB,aAAa;AACjB;AACA;IACI;QACI,aAAa;QACb,oBAAoB;QACpB,wBAAwB;QACxB,iBAAiB;IACrB;AACJ;AACA;IACI;QACI,aAAa;QACb,oBAAoB;QACpB,wBAAwB;QACxB,iBAAiB;IACrB;IACA;QACI,kBAAkB;QAClB,wBAAwB;QACxB,kBAAkB;IACtB;IACA;QACI,iBAAiB;QACjB,gBAAgB;IACpB;AACJ;AACA;IACI;QACI,aAAa;QACb,oBAAoB;QACpB,uBAAuB;QACvB,iBAAiB;IACrB;IACA;QACI,kBAAkB;QAClB,wBAAwB;QACxB,kBAAkB;IACtB;IACA;QACI,iBAAiB;QACjB,uBAAuB;QACvB,kBAAkB;IACtB;AACJ","sourcesContent":[".sidetrack{\n    grid-column: 1/span 2;\n    background-color: var(--dark-black);\n    display: grid;\n    justify-content: center;\n}\n.all-projects{\n    display: grid;\n    grid-auto-rows: 35px;\n    grid-auto-columns: 220px;\n    padding-top: 50px;\n}\n\n.Inbox , .projects{\n    font-weight: bold;\n    color: var(--dark-soft);\n}\n.projects-container{\n    display: flex;\n    justify-content: space-between;\n    height: 30px;\n    align-items: center;\n}\n.projects-container > .new-project{\n    border-radius: 20px;\n    border: none;\n    cursor: pointer;\n    background-color: var(--dark-soft);\n}\n.projects > .project{\n    padding-left: 15px;\n    color: var(--dark-soft);\n    padding: 15px;\n}\n@media (max-width: 910px){\n    .all-projects{\n        display: grid;\n        grid-auto-rows: 24px;\n        grid-auto-columns: 189px;\n        padding-top: 50px;\n    }\n}\n@media (max-width: 650px){\n    .all-projects{\n        display: grid;\n        grid-auto-rows: 20px;\n        grid-auto-columns: 112px;\n        padding-top: 50px;\n    }\n    .projects > .project{\n        padding-left: 15px;\n        color: var(--light-soft);\n        font-size: smaller;\n    }\n    .Inbox , .projects{\n        font-weight: bold;\n        font-size: small;\n    }\n}\n@media (max-width: 455px){\n    .all-projects{\n        display: grid;\n        grid-auto-rows: 20px;\n        grid-auto-columns: 78px;\n        padding-top: 50px;\n    }\n    .projects > .project{\n        padding-left: 15px;\n        color: var(--light-soft);\n        font-size: x-small;\n    }\n    .Inbox , .projects{\n        font-weight: bold;\n        color: var(--dark-soft);\n        font-size: smaller;\n    }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".sidetrack{\n    grid-column: 1/span 2;\n    background-color: var(--dark-black);\n    display: grid;\n    justify-content: center;\n    border-right: 0.1rem solid var(--dark-soft);\n}\n.all-projects{\n    display: grid;\n    grid-auto-rows: 35px;\n    grid-auto-columns: 220px;\n    padding-top: 50px;\n}\n\n.Inbox , .projects{\n    font-weight: bold;\n    color: var(--dark-soft);\n    border-bottom: 0.1rem solid var(--dark-soft);\n}\n.projects-container{\n    display: flex;\n    justify-content: space-between;\n    height: 30px;\n    align-items: center;\n    margin-bottom: 2rem;\n}\n.projects-container > .new-project{\n    display: inline-flex;\n    justify-content: center;\n    align-items: center;\n    background-color: var(--dark-soft);\n    padding: 0.2rem;\n    border-radius: 50%;\n    font-size: 1rem;\n    color: var(--dark-black);\n    cursor: pointer;\n}\n.projects > .project{\n    color: var(--dark-soft);\n    padding-bottom: 2rem;\n    padding-left: 1rem;\n    margin-left: 0.5rem;\n    border-left: 1px solid;\n}\n.projects > .project:last-child{\n    padding-bottom: 0;\n}\n@media (max-width: 910px){\n    .all-projects{\n        display: grid;\n        grid-auto-rows: 24px;\n        grid-auto-columns: 189px;\n        padding-top: 50px;\n    }\n}\n@media (max-width: 650px){\n    .all-projects{\n        display: grid;\n        grid-auto-rows: 20px;\n        grid-auto-columns: 112px;\n        padding-top: 50px;\n    }\n    .projects > .project{\n        padding-left: 15px;\n        /* font-size: smaller; */\n    }\n    .Inbox , .projects{\n        font-weight: bold;\n        /* font-size: small; */\n    }\n}\n@media (max-width: 455px){\n    .all-projects{\n        display: grid;\n        grid-auto-rows: 20px;\n        grid-auto-columns: 78px;\n        padding-top: 50px;\n    }\n    .projects > .project{\n        padding-left: 15px;\n    }\n    .Inbox , .projects{\n        font-weight: bold;\n    }\n}", "",{"version":3,"sources":["webpack://./src/styles/sidetrack.css"],"names":[],"mappings":"AAAA;IACI,qBAAqB;IACrB,mCAAmC;IACnC,aAAa;IACb,uBAAuB;IACvB,2CAA2C;AAC/C;AACA;IACI,aAAa;IACb,oBAAoB;IACpB,wBAAwB;IACxB,iBAAiB;AACrB;;AAEA;IACI,iBAAiB;IACjB,uBAAuB;IACvB,4CAA4C;AAChD;AACA;IACI,aAAa;IACb,8BAA8B;IAC9B,YAAY;IACZ,mBAAmB;IACnB,mBAAmB;AACvB;AACA;IACI,oBAAoB;IACpB,uBAAuB;IACvB,mBAAmB;IACnB,kCAAkC;IAClC,eAAe;IACf,kBAAkB;IAClB,eAAe;IACf,wBAAwB;IACxB,eAAe;AACnB;AACA;IACI,uBAAuB;IACvB,oBAAoB;IACpB,kBAAkB;IAClB,mBAAmB;IACnB,sBAAsB;AAC1B;AACA;IACI,iBAAiB;AACrB;AACA;IACI;QACI,aAAa;QACb,oBAAoB;QACpB,wBAAwB;QACxB,iBAAiB;IACrB;AACJ;AACA;IACI;QACI,aAAa;QACb,oBAAoB;QACpB,wBAAwB;QACxB,iBAAiB;IACrB;IACA;QACI,kBAAkB;QAClB,wBAAwB;IAC5B;IACA;QACI,iBAAiB;QACjB,sBAAsB;IAC1B;AACJ;AACA;IACI;QACI,aAAa;QACb,oBAAoB;QACpB,uBAAuB;QACvB,iBAAiB;IACrB;IACA;QACI,kBAAkB;IACtB;IACA;QACI,iBAAiB;IACrB;AACJ","sourcesContent":[".sidetrack{\n    grid-column: 1/span 2;\n    background-color: var(--dark-black);\n    display: grid;\n    justify-content: center;\n    border-right: 0.1rem solid var(--dark-soft);\n}\n.all-projects{\n    display: grid;\n    grid-auto-rows: 35px;\n    grid-auto-columns: 220px;\n    padding-top: 50px;\n}\n\n.Inbox , .projects{\n    font-weight: bold;\n    color: var(--dark-soft);\n    border-bottom: 0.1rem solid var(--dark-soft);\n}\n.projects-container{\n    display: flex;\n    justify-content: space-between;\n    height: 30px;\n    align-items: center;\n    margin-bottom: 2rem;\n}\n.projects-container > .new-project{\n    display: inline-flex;\n    justify-content: center;\n    align-items: center;\n    background-color: var(--dark-soft);\n    padding: 0.2rem;\n    border-radius: 50%;\n    font-size: 1rem;\n    color: var(--dark-black);\n    cursor: pointer;\n}\n.projects > .project{\n    color: var(--dark-soft);\n    padding-bottom: 2rem;\n    padding-left: 1rem;\n    margin-left: 0.5rem;\n    border-left: 1px solid;\n}\n.projects > .project:last-child{\n    padding-bottom: 0;\n}\n@media (max-width: 910px){\n    .all-projects{\n        display: grid;\n        grid-auto-rows: 24px;\n        grid-auto-columns: 189px;\n        padding-top: 50px;\n    }\n}\n@media (max-width: 650px){\n    .all-projects{\n        display: grid;\n        grid-auto-rows: 20px;\n        grid-auto-columns: 112px;\n        padding-top: 50px;\n    }\n    .projects > .project{\n        padding-left: 15px;\n        /* font-size: smaller; */\n    }\n    .Inbox , .projects{\n        font-weight: bold;\n        /* font-size: small; */\n    }\n}\n@media (max-width: 455px){\n    .all-projects{\n        display: grid;\n        grid-auto-rows: 20px;\n        grid-auto-columns: 78px;\n        padding-top: 50px;\n    }\n    .projects > .project{\n        padding-left: 15px;\n    }\n    .Inbox , .projects{\n        font-weight: bold;\n    }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1145,7 +1249,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".input-button-container{\n    display: flex;\n    gap: 20px;\n   --input-button-height: 30px;\n}\n\n\n\n.add-task-form{\n    display: flex;\n    flex-direction: column;\n    width: 400px;\n    gap: 20px;\n    border: 2px solid black;\n    padding: 15px;\n    border-radius: 15px;\n    background-color: var(--light-soft);\n    color: var(--dark-black);\n}\n\n\n.input-button-container > div{\n    border: 1px solid black;\n    justify-content: center;\n    align-items: center;\n    text-align: center;\n    display: flex;\n    height: var(--input-button-height);\n    border-radius: 5px;\n    cursor: pointer;\n    padding: 4px 6px 4px 4px;\n}\n#taskName{\n    font-size: 18px;\n    padding-left: 5px;\n}\n\n#taskName, #description{\n    border: none;\n}\n.add-task-footer{\n    display: flex;\n    justify-content: space-between;\n    gap: 7px;\n}\n\n/* priority  */\n.priority-container, .label-container{\n    position: relative;\n}\n.priority-list,.label-list{\n    display: none;\n    position: absolute;\n    top: var(--input-button-height);\n    background-color: white;\n    padding: 3px;\n    border-radius: 6px;\n}\n.priority-list{\n    width: 78px;\n}\n.priority-list > li{\n    padding: 4px;\n    color: var(--dark-black);\n}\n\nli:hover{\n    background:  var(--dark-black);\n    color: var(--light-soft);\n    border-radius: 6px;\n}\n\n\n\n\n/* label */\n.label-list{\n    width: 100px;\n}\n.label-list > div.label{\n    display: flex;\n    justify-content: start;\n    align-items: center;\n    gap: 8px;\n    color: var(--dark-black);\n}\n\n.add-task-overlay{\n    position: fixed;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    top: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    pointer-events: all;\n    background: rgba(2, 2, 26, 0.642);\n    z-index: 1;\n    transform: scale(1);\n    transition: transform 300ms ease-in-out ;\n}\n.add-task-overlay.hide{\n    transform: scale(0);\n    pointer-events: none;\n}\n.project-container{\n    align-self: flex-start;\n}\nbutton.add-label-button:active { \n    background: var(--dark-soft); \n}; \nbutton.add-label-button:hover { \n    background: var(--dark-black); \n};\nbutton.add-label-button {\n    border: none;\n    font-size: smaller;\n    font-weight: bolder;\n    width: 50%;\n    background: var(--dark-black);\n    color: var(--light-soft);\n}\n\n.input-button-container > div:hover {\n    background: var(--dark-black);\n    color: var(--light-soft);\n}\n\n.priority-container:hover .priority-list {\n    display: block;\n}\n.label-container:hover .label-list {\n    display: block;\n}\n@media (max-width: 450px){\n    .add-task-form{\n        display: flex;\n        flex-direction: column;\n        width: 281px;\n        gap: 20px;\n        border: 2px solid black;\n        padding: 15px;\n        border-radius: 15px;\n        background-color: var(--light-soft);\n        color: var(--dark-black);\n        font-size: 14px;\n    }\n    #taskName, #description {\n        border: none;\n        font-size: 17px;\n    }\n    .input-button-container {\n        display: flex;\n        gap: 0px;\n        --input-button-height: 30px;\n    }\n}", "",{"version":3,"sources":["webpack://./src/styles/taskoverlay.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,SAAS;GACV,2BAA2B;AAC9B;;;;AAIA;IACI,aAAa;IACb,sBAAsB;IACtB,YAAY;IACZ,SAAS;IACT,uBAAuB;IACvB,aAAa;IACb,mBAAmB;IACnB,mCAAmC;IACnC,wBAAwB;AAC5B;;;AAGA;IACI,uBAAuB;IACvB,uBAAuB;IACvB,mBAAmB;IACnB,kBAAkB;IAClB,aAAa;IACb,kCAAkC;IAClC,kBAAkB;IAClB,eAAe;IACf,wBAAwB;AAC5B;AACA;IACI,eAAe;IACf,iBAAiB;AACrB;;AAEA;IACI,YAAY;AAChB;AACA;IACI,aAAa;IACb,8BAA8B;IAC9B,QAAQ;AACZ;;AAEA,cAAc;AACd;IACI,kBAAkB;AACtB;AACA;IACI,aAAa;IACb,kBAAkB;IAClB,+BAA+B;IAC/B,uBAAuB;IACvB,YAAY;IACZ,kBAAkB;AACtB;AACA;IACI,WAAW;AACf;AACA;IACI,YAAY;IACZ,wBAAwB;AAC5B;;AAEA;IACI,8BAA8B;IAC9B,wBAAwB;IACxB,kBAAkB;AACtB;;;;;AAKA,UAAU;AACV;IACI,YAAY;AAChB;AACA;IACI,aAAa;IACb,sBAAsB;IACtB,mBAAmB;IACnB,QAAQ;IACR,wBAAwB;AAC5B;;AAEA;IACI,eAAe;IACf,OAAO;IACP,QAAQ;IACR,SAAS;IACT,MAAM;IACN,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,mBAAmB;IACnB,iCAAiC;IACjC,UAAU;IACV,mBAAmB;IACnB,wCAAwC;AAC5C;AACA;IACI,mBAAmB;IACnB,oBAAoB;AACxB;AACA;IACI,sBAAsB;AAC1B;AACA;IACI,4BAA4B;AAChC,CAAA;AACA;IACI,6BAA6B;AACjC,CAAA;AACA;IACI,YAAY;IACZ,kBAAkB;IAClB,mBAAmB;IACnB,UAAU;IACV,6BAA6B;IAC7B,wBAAwB;AAC5B;;AAEA;IACI,6BAA6B;IAC7B,wBAAwB;AAC5B;;AAEA;IACI,cAAc;AAClB;AACA;IACI,cAAc;AAClB;AACA;IACI;QACI,aAAa;QACb,sBAAsB;QACtB,YAAY;QACZ,SAAS;QACT,uBAAuB;QACvB,aAAa;QACb,mBAAmB;QACnB,mCAAmC;QACnC,wBAAwB;QACxB,eAAe;IACnB;IACA;QACI,YAAY;QACZ,eAAe;IACnB;IACA;QACI,aAAa;QACb,QAAQ;QACR,2BAA2B;IAC/B;AACJ","sourcesContent":[".input-button-container{\n    display: flex;\n    gap: 20px;\n   --input-button-height: 30px;\n}\n\n\n\n.add-task-form{\n    display: flex;\n    flex-direction: column;\n    width: 400px;\n    gap: 20px;\n    border: 2px solid black;\n    padding: 15px;\n    border-radius: 15px;\n    background-color: var(--light-soft);\n    color: var(--dark-black);\n}\n\n\n.input-button-container > div{\n    border: 1px solid black;\n    justify-content: center;\n    align-items: center;\n    text-align: center;\n    display: flex;\n    height: var(--input-button-height);\n    border-radius: 5px;\n    cursor: pointer;\n    padding: 4px 6px 4px 4px;\n}\n#taskName{\n    font-size: 18px;\n    padding-left: 5px;\n}\n\n#taskName, #description{\n    border: none;\n}\n.add-task-footer{\n    display: flex;\n    justify-content: space-between;\n    gap: 7px;\n}\n\n/* priority  */\n.priority-container, .label-container{\n    position: relative;\n}\n.priority-list,.label-list{\n    display: none;\n    position: absolute;\n    top: var(--input-button-height);\n    background-color: white;\n    padding: 3px;\n    border-radius: 6px;\n}\n.priority-list{\n    width: 78px;\n}\n.priority-list > li{\n    padding: 4px;\n    color: var(--dark-black);\n}\n\nli:hover{\n    background:  var(--dark-black);\n    color: var(--light-soft);\n    border-radius: 6px;\n}\n\n\n\n\n/* label */\n.label-list{\n    width: 100px;\n}\n.label-list > div.label{\n    display: flex;\n    justify-content: start;\n    align-items: center;\n    gap: 8px;\n    color: var(--dark-black);\n}\n\n.add-task-overlay{\n    position: fixed;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    top: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    pointer-events: all;\n    background: rgba(2, 2, 26, 0.642);\n    z-index: 1;\n    transform: scale(1);\n    transition: transform 300ms ease-in-out ;\n}\n.add-task-overlay.hide{\n    transform: scale(0);\n    pointer-events: none;\n}\n.project-container{\n    align-self: flex-start;\n}\nbutton.add-label-button:active { \n    background: var(--dark-soft); \n}; \nbutton.add-label-button:hover { \n    background: var(--dark-black); \n};\nbutton.add-label-button {\n    border: none;\n    font-size: smaller;\n    font-weight: bolder;\n    width: 50%;\n    background: var(--dark-black);\n    color: var(--light-soft);\n}\n\n.input-button-container > div:hover {\n    background: var(--dark-black);\n    color: var(--light-soft);\n}\n\n.priority-container:hover .priority-list {\n    display: block;\n}\n.label-container:hover .label-list {\n    display: block;\n}\n@media (max-width: 450px){\n    .add-task-form{\n        display: flex;\n        flex-direction: column;\n        width: 281px;\n        gap: 20px;\n        border: 2px solid black;\n        padding: 15px;\n        border-radius: 15px;\n        background-color: var(--light-soft);\n        color: var(--dark-black);\n        font-size: 14px;\n    }\n    #taskName, #description {\n        border: none;\n        font-size: 17px;\n    }\n    .input-button-container {\n        display: flex;\n        gap: 0px;\n        --input-button-height: 30px;\n    }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".input-button-container{\n    display: flex;\n    gap: 20px;\n   --input-button-height: 30px;\n}\n\n\n\n.add-task-form{\n    display: flex;\n    flex-direction: column;\n    width: 400px;\n    gap: 20px;\n    border: 2px solid black;\n    padding: 15px;\n    border-radius: 15px;\n    background-color: var(--dark-black);\n    color: var(--dark-soft);\n}\n\n\n.input-button-container > div{\n    border: 1px solid black;\n    justify-content: center;\n    align-items: center;\n    text-align: center;\n    display: flex;\n    height: var(--input-button-height);\n    border-radius: 5px;\n    cursor: pointer;\n    padding: 4px 6px 4px 4px;\n}\n#taskName{\n    font-size: 18px;\n    padding-left: 5px;\n}\n\n#taskName, #description{\n    border: none;\n}\n.add-task-footer{\n    display: flex;\n    justify-content: space-between;\n    gap: 7px;\n}\n\n/* priority  */\n.priority-container, .label-container{\n    position: relative;\n}\n.priority-list,.label-list{\n    display: none;\n    position: absolute;\n    top: var(--input-button-height);\n    background-color: var(--dark-black);\n    padding: 3px;\n    border-radius: 6px;\n}\n\n.priority-list{\n    width: 78px;\n}\n.priority-list > li{\n    padding: 4px;\n    color: var(--dark-soft);\n}\n\nli:hover{\n    background:  var(--meduim-soft);\n    color: var(--dark-black);\n    border-radius: 6px;\n}\n\n/* label */\n.label-list{\n    width: 100px;\n}\n.label-list > div.label{\n    display: flex;\n    justify-content: start;\n    align-items: center;\n    gap: 8px;\n    color: var(--dark-soft);\n    padding: 0.5rem 0px;\n}\n\n.add-task-overlay{\n    position: fixed;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    top: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    pointer-events: all;\n    background: rgba(2, 2, 26, 0.642);\n    z-index: 1;\n    transform: scale(1);\n    transition: transform 300ms ease-in-out ;\n}\n.add-task-overlay.hide{\n    transform: scale(0);\n    pointer-events: none;\n}\n.project-container{\n    align-self: flex-start;\n}\nbutton.add-label-button:active { \n    background: var(--dark-soft); \n}; \nbutton.add-label-button:hover { \n    background: var(--dark-black); \n};\nbutton.add-label-button {\n    border: none;\n    font-size: smaller;\n    font-weight: bolder;\n    width: 50%;\n    background: var(--dark-black);\n    color: var(--light-soft);\n}\n\n.input-button-container > div:hover {\n    background: var(--dark-black);\n    color: var(--light-soft);\n}\n\n.priority-container:hover .priority-list {\n    display: block;\n}\n.label-container:hover .label-list {\n    display: block;\n}\n@media (max-width: 450px){\n    .add-task-form{\n        display: flex;\n        flex-direction: column;\n        width: 281px;\n        gap: 20px;\n        border: 2px solid black;\n        padding: 15px;\n        border-radius: 15px;\n        background-color: var(--light-soft);\n        color: var(--dark-black);\n    }\n    #taskName, #description {\n        border: none;\n    }\n    .input-button-container {\n        display: flex;\n        gap: 0px;\n        --input-button-height: 30px;\n    }\n}", "",{"version":3,"sources":["webpack://./src/styles/taskoverlay.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,SAAS;GACV,2BAA2B;AAC9B;;;;AAIA;IACI,aAAa;IACb,sBAAsB;IACtB,YAAY;IACZ,SAAS;IACT,uBAAuB;IACvB,aAAa;IACb,mBAAmB;IACnB,mCAAmC;IACnC,uBAAuB;AAC3B;;;AAGA;IACI,uBAAuB;IACvB,uBAAuB;IACvB,mBAAmB;IACnB,kBAAkB;IAClB,aAAa;IACb,kCAAkC;IAClC,kBAAkB;IAClB,eAAe;IACf,wBAAwB;AAC5B;AACA;IACI,eAAe;IACf,iBAAiB;AACrB;;AAEA;IACI,YAAY;AAChB;AACA;IACI,aAAa;IACb,8BAA8B;IAC9B,QAAQ;AACZ;;AAEA,cAAc;AACd;IACI,kBAAkB;AACtB;AACA;IACI,aAAa;IACb,kBAAkB;IAClB,+BAA+B;IAC/B,mCAAmC;IACnC,YAAY;IACZ,kBAAkB;AACtB;;AAEA;IACI,WAAW;AACf;AACA;IACI,YAAY;IACZ,uBAAuB;AAC3B;;AAEA;IACI,+BAA+B;IAC/B,wBAAwB;IACxB,kBAAkB;AACtB;;AAEA,UAAU;AACV;IACI,YAAY;AAChB;AACA;IACI,aAAa;IACb,sBAAsB;IACtB,mBAAmB;IACnB,QAAQ;IACR,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,eAAe;IACf,OAAO;IACP,QAAQ;IACR,SAAS;IACT,MAAM;IACN,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,mBAAmB;IACnB,iCAAiC;IACjC,UAAU;IACV,mBAAmB;IACnB,wCAAwC;AAC5C;AACA;IACI,mBAAmB;IACnB,oBAAoB;AACxB;AACA;IACI,sBAAsB;AAC1B;AACA;IACI,4BAA4B;AAChC,CAAA;AACA;IACI,6BAA6B;AACjC,CAAA;AACA;IACI,YAAY;IACZ,kBAAkB;IAClB,mBAAmB;IACnB,UAAU;IACV,6BAA6B;IAC7B,wBAAwB;AAC5B;;AAEA;IACI,6BAA6B;IAC7B,wBAAwB;AAC5B;;AAEA;IACI,cAAc;AAClB;AACA;IACI,cAAc;AAClB;AACA;IACI;QACI,aAAa;QACb,sBAAsB;QACtB,YAAY;QACZ,SAAS;QACT,uBAAuB;QACvB,aAAa;QACb,mBAAmB;QACnB,mCAAmC;QACnC,wBAAwB;IAC5B;IACA;QACI,YAAY;IAChB;IACA;QACI,aAAa;QACb,QAAQ;QACR,2BAA2B;IAC/B;AACJ","sourcesContent":[".input-button-container{\n    display: flex;\n    gap: 20px;\n   --input-button-height: 30px;\n}\n\n\n\n.add-task-form{\n    display: flex;\n    flex-direction: column;\n    width: 400px;\n    gap: 20px;\n    border: 2px solid black;\n    padding: 15px;\n    border-radius: 15px;\n    background-color: var(--dark-black);\n    color: var(--dark-soft);\n}\n\n\n.input-button-container > div{\n    border: 1px solid black;\n    justify-content: center;\n    align-items: center;\n    text-align: center;\n    display: flex;\n    height: var(--input-button-height);\n    border-radius: 5px;\n    cursor: pointer;\n    padding: 4px 6px 4px 4px;\n}\n#taskName{\n    font-size: 18px;\n    padding-left: 5px;\n}\n\n#taskName, #description{\n    border: none;\n}\n.add-task-footer{\n    display: flex;\n    justify-content: space-between;\n    gap: 7px;\n}\n\n/* priority  */\n.priority-container, .label-container{\n    position: relative;\n}\n.priority-list,.label-list{\n    display: none;\n    position: absolute;\n    top: var(--input-button-height);\n    background-color: var(--dark-black);\n    padding: 3px;\n    border-radius: 6px;\n}\n\n.priority-list{\n    width: 78px;\n}\n.priority-list > li{\n    padding: 4px;\n    color: var(--dark-soft);\n}\n\nli:hover{\n    background:  var(--meduim-soft);\n    color: var(--dark-black);\n    border-radius: 6px;\n}\n\n/* label */\n.label-list{\n    width: 100px;\n}\n.label-list > div.label{\n    display: flex;\n    justify-content: start;\n    align-items: center;\n    gap: 8px;\n    color: var(--dark-soft);\n    padding: 0.5rem 0px;\n}\n\n.add-task-overlay{\n    position: fixed;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    top: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    pointer-events: all;\n    background: rgba(2, 2, 26, 0.642);\n    z-index: 1;\n    transform: scale(1);\n    transition: transform 300ms ease-in-out ;\n}\n.add-task-overlay.hide{\n    transform: scale(0);\n    pointer-events: none;\n}\n.project-container{\n    align-self: flex-start;\n}\nbutton.add-label-button:active { \n    background: var(--dark-soft); \n}; \nbutton.add-label-button:hover { \n    background: var(--dark-black); \n};\nbutton.add-label-button {\n    border: none;\n    font-size: smaller;\n    font-weight: bolder;\n    width: 50%;\n    background: var(--dark-black);\n    color: var(--light-soft);\n}\n\n.input-button-container > div:hover {\n    background: var(--dark-black);\n    color: var(--light-soft);\n}\n\n.priority-container:hover .priority-list {\n    display: block;\n}\n.label-container:hover .label-list {\n    display: block;\n}\n@media (max-width: 450px){\n    .add-task-form{\n        display: flex;\n        flex-direction: column;\n        width: 281px;\n        gap: 20px;\n        border: 2px solid black;\n        padding: 15px;\n        border-radius: 15px;\n        background-color: var(--light-soft);\n        color: var(--dark-black);\n    }\n    #taskName, #description {\n        border: none;\n    }\n    .input-button-container {\n        display: flex;\n        gap: 0px;\n        --input-button-height: 30px;\n    }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1268,6 +1372,188 @@ module.exports = function (item) {
   }
   return [content].join("\n");
 };
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/esm/_lib/requiredArgs/index.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/date-fns/esm/_lib/requiredArgs/index.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ requiredArgs)
+/* harmony export */ });
+function requiredArgs(required, args) {
+  if (args.length < required) {
+    throw new TypeError(required + ' argument' + (required > 1 ? 's' : '') + ' required, but only ' + args.length + ' present');
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/esm/compareAsc/index.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/date-fns/esm/compareAsc/index.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ compareAsc)
+/* harmony export */ });
+/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../toDate/index.js */ "./node_modules/date-fns/esm/toDate/index.js");
+/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_lib/requiredArgs/index.js */ "./node_modules/date-fns/esm/_lib/requiredArgs/index.js");
+
+
+/**
+ * @name compareAsc
+ * @category Common Helpers
+ * @summary Compare the two dates and return -1, 0 or 1.
+ *
+ * @description
+ * Compare the two dates and return 1 if the first date is after the second,
+ * -1 if the first date is before the second or 0 if dates are equal.
+ *
+ * @param {Date|Number} dateLeft - the first date to compare
+ * @param {Date|Number} dateRight - the second date to compare
+ * @returns {Number} the result of the comparison
+ * @throws {TypeError} 2 arguments required
+ *
+ * @example
+ * // Compare 11 February 1987 and 10 July 1989:
+ * const result = compareAsc(new Date(1987, 1, 11), new Date(1989, 6, 10))
+ * //=> -1
+ *
+ * @example
+ * // Sort the array of dates:
+ * const result = [
+ *   new Date(1995, 6, 2),
+ *   new Date(1987, 1, 11),
+ *   new Date(1989, 6, 10)
+ * ].sort(compareAsc)
+ * //=> [
+ * //   Wed Feb 11 1987 00:00:00,
+ * //   Mon Jul 10 1989 00:00:00,
+ * //   Sun Jul 02 1995 00:00:00
+ * // ]
+ */
+function compareAsc(dirtyDateLeft, dirtyDateRight) {
+  (0,_lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__["default"])(2, arguments);
+  var dateLeft = (0,_toDate_index_js__WEBPACK_IMPORTED_MODULE_1__["default"])(dirtyDateLeft);
+  var dateRight = (0,_toDate_index_js__WEBPACK_IMPORTED_MODULE_1__["default"])(dirtyDateRight);
+  var diff = dateLeft.getTime() - dateRight.getTime();
+  if (diff < 0) {
+    return -1;
+  } else if (diff > 0) {
+    return 1;
+    // Return 0 if diff is 0; return NaN if diff is NaN
+  } else {
+    return diff;
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/date-fns/esm/toDate/index.js":
+/*!***************************************************!*\
+  !*** ./node_modules/date-fns/esm/toDate/index.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ toDate)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/typeof */ "./node_modules/@babel/runtime/helpers/esm/typeof.js");
+/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../_lib/requiredArgs/index.js */ "./node_modules/date-fns/esm/_lib/requiredArgs/index.js");
+
+
+/**
+ * @name toDate
+ * @category Common Helpers
+ * @summary Convert the given argument to an instance of Date.
+ *
+ * @description
+ * Convert the given argument to an instance of Date.
+ *
+ * If the argument is an instance of Date, the function returns its clone.
+ *
+ * If the argument is a number, it is treated as a timestamp.
+ *
+ * If the argument is none of the above, the function returns Invalid Date.
+ *
+ * **Note**: *all* Date arguments passed to any *date-fns* function is processed by `toDate`.
+ *
+ * @param {Date|Number} argument - the value to convert
+ * @returns {Date} the parsed date in the local time zone
+ * @throws {TypeError} 1 argument required
+ *
+ * @example
+ * // Clone the date:
+ * const result = toDate(new Date(2014, 1, 11, 11, 30, 30))
+ * //=> Tue Feb 11 2014 11:30:30
+ *
+ * @example
+ * // Convert the timestamp to date:
+ * const result = toDate(1392098430000)
+ * //=> Tue Feb 11 2014 11:30:30
+ */
+function toDate(argument) {
+  (0,_lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_1__["default"])(1, arguments);
+  var argStr = Object.prototype.toString.call(argument);
+
+  // Clone the date
+  if (argument instanceof Date || (0,_babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_0__["default"])(argument) === 'object' && argStr === '[object Date]') {
+    // Prevent the date to lose the milliseconds when passed to new Date() in IE10
+    return new Date(argument.getTime());
+  } else if (typeof argument === 'number' || argStr === '[object Number]') {
+    return new Date(argument);
+  } else {
+    if ((typeof argument === 'string' || argStr === '[object String]') && typeof console !== 'undefined') {
+      // eslint-disable-next-line no-console
+      console.warn("Starting with v2.0.0-beta.1 date-fns doesn't accept strings as date arguments. Please use `parseISO` to parse strings. See: https://github.com/date-fns/date-fns/blob/master/docs/upgradeGuide.md#string-arguments");
+      // eslint-disable-next-line no-console
+      console.warn(new Error().stack);
+    }
+    return new Date(NaN);
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/linkclickablenode/src/scripts/linkClickable.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/linkclickablenode/src/scripts/linkClickable.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "linkClickable": () => (/* binding */ linkClickable)
+/* harmony export */ });
+const hide = (object) => {
+    object.classList.add("hide");
+};
+const show = (object) => {
+    object.classList.remove("hide");
+};
+const linkClickable = (linker, linkable) => {
+    linker.addEventListener('click' , (e) => {
+        if(linkable.classList.contains("hide")){
+            show(linkable);
+        }else{
+            hide(linkable)
+        }
+    })
+    document.addEventListener('click', (e) => {
+        if(!linker.contains(e.target)){    
+            hide(linkable)
+        }
+    })
+}
+
 
 /***/ }),
 
@@ -1968,6 +2254,28 @@ function styleTagTransform(css, styleElement) {
 }
 module.exports = styleTagTransform;
 
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/typeof.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/typeof.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _typeof)
+/* harmony export */ });
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+
+  return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
+    return typeof obj;
+  } : function (obj) {
+    return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+  }, _typeof(obj);
+}
+
 /***/ })
 
 /******/ 	});
@@ -2073,4 +2381,4 @@ console.log(" to finish");
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.5adc710a9cc99c22e932.js.map
+//# sourceMappingURL=bundle.5f121bbe6ccd73c58e1e.js.map
