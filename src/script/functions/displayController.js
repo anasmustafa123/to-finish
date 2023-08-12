@@ -99,11 +99,11 @@ const displayController = () => {
   })
   /* openning addtask form */
   addTaskButton.addEventListener('click', () => {
-    showTaskForm()
+    showTaskForm();
   })
   /* submit addtask form */
   taskInput.addEventListener('submit', (event) => {
-    event.preventDefault()
+    event.preventDefault();
     const { taskName, description, date, project, priority, labels } =
       addTaskData()
     const newTask = new task(

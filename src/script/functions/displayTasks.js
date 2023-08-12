@@ -15,7 +15,7 @@ const appendAllTasksFromStorage = () => {
 }
 const appendNewTaskNode = (newTask) => {
   /* add to all tasks as default used with(appendGroups, appendTasks)  */
-  addNewTaskNode(newTask.name, newTask.project, newTask.label);
+  addNewTaskNode(newTask.name, newTask.project, newTask.date ,newTask.label);
   if (isGrouped()){
     const {key} = addOneTaskToGroup(newTask)
     console.log(groupTasks[key])

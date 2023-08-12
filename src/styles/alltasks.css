@@ -124,6 +124,14 @@ h2.header{
   align-self: center;
   color: var(--dark-black);
 }
+.tdate{
+  margin-left: 2rem;
+  display: inline-flex;
+  border-radius: 0.2rem;
+  padding: 0.1rem 0.5rem;
+  font-weight: 600;
+  background-color: var(--dark-black);
+}
 .p-name {
   position: absolute;
   bottom: 7px;

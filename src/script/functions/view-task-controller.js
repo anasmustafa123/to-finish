@@ -19,7 +19,7 @@ const clearEmptyRGroupNodes = () => {
     }
   })
 }
-const addNewTaskNode = (taskName, project, labels) => {
+const addNewTaskNode = (taskName, project, date, labels) => {
   const taskContainer = document.querySelector(".all-tasks");
   const lastTask = document.querySelector(`[index = '${getLastTaskIndex()}']`);
   let newTaskNode = undefined;
@@ -28,6 +28,7 @@ const addNewTaskNode = (taskName, project, labels) => {
       newTaskNode.setAttribute("index" ,`${Number(lastTask.getAttribute("index")) + 1}`);
       newTaskNode.querySelector(".p-title").textContent = taskName;
       newTaskNode.querySelector(".p-name").textContent =  project;
+      newTaskNode.querySelector(".tdate").textContent = date;
       const labelList =  newTaskNode.querySelector(".labels-list");
       newTaskNode.querySelector("#task").checked = false;
       labelList.textContent = "";
@@ -35,7 +36,7 @@ const addNewTaskNode = (taskName, project, labels) => {
           labelList.appendChild(createNewLabelNode(label));
       })
   }else{
-  newTaskNode = createNewTaskNode("1",taskName, project, labels);
+  newTaskNode = createNewTaskNode("1",taskName, project, date,labels);
   }
   newTaskNode.querySelector("input").addEventListener("change",()=>{
       document.querySelector(".all-tasks").removeChild(newTaskNode);
@@ -44,7 +45,7 @@ const addNewTaskNode = (taskName, project, labels) => {
   console.log("check is task added to origin:")
   console.log(taskContainer)  
 };
-const createNewTaskNode = (index, taskTitle, pName, labels)=>{
+const createNewTaskNode = (index, taskTitle, pName, taskdate_,labels)=>{
   const labelsList = document.createElement("div");
   labelsList.className = "labels-list";
   labels.forEach(label =>{
@@ -59,10 +60,13 @@ const createNewTaskNode = (index, taskTitle, pName, labels)=>{
   newTaskNode.setAttribute("index",index)
   const checkbox = document.createElement("input");
   const ptitle = document.createElement("div");
+  const taskDate = document.createElement("div");
   const pname = document.createElement("div");
   ptitle.classList.add("p-title");
+  taskDate.classList.add('tdate');
   pname.classList.add("p-name");
   ptitle.textContent = taskTitle;
+  taskDate.textContent = taskdate_;
   pname.textContent = pName;
   checkbox.type = "checkbox";
   checkbox.id = "task"
@@ -70,6 +74,7 @@ const createNewTaskNode = (index, taskTitle, pName, labels)=>{
   taskFirstLine.appendChild(checkbox);
   taskFirstLine.appendChild(ptitle);
   taskFirstLine.appendChild(labelsList);
+  taskSecondLine.appendChild(taskDate);
   taskSecondLine.appendChild(pname);
   newTaskNode.appendChild(taskFirstLine);
   newTaskNode.appendChild(taskSecondLine);
@@ -94,24 +99,7 @@ const addAllTasks = (tasks) => {
   clearEmptyRGroupNodes()
   removeGroupsContainer()
 }
-/* const appendSingleTaskNodeToGroup = (singleGroup, key) =>{
-  const allTasksNode = document.querySelector('.all-tasks')
 
-    let groupNode = document.querySelector(`.${key}`)
-    if (!groupNode) {
-      groupNode = createGroupNode(key)
-    }
-    singleGroup.forEach((taskContainer) => {
-      const old = allTasksNode.querySelector(
-        `[index = '${taskContainer[1]}']`
-      )
-      const task = old.cloneNode(true)
-      old.remove()
-      groupNode.appendChild(task)
-    })
-    allTasksNode.appendChild(groupNode)
-    addGroupsContainer();
-} */
 const addGroupsContainer = () => {
   const allTasksNode = document.querySelector('.all-tasks')
   let groupsWrapper = document.querySelector('.groups-wrapper')
@@ -138,7 +126,9 @@ const addAllGroups = (groupTasks) => {
   const allTasksNode = document.querySelector('.all-tasks')
   for (const key in groupTasks) {
     if (groupTasks[key].length !== 0) {
+      /* get group node if exist */
       let groupNode = document.querySelector(`.${key}`)
+      /* if not exist create it */
       if (!groupNode) {
         groupNode = createGroupNode(key)
       }
@@ -146,6 +136,7 @@ const addAllGroups = (groupTasks) => {
         const old = allTasksNode.querySelector(
           `[index = '${taskContainer[1]}']`
         )
+        /* assume all tasks are added already to the dom (p error)*/
         const task = old.cloneNode(true)
         old.remove()
         groupNode.appendChild(task)
