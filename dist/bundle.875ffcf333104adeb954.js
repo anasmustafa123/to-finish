@@ -126,6 +126,26 @@ sidetrack.innerHTML = "<div class=\"all-projects\">\n<div class=\"Inbox\">Inbox<
 
 /***/ }),
 
+/***/ "./src/script/components/taskContent.js":
+/*!**********************************************!*\
+  !*** ./src/script/components/taskContent.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "overlayContainer": () => (/* binding */ overlayContainer)
+/* harmony export */ });
+/* harmony import */ var _styles_taskContent_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../styles/taskContent.css */ "./src/styles/taskContent.css");
+
+var overlayContainer = document.createElement('div');
+overlayContainer.classList.add('overlay-container');
+overlayContainer.classList.add('hide');
+overlayContainer.innerHTML = "\n<section class=\"taskContent-container hide\">\n        <div class=\"taskContent-header\">\n            <div class=\"taskContent-addSubTask\">\n                <i class='bx bx-plus' ></i>\n                add sub task\n            </div>\n            <i class='bx bx-x-circle textContent-cansel-task'></i>\n        </div>\n        <div class=\"taskContent-taskName\">\n            <!--  <input type=\"checkbox\" name=\"task\" id=\"\"> -->\n            <p class=\"taskContent-taskName-name\">task name</p>\n        </div>\n        <div class=\"taskContent-grid-container\">\n            <div class=\"taskContent-input-container\">\n                <textarea name=\"description\" id=\"description\" cols=\"30\" rows=\"10\" class=\"taskContent-description\" placeholder=\"description....\" readonly></textarea>\n                <div class=\"textContent-comment-container\">\n                    <textarea name=\"comment\" id=\"comment\" cols=\"30\" rows=\"10\" class=\"taskContent-comment\" placeholder=\"comment.....\"></textarea>\n                    <div class=\"textContent-comment-submit\">Comment</div>\n                </div>\n\n            </div>\n            <div class=\"taskContent-projectContent\">\n                <div class=\"taskContent-box\">\n                    <h2 class=\"taskContent-box-title\">Project</h2>\n                    <div class=\"taskContent-box-container\">\n                        <i class='bx bxs-building' ></i>\n                        <p class=\"taskContent-box-projectName\">important task</p>\n                    </div>\n                </div>\n                <div class=\"taskContent-box\">\n                    <h2 class=\"taskContent-box-title\">Due Date</h2>\n                    <div class=\"taskContent-box-container\">\n                        <i class='bx bx-timer'></i>\n                        <p class=\"taskContent-box-date\">2-12-2002</p>\n                    </div>\n                </div>\n                <div class=\"taskContent-box\">\n                    <h2 class=\"taskContent-box-title\">priority</h2>\n                    <div class=\"taskContent-box-container\">\n                        <i class='bx bxs-purchase-tag' ></i>\n                        <p class=\"taskContent-box-priorityName\">priority 1</p>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"taskContent-updateContent\">Update</div>\n    </section>";
+
+
+/***/ }),
+
 /***/ "./src/script/components/taskoverlay.js":
 /*!**********************************************!*\
   !*** ./src/script/components/taskoverlay.js ***!
@@ -163,6 +183,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _newLabelModule__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./newLabelModule */ "./src/script/functions/newLabelModule.js");
 /* harmony import */ var _task__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./task */ "./src/script/functions/task.js");
 /* harmony import */ var _displayTasks__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./displayTasks */ "./src/script/functions/displayTasks.js");
+/* harmony import */ var _formHandler__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./formHandler */ "./src/script/functions/formHandler.js");
+
 
 
 
@@ -171,6 +193,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var displayController = function displayController() {
+  /* load projects data from localstorage */
   var appendAllProjectsFromStorage = function appendAllProjectsFromStorage() {
     Object.values(JSON.parse(localStorage.getItem('projects'))).forEach(function (project) {
       (0,_taskList__WEBPACK_IMPORTED_MODULE_0__.addProject)(project.name);
@@ -270,6 +293,11 @@ var displayController = function displayController() {
       hideList(list);
     }
   };
+  /* clear the tastContent when exting */
+  document.querySelector('.textContent-cansel-task').addEventListener('click', function () {
+    (0,_formHandler__WEBPACK_IMPORTED_MODULE_7__.hideForm)('.overlay-container');
+    (0,_formHandler__WEBPACK_IMPORTED_MODULE_7__.hideForm)('.taskContent-container');
+  });
   document.querySelectorAll('.priority-list > li').forEach(function (priority) {
     priority.addEventListener('click', function (e) {
       var priorityText = document.querySelector('.priority-text');
@@ -309,6 +337,10 @@ var displayController = function displayController() {
     (0,_newLabelModule__WEBPACK_IMPORTED_MODULE_4__.clearAddLabel)();
     (0,_newTaskModule__WEBPACK_IMPORTED_MODULE_3__.showTaskForm)();
   });
+  var canselTask = document.querySelector('.textContent-cansel-task');
+  var textContentContainer = document.querySelector('section.taskContent-container');
+  var overlayContainer = document.querySelector('.overlay-container');
+  canselTask.addEventListener('click', function () {});
   document.querySelector('.sort-container #s0').addEventListener('click', function () {
     (0,_displayTasks__WEBPACK_IMPORTED_MODULE_6__.sortByDefault)();
   });
@@ -358,18 +390,17 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 
 
 var appendAllTasksFromStorage = function appendAllTasksFromStorage() {
-  Object.values(JSON.parse(localStorage.getItem('tasks'))).forEach(function (task) {
+  Object.values(JSON.parse(localStorage.getItem("tasks"))).forEach(function (task) {
     _taskList__WEBPACK_IMPORTED_MODULE_0__.tasks.push(task);
     appendNewTaskNode(task[0]);
   });
 };
 var appendNewTaskNode = function appendNewTaskNode(newTask) {
   /* add to all tasks as default used with(appendGroups, appendTasks)  */
-  (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addNewTaskNode)(newTask.name, newTask.project, newTask.label);
+  (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addNewTaskNode)(newTask.name, newTask.project, newTask.date, newTask.label, newTask.description, newTask.priority);
   if (isGrouped()) {
     var _addOneTaskToGroup = (0,_groupBy__WEBPACK_IMPORTED_MODULE_2__.addOneTaskToGroup)(newTask),
       key = _addOneTaskToGroup.key;
-    console.log(_groupBy__WEBPACK_IMPORTED_MODULE_2__.groupTasks[key]);
     (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addAllGroups)(_groupBy__WEBPACK_IMPORTED_MODULE_2__.groupTasks);
     if (isSorted()) {
       /* sort only that group */
@@ -384,7 +415,7 @@ var appendNewTaskNode = function appendNewTaskNode(newTask) {
   }
 };
 var sortByDefault = function sortByDefault() {
-  var defaultSort = document.querySelector('.sort-container #s0');
+  var defaultSort = document.querySelector(".sort-container #s0");
   if (!isSelected(defaultSort)) {
     if (isGrouped()) {
       (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addAllGroups)(_groupBy__WEBPACK_IMPORTED_MODULE_2__.groupTasks);
@@ -395,18 +426,18 @@ var sortByDefault = function sortByDefault() {
   }
 };
 var sortByDate = function sortByDate() {
-  var dateSort = document.querySelector('.sort-container #s1');
+  var dateSort = document.querySelector(".sort-container #s1");
   if (!isSelected(dateSort)) {
     if (isGrouped()) {
-      (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addAllGroups)((0,_sortBy__WEBPACK_IMPORTED_MODULE_1__.sortGroups)('date'));
+      (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addAllGroups)((0,_sortBy__WEBPACK_IMPORTED_MODULE_1__.sortGroups)("date"));
     } else {
-      (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addAllTasks)((0,_sortBy__WEBPACK_IMPORTED_MODULE_1__.sortAll)('date'));
+      (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addAllTasks)((0,_sortBy__WEBPACK_IMPORTED_MODULE_1__.sortAll)("date"));
     }
     toggleSortOption(dateSort);
   }
 };
 var groupByDefault = function groupByDefault() {
-  var defaultGroup = document.querySelector('.group-container #g0');
+  var defaultGroup = document.querySelector(".group-container #g0");
   if (!isSelected(defaultGroup)) {
     if (isSorted()) {
       (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addAllTasks)((0,_sortBy__WEBPACK_IMPORTED_MODULE_1__.sortAll)(currentSortType()));
@@ -417,9 +448,9 @@ var groupByDefault = function groupByDefault() {
   }
 };
 var groupByPriotiry = function groupByPriotiry() {
-  var priorityGroup = document.querySelector('.group-container #g1');
+  var priorityGroup = document.querySelector(".group-container #g1");
   if (!isSelected(priorityGroup)) {
-    (0,_groupBy__WEBPACK_IMPORTED_MODULE_2__.group)('priority');
+    (0,_groupBy__WEBPACK_IMPORTED_MODULE_2__.group)("priority");
     if (isSorted()) {
       var sortedGroups = (0,_sortBy__WEBPACK_IMPORTED_MODULE_1__.sortGroups)(currentSortType());
       (0,_view_task_controller__WEBPACK_IMPORTED_MODULE_3__.addAllGroups)(sortedGroups);
@@ -430,15 +461,15 @@ var groupByPriotiry = function groupByPriotiry() {
   }
 };
 var toggleSelectAttribute = function toggleSelectAttribute(node) {
-  if (node.getAttribute('selected') === 't') {
-    node.setAttribute('selected', 'f');
+  if (node.getAttribute("selected") === "t") {
+    node.setAttribute("selected", "f");
   } else {
-    node.setAttribute('selected', 't');
+    node.setAttribute("selected", "t");
   }
 };
 var isSelected = function isSelected(obtion) {
-  var isObtionSelected = obtion.getAttribute('selected');
-  return isObtionSelected === 't';
+  var isObtionSelected = obtion.getAttribute("selected");
+  return isObtionSelected === "t";
 };
 var selecetdSortObtion = function selecetdSortObtion() {
   return document.querySelector('.sort-container [selected = "t"]');
@@ -447,13 +478,13 @@ var selecetedGroupObtion = function selecetedGroupObtion() {
   return document.querySelector('.group-container [selected = "t"]');
 };
 var currentSortType = function currentSortType() {
-  return selecetdSortObtion().textContent.replaceAll(' ', '').toLowerCase();
+  return selecetdSortObtion().textContent.replaceAll(" ", "").toLowerCase();
 };
 var isSorted = function isSorted() {
-  return !isSelected(document.querySelector('.sort-option#s0'));
+  return !isSelected(document.querySelector(".sort-option#s0"));
 };
 var isGrouped = function isGrouped() {
-  return !isSelected(document.querySelector('.group-option#g0'));
+  return !isSelected(document.querySelector(".group-option#g0"));
 };
 var toggleSortOption = function toggleSortOption(newOption) {
   toggleSelectAttribute(selecetdSortObtion());
@@ -888,27 +919,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _groupBy__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./groupBy */ "./src/script/functions/groupBy.js");
 /* harmony import */ var _taskList__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./taskList */ "./src/script/functions/taskList.js");
+/* harmony import */ var _formHandler__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./formHandler */ "./src/script/functions/formHandler.js");
+
 
 
 var createGroupNode = function createGroupNode(groupName) {
-  var groupContainer = document.createElement('div');
+  var groupContainer = document.createElement("div");
   groupContainer.classList.add("".concat(groupName));
-  groupContainer.classList.add('task-container');
-  var title = document.createElement('h2');
+  groupContainer.classList.add("task-container");
+  var title = document.createElement("h2");
   title.className = "priority-header";
   title.textContent = groupName;
   groupContainer.appendChild(title);
   return groupContainer;
 };
 var clearEmptyRGroupNodes = function clearEmptyRGroupNodes() {
-  var groupContainers = document.querySelectorAll('.task-container');
+  var groupContainers = document.querySelectorAll(".task-container");
   groupContainers.forEach(function (groupContainer) {
     if (groupContainer.childNodes.length === 1) {
       groupContainer.remove();
     }
   });
 };
-var addNewTaskNode = function addNewTaskNode(taskName, project, labels) {
+var addNewTaskNode = function addNewTaskNode(taskName, project, date, labels, description, priority) {
   var taskContainer = document.querySelector(".all-tasks");
   var lastTask = document.querySelector("[index = '".concat((0,_taskList__WEBPACK_IMPORTED_MODULE_1__.getLastTaskIndex)(), "']"));
   var newTaskNode = undefined;
@@ -917,6 +950,7 @@ var addNewTaskNode = function addNewTaskNode(taskName, project, labels) {
     newTaskNode.setAttribute("index", "".concat(Number(lastTask.getAttribute("index")) + 1));
     newTaskNode.querySelector(".p-title").textContent = taskName;
     newTaskNode.querySelector(".p-name").textContent = project;
+    newTaskNode.querySelector(".tdate").textContent = date;
     var labelList = newTaskNode.querySelector(".labels-list");
     newTaskNode.querySelector("#task").checked = false;
     labelList.textContent = "";
@@ -924,16 +958,37 @@ var addNewTaskNode = function addNewTaskNode(taskName, project, labels) {
       labelList.appendChild(createNewLabelNode(label));
     });
   } else {
-    newTaskNode = createNewTaskNode("1", taskName, project, labels);
+    newTaskNode = createNewTaskNode("1", taskName, project, date, labels);
   }
+  /* showing task Content when clicked */
+  newTaskNode.addEventListener("click", function (event) {
+    if (event.target !== document.querySelector('.task-first-line input')) {
+      loadTaskContent({
+        taskName: taskName,
+        project: project,
+        date: date,
+        labels: labels,
+        description: description,
+        priority: priority
+      });
+      (0,_formHandler__WEBPACK_IMPORTED_MODULE_2__.showForm)("section.taskContent-container");
+      (0,_formHandler__WEBPACK_IMPORTED_MODULE_2__.showForm)(".overlay-container");
+    }
+  });
   newTaskNode.querySelector("input").addEventListener("change", function () {
     document.querySelector(".all-tasks").removeChild(newTaskNode);
   });
   taskContainer.appendChild(newTaskNode);
-  console.log("check is task added to origin:");
-  console.log(taskContainer);
 };
-var createNewTaskNode = function createNewTaskNode(index, taskTitle, pName, labels) {
+var loadTaskContent = function loadTaskContent(taskData) {
+  /* taskName, project, date, labels */
+  document.querySelector(".taskContent-taskName-name").textContent = taskData.taskName;
+  document.querySelector(".taskContent-box-projectName").textContent = taskData.project;
+  document.querySelector(".taskContent-box-date").textContent = taskData.date;
+  document.querySelector(".taskContent-box-priorityName").textContent = "priority ".concat(taskData.priority);
+  document.querySelector(".taskContent-description").textContent = taskData.description;
+};
+var createNewTaskNode = function createNewTaskNode(index, taskTitle, pName, taskdate_, labels) {
   var labelsList = document.createElement("div");
   labelsList.className = "labels-list";
   labels.forEach(function (label) {
@@ -948,10 +1003,13 @@ var createNewTaskNode = function createNewTaskNode(index, taskTitle, pName, labe
   newTaskNode.setAttribute("index", index);
   var checkbox = document.createElement("input");
   var ptitle = document.createElement("div");
+  var taskDate = document.createElement("div");
   var pname = document.createElement("div");
   ptitle.classList.add("p-title");
+  taskDate.classList.add("tdate");
   pname.classList.add("p-name");
   ptitle.textContent = taskTitle;
+  taskDate.textContent = taskdate_;
   pname.textContent = pName;
   checkbox.type = "checkbox";
   checkbox.id = "task";
@@ -959,6 +1017,7 @@ var createNewTaskNode = function createNewTaskNode(index, taskTitle, pName, labe
   taskFirstLine.appendChild(checkbox);
   taskFirstLine.appendChild(ptitle);
   taskFirstLine.appendChild(labelsList);
+  taskSecondLine.appendChild(taskDate);
   taskSecondLine.appendChild(pname);
   newTaskNode.appendChild(taskFirstLine);
   newTaskNode.appendChild(taskSecondLine);
@@ -971,7 +1030,7 @@ var createNewLabelNode = function createNewLabelNode(labelName) {
   return labelNode;
 };
 var addAllTasks = function addAllTasks(tasks) {
-  var allTasksNode = document.querySelector('.all-tasks');
+  var allTasksNode = document.querySelector(".all-tasks");
   tasks.forEach(function (taskContainer) {
     var old = allTasksNode.querySelector("[index = '".concat(taskContainer[1], "']"));
     if (old) {
@@ -983,32 +1042,14 @@ var addAllTasks = function addAllTasks(tasks) {
   clearEmptyRGroupNodes();
   removeGroupsContainer();
 };
-/* const appendSingleTaskNodeToGroup = (singleGroup, key) =>{
-  const allTasksNode = document.querySelector('.all-tasks')
-
-    let groupNode = document.querySelector(`.${key}`)
-    if (!groupNode) {
-      groupNode = createGroupNode(key)
-    }
-    singleGroup.forEach((taskContainer) => {
-      const old = allTasksNode.querySelector(
-        `[index = '${taskContainer[1]}']`
-      )
-      const task = old.cloneNode(true)
-      old.remove()
-      groupNode.appendChild(task)
-    })
-    allTasksNode.appendChild(groupNode)
-    addGroupsContainer();
-} */
 var addGroupsContainer = function addGroupsContainer() {
-  var allTasksNode = document.querySelector('.all-tasks');
-  var groupsWrapper = document.querySelector('.groups-wrapper');
+  var allTasksNode = document.querySelector(".all-tasks");
+  var groupsWrapper = document.querySelector(".groups-wrapper");
   if (!groupsWrapper) {
-    groupsWrapper = document.createElement('div');
-    groupsWrapper.classList = 'groups-wrapper';
+    groupsWrapper = document.createElement("div");
+    groupsWrapper.classList = "groups-wrapper";
   }
-  document.querySelectorAll('.task-container').forEach(function (group) {
+  document.querySelectorAll(".task-container").forEach(function (group) {
     var tempGroup = group.cloneNode(true);
     group.remove();
     groupsWrapper.appendChild(tempGroup);
@@ -1016,21 +1057,24 @@ var addGroupsContainer = function addGroupsContainer() {
   allTasksNode.appendChild(groupsWrapper);
 };
 var removeGroupsContainer = function removeGroupsContainer() {
-  var groupsWrapper = document.querySelector('.groups-wrapper');
+  var groupsWrapper = document.querySelector(".groups-wrapper");
   if (groupsWrapper) {
     groupsWrapper.remove();
   }
 };
 var addAllGroups = function addAllGroups(groupTasks) {
-  var allTasksNode = document.querySelector('.all-tasks');
+  var allTasksNode = document.querySelector(".all-tasks");
   var _loop = function _loop() {
     if (groupTasks[key].length !== 0) {
+      /* get group node if exist */
       var groupNode = document.querySelector(".".concat(key));
+      /* if not exist create it */
       if (!groupNode) {
         groupNode = createGroupNode(key);
       }
       groupTasks[key].forEach(function (taskContainer) {
         var old = allTasksNode.querySelector("[index = '".concat(taskContainer[1], "']"));
+        /* assume all tasks are added already to the dom (p error)*/
         var task = old.cloneNode(true);
         old.remove();
         groupNode.appendChild(task);
@@ -1067,7 +1111,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".all-tasks {\n  display: inline-grid;\n  grid-auto-rows: 70px;\n  grid-auto-columns: 500px;\n  padding-top: 70px;\n  justify-content: center;\n  grid-column: 3/-1;\n  background-color: var(--dark-black);\n  position: relative;\n  gap: 35px;\n  overflow-y: scroll;\n}\n.view-container {\n  position: absolute;\n  display: flex;\n  justify-content: end;\n  align-items: center;\n  width: 100%;\n  padding-top: 10px;\n}\n.view-border {\n  display: flex;\n  gap: 5px;\n  padding: 2px;\n  margin-right: 11%;\n  position: relative;\n}\n.view-border:hover {\n  border: 1px solid var(--light-soft);\n  border-radius: 7px;\n  cursor: pointer;\n}\n.view-option-container {\n  position: absolute;\n  top: 30px;\n  left: -141px;\n  width: 250px;\n  display: flex;\n  flex-direction: column;\n  background-color: var(--dark-black);\n  z-index: 2;\n  border-radius: 10px;\n  color: var(--dark-soft);\n  box-shadow: 0px 0px 23px -2px #5c5950;\n  transition: transform 300ms ease;\n}\n.view-option-container.hide{\n  transform: scale(0);\n}\n.sort-container,\n.group-container {\n  display: flex;\n  flex-direction: column;\n}\n\n.sort-option[selected = 't'],\n.group-option[selected = 't']{\n  background-color: var(--dark-soft);\n  color: var(--dark-black);\n}\n\nh3.sort-option,\nh3.group-option {\n  padding: 10px;\n  justify-content: space-around;\n  display: flex;\n  position: relative;\n}\n\n.view-option-container i.bx {\n  position: absolute;\n  left: 10px;\n  color: var(--dark-soft);\n}\n.sort-option[selected = 't'] i.bx,\n.group-option[selected = 't']  i.bx{\n  color: var(--dark-black);\n}\nh3.sort-option:hover,\nh3.group-option:hover {\n  color: var(--dark-black);\n  background: var(--meduim-soft);\n}\nh3.sort-option:active h3.group-option:active {\n  color: var(--dark-black);\n  border: 1px solid var(--dark-black);\n}\nh2.header{\n  background-color: var(--dark-black);\n  margin-bottom: 7px;\n  color: var(--meduim-soft);\n  padding: 7px;\n}\n.p-container {\n  margin-bottom: 35px;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  padding: 7px;\n  position: relative;\n  gap: 5px;\n  background: var(--dark-soft);\n  box-shadow: 0 0 0.5rem var(--meduim-soft);\n  min-height: 50px;\n  border-radius: 10px;\n}\n.task-first-line {\n  display: flex;\n  gap: 7px;\n}\n.labels-list {\n  display: flex;\n  gap: 7px;\n}\n.labels-list > .label {\n  background: var(--light-soft);\n  color: var(--dark-soft);\n  border-radius: 7px;\n  padding: 2px;\n}\n.p-title {\n  font-weight: bold;\n  font-size: large;\n  align-self: center;\n  color: var(--dark-black);\n}\n.p-name {\n  position: absolute;\n  bottom: 7px;\n  right: 7px;\n  color: var(--dark-black);\n}\nh2.priority-header{\n  padding-bottom: 25px;\n}\n@media (max-width: 700px) {\n  .all-tasks {\n    grid-auto-rows: 64px;\n    grid-auto-columns: 400px;\n    padding-top: 40px;\n  }\n  .view-option-container {\n    width: 170px;\n  }\n/*   h3.sort-option {\n    font-size: medium;\n  }\n  h2.header {\n    font-size: medium;\n  } */\n}\n@media (max-width: 550px) {\n\n  .all-tasks {\n    grid-auto-rows: 59px;\n    grid-auto-columns: 282px;\n    padding-top: 40px;\n  }\n  .p-title {\n    font-weight: bold;\n    font-size: medium;\n    align-self: center;\n    color: var(--dark-black);\n  }\n  .p-name {\n    position: absolute;\n    bottom: 7px;\n    right: 7px;\n    font-size: small;\n  }\n}\n@media (max-width: 380px) {\n  .all-tasks {\n    grid-auto-rows: 40px;\n    grid-auto-columns: 192px;\n    padding-top: 40px;\n  }\n  .p-name {\n    position: absolute;\n    bottom: 7px;\n    right: 7px;\n  }\n\n}\n", "",{"version":3,"sources":["webpack://./src/styles/alltasks.css"],"names":[],"mappings":"AAAA;EACE,oBAAoB;EACpB,oBAAoB;EACpB,wBAAwB;EACxB,iBAAiB;EACjB,uBAAuB;EACvB,iBAAiB;EACjB,mCAAmC;EACnC,kBAAkB;EAClB,SAAS;EACT,kBAAkB;AACpB;AACA;EACE,kBAAkB;EAClB,aAAa;EACb,oBAAoB;EACpB,mBAAmB;EACnB,WAAW;EACX,iBAAiB;AACnB;AACA;EACE,aAAa;EACb,QAAQ;EACR,YAAY;EACZ,iBAAiB;EACjB,kBAAkB;AACpB;AACA;EACE,mCAAmC;EACnC,kBAAkB;EAClB,eAAe;AACjB;AACA;EACE,kBAAkB;EAClB,SAAS;EACT,YAAY;EACZ,YAAY;EACZ,aAAa;EACb,sBAAsB;EACtB,mCAAmC;EACnC,UAAU;EACV,mBAAmB;EACnB,uBAAuB;EACvB,qCAAqC;EACrC,gCAAgC;AAClC;AACA;EACE,mBAAmB;AACrB;AACA;;EAEE,aAAa;EACb,sBAAsB;AACxB;;AAEA;;EAEE,kCAAkC;EAClC,wBAAwB;AAC1B;;AAEA;;EAEE,aAAa;EACb,6BAA6B;EAC7B,aAAa;EACb,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,UAAU;EACV,uBAAuB;AACzB;AACA;;EAEE,wBAAwB;AAC1B;AACA;;EAEE,wBAAwB;EACxB,8BAA8B;AAChC;AACA;EACE,wBAAwB;EACxB,mCAAmC;AACrC;AACA;EACE,mCAAmC;EACnC,kBAAkB;EAClB,yBAAyB;EACzB,YAAY;AACd;AACA;EACE,mBAAmB;EACnB,aAAa;EACb,sBAAsB;EACtB,8BAA8B;EAC9B,YAAY;EACZ,kBAAkB;EAClB,QAAQ;EACR,4BAA4B;EAC5B,yCAAyC;EACzC,gBAAgB;EAChB,mBAAmB;AACrB;AACA;EACE,aAAa;EACb,QAAQ;AACV;AACA;EACE,aAAa;EACb,QAAQ;AACV;AACA;EACE,6BAA6B;EAC7B,uBAAuB;EACvB,kBAAkB;EAClB,YAAY;AACd;AACA;EACE,iBAAiB;EACjB,gBAAgB;EAChB,kBAAkB;EAClB,wBAAwB;AAC1B;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,UAAU;EACV,wBAAwB;AAC1B;AACA;EACE,oBAAoB;AACtB;AACA;EACE;IACE,oBAAoB;IACpB,wBAAwB;IACxB,iBAAiB;EACnB;EACA;IACE,YAAY;EACd;AACF;;;;;KAKK;AACL;AACA;;EAEE;IACE,oBAAoB;IACpB,wBAAwB;IACxB,iBAAiB;EACnB;EACA;IACE,iBAAiB;IACjB,iBAAiB;IACjB,kBAAkB;IAClB,wBAAwB;EAC1B;EACA;IACE,kBAAkB;IAClB,WAAW;IACX,UAAU;IACV,gBAAgB;EAClB;AACF;AACA;EACE;IACE,oBAAoB;IACpB,wBAAwB;IACxB,iBAAiB;EACnB;EACA;IACE,kBAAkB;IAClB,WAAW;IACX,UAAU;EACZ;;AAEF","sourcesContent":[".all-tasks {\n  display: inline-grid;\n  grid-auto-rows: 70px;\n  grid-auto-columns: 500px;\n  padding-top: 70px;\n  justify-content: center;\n  grid-column: 3/-1;\n  background-color: var(--dark-black);\n  position: relative;\n  gap: 35px;\n  overflow-y: scroll;\n}\n.view-container {\n  position: absolute;\n  display: flex;\n  justify-content: end;\n  align-items: center;\n  width: 100%;\n  padding-top: 10px;\n}\n.view-border {\n  display: flex;\n  gap: 5px;\n  padding: 2px;\n  margin-right: 11%;\n  position: relative;\n}\n.view-border:hover {\n  border: 1px solid var(--light-soft);\n  border-radius: 7px;\n  cursor: pointer;\n}\n.view-option-container {\n  position: absolute;\n  top: 30px;\n  left: -141px;\n  width: 250px;\n  display: flex;\n  flex-direction: column;\n  background-color: var(--dark-black);\n  z-index: 2;\n  border-radius: 10px;\n  color: var(--dark-soft);\n  box-shadow: 0px 0px 23px -2px #5c5950;\n  transition: transform 300ms ease;\n}\n.view-option-container.hide{\n  transform: scale(0);\n}\n.sort-container,\n.group-container {\n  display: flex;\n  flex-direction: column;\n}\n\n.sort-option[selected = 't'],\n.group-option[selected = 't']{\n  background-color: var(--dark-soft);\n  color: var(--dark-black);\n}\n\nh3.sort-option,\nh3.group-option {\n  padding: 10px;\n  justify-content: space-around;\n  display: flex;\n  position: relative;\n}\n\n.view-option-container i.bx {\n  position: absolute;\n  left: 10px;\n  color: var(--dark-soft);\n}\n.sort-option[selected = 't'] i.bx,\n.group-option[selected = 't']  i.bx{\n  color: var(--dark-black);\n}\nh3.sort-option:hover,\nh3.group-option:hover {\n  color: var(--dark-black);\n  background: var(--meduim-soft);\n}\nh3.sort-option:active h3.group-option:active {\n  color: var(--dark-black);\n  border: 1px solid var(--dark-black);\n}\nh2.header{\n  background-color: var(--dark-black);\n  margin-bottom: 7px;\n  color: var(--meduim-soft);\n  padding: 7px;\n}\n.p-container {\n  margin-bottom: 35px;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  padding: 7px;\n  position: relative;\n  gap: 5px;\n  background: var(--dark-soft);\n  box-shadow: 0 0 0.5rem var(--meduim-soft);\n  min-height: 50px;\n  border-radius: 10px;\n}\n.task-first-line {\n  display: flex;\n  gap: 7px;\n}\n.labels-list {\n  display: flex;\n  gap: 7px;\n}\n.labels-list > .label {\n  background: var(--light-soft);\n  color: var(--dark-soft);\n  border-radius: 7px;\n  padding: 2px;\n}\n.p-title {\n  font-weight: bold;\n  font-size: large;\n  align-self: center;\n  color: var(--dark-black);\n}\n.p-name {\n  position: absolute;\n  bottom: 7px;\n  right: 7px;\n  color: var(--dark-black);\n}\nh2.priority-header{\n  padding-bottom: 25px;\n}\n@media (max-width: 700px) {\n  .all-tasks {\n    grid-auto-rows: 64px;\n    grid-auto-columns: 400px;\n    padding-top: 40px;\n  }\n  .view-option-container {\n    width: 170px;\n  }\n/*   h3.sort-option {\n    font-size: medium;\n  }\n  h2.header {\n    font-size: medium;\n  } */\n}\n@media (max-width: 550px) {\n\n  .all-tasks {\n    grid-auto-rows: 59px;\n    grid-auto-columns: 282px;\n    padding-top: 40px;\n  }\n  .p-title {\n    font-weight: bold;\n    font-size: medium;\n    align-self: center;\n    color: var(--dark-black);\n  }\n  .p-name {\n    position: absolute;\n    bottom: 7px;\n    right: 7px;\n    font-size: small;\n  }\n}\n@media (max-width: 380px) {\n  .all-tasks {\n    grid-auto-rows: 40px;\n    grid-auto-columns: 192px;\n    padding-top: 40px;\n  }\n  .p-name {\n    position: absolute;\n    bottom: 7px;\n    right: 7px;\n  }\n\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".all-tasks {\n  display: inline-grid;\n  grid-auto-rows: 70px;\n  grid-auto-columns: 500px;\n  padding-top: 70px;\n  justify-content: center;\n  grid-column: 3/-1;\n  background-color: var(--dark-black);\n  position: relative;\n  gap: 35px;\n  overflow-y: scroll;\n}\n.view-container {\n  position: absolute;\n  display: flex;\n  justify-content: end;\n  align-items: center;\n  width: 100%;\n  padding-top: 10px;\n}\n.view-border {\n  display: flex;\n  gap: 5px;\n  padding: 2px;\n  margin-right: 11%;\n  position: relative;\n}\n.view-border:hover {\n  border: 1px solid var(--light-soft);\n  border-radius: 7px;\n  cursor: pointer;\n}\n.view-option-container {\n  position: absolute;\n  top: 30px;\n  left: -141px;\n  width: 250px;\n  display: flex;\n  flex-direction: column;\n  background-color: var(--dark-black);\n  z-index: 2;\n  border-radius: 10px;\n  color: var(--dark-soft);\n  box-shadow: 0px 0px 23px -2px #5c5950;\n  transition: transform 300ms ease;\n}\n.view-option-container.hide{\n  transform: scale(0);\n}\n.sort-container,\n.group-container {\n  display: flex;\n  flex-direction: column;\n}\n\n.sort-option[selected = 't'],\n.group-option[selected = 't']{\n  background-color: var(--dark-soft);\n  color: var(--dark-black);\n}\n\nh3.sort-option,\nh3.group-option {\n  padding: 10px;\n  justify-content: space-around;\n  display: flex;\n  position: relative;\n}\n\n.view-option-container i.bx {\n  position: absolute;\n  left: 10px;\n  color: var(--dark-soft);\n}\n.sort-option[selected = 't'] i.bx,\n.group-option[selected = 't']  i.bx{\n  color: var(--dark-black);\n}\nh3.sort-option:hover,\nh3.group-option:hover {\n  color: var(--dark-black);\n  background: var(--meduim-soft);\n}\nh3.sort-option:active h3.group-option:active {\n  color: var(--dark-black);\n  border: 1px solid var(--dark-black);\n}\nh2.header{\n  background-color: var(--dark-black);\n  margin-bottom: 7px;\n  color: var(--meduim-soft);\n  padding: 7px;\n}\n.p-container {\n  margin-bottom: 35px;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  padding: 7px;\n  position: relative;\n  gap: 5px;\n  background: var(--dark-soft);\n  box-shadow: 0 0 0.5rem var(--meduim-soft);\n  min-height: 50px;\n  border-radius: 10px;\n}\n.task-first-line {\n  display: flex;\n  gap: 7px;\n}\n.labels-list {\n  display: flex;\n  gap: 7px;\n}\n.labels-list > .label {\n  background: var(--light-soft);\n  color: var(--dark-soft);\n  border-radius: 7px;\n  padding: 2px;\n}\n.p-title {\n  font-weight: bold;\n  font-size: large;\n  align-self: center;\n  color: var(--dark-black);\n}\n.tdate{\n  margin-left: 2rem;\n  display: inline-flex;\n  border-radius: 0.2rem;\n  padding: 0.1rem 0.5rem;\n  font-weight: 600;\n  background-color: var(--dark-black);\n}\n.p-name {\n  position: absolute;\n  bottom: 7px;\n  right: 7px;\n  color: var(--dark-black);\n}\nh2.priority-header{\n  padding-bottom: 25px;\n}\n@media (max-width: 700px) {\n  .all-tasks {\n    grid-auto-rows: 64px;\n    grid-auto-columns: 400px;\n    padding-top: 40px;\n  }\n  .view-option-container {\n    width: 170px;\n  }\n/*   h3.sort-option {\n    font-size: medium;\n  }\n  h2.header {\n    font-size: medium;\n  } */\n}\n@media (max-width: 550px) {\n\n  .all-tasks {\n    grid-auto-rows: 59px;\n    grid-auto-columns: 282px;\n    padding-top: 40px;\n  }\n  .p-title {\n    font-weight: bold;\n    font-size: medium;\n    align-self: center;\n    color: var(--dark-black);\n  }\n  .p-name {\n    position: absolute;\n    bottom: 7px;\n    right: 7px;\n    font-size: small;\n  }\n}\n@media (max-width: 380px) {\n  .all-tasks {\n    grid-auto-rows: 40px;\n    grid-auto-columns: 192px;\n    padding-top: 40px;\n  }\n  .p-name {\n    position: absolute;\n    bottom: 7px;\n    right: 7px;\n  }\n\n}\n", "",{"version":3,"sources":["webpack://./src/styles/alltasks.css"],"names":[],"mappings":"AAAA;EACE,oBAAoB;EACpB,oBAAoB;EACpB,wBAAwB;EACxB,iBAAiB;EACjB,uBAAuB;EACvB,iBAAiB;EACjB,mCAAmC;EACnC,kBAAkB;EAClB,SAAS;EACT,kBAAkB;AACpB;AACA;EACE,kBAAkB;EAClB,aAAa;EACb,oBAAoB;EACpB,mBAAmB;EACnB,WAAW;EACX,iBAAiB;AACnB;AACA;EACE,aAAa;EACb,QAAQ;EACR,YAAY;EACZ,iBAAiB;EACjB,kBAAkB;AACpB;AACA;EACE,mCAAmC;EACnC,kBAAkB;EAClB,eAAe;AACjB;AACA;EACE,kBAAkB;EAClB,SAAS;EACT,YAAY;EACZ,YAAY;EACZ,aAAa;EACb,sBAAsB;EACtB,mCAAmC;EACnC,UAAU;EACV,mBAAmB;EACnB,uBAAuB;EACvB,qCAAqC;EACrC,gCAAgC;AAClC;AACA;EACE,mBAAmB;AACrB;AACA;;EAEE,aAAa;EACb,sBAAsB;AACxB;;AAEA;;EAEE,kCAAkC;EAClC,wBAAwB;AAC1B;;AAEA;;EAEE,aAAa;EACb,6BAA6B;EAC7B,aAAa;EACb,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,UAAU;EACV,uBAAuB;AACzB;AACA;;EAEE,wBAAwB;AAC1B;AACA;;EAEE,wBAAwB;EACxB,8BAA8B;AAChC;AACA;EACE,wBAAwB;EACxB,mCAAmC;AACrC;AACA;EACE,mCAAmC;EACnC,kBAAkB;EAClB,yBAAyB;EACzB,YAAY;AACd;AACA;EACE,mBAAmB;EACnB,aAAa;EACb,sBAAsB;EACtB,8BAA8B;EAC9B,YAAY;EACZ,kBAAkB;EAClB,QAAQ;EACR,4BAA4B;EAC5B,yCAAyC;EACzC,gBAAgB;EAChB,mBAAmB;AACrB;AACA;EACE,aAAa;EACb,QAAQ;AACV;AACA;EACE,aAAa;EACb,QAAQ;AACV;AACA;EACE,6BAA6B;EAC7B,uBAAuB;EACvB,kBAAkB;EAClB,YAAY;AACd;AACA;EACE,iBAAiB;EACjB,gBAAgB;EAChB,kBAAkB;EAClB,wBAAwB;AAC1B;AACA;EACE,iBAAiB;EACjB,oBAAoB;EACpB,qBAAqB;EACrB,sBAAsB;EACtB,gBAAgB;EAChB,mCAAmC;AACrC;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,UAAU;EACV,wBAAwB;AAC1B;AACA;EACE,oBAAoB;AACtB;AACA;EACE;IACE,oBAAoB;IACpB,wBAAwB;IACxB,iBAAiB;EACnB;EACA;IACE,YAAY;EACd;AACF;;;;;KAKK;AACL;AACA;;EAEE;IACE,oBAAoB;IACpB,wBAAwB;IACxB,iBAAiB;EACnB;EACA;IACE,iBAAiB;IACjB,iBAAiB;IACjB,kBAAkB;IAClB,wBAAwB;EAC1B;EACA;IACE,kBAAkB;IAClB,WAAW;IACX,UAAU;IACV,gBAAgB;EAClB;AACF;AACA;EACE;IACE,oBAAoB;IACpB,wBAAwB;IACxB,iBAAiB;EACnB;EACA;IACE,kBAAkB;IAClB,WAAW;IACX,UAAU;EACZ;;AAEF","sourcesContent":[".all-tasks {\n  display: inline-grid;\n  grid-auto-rows: 70px;\n  grid-auto-columns: 500px;\n  padding-top: 70px;\n  justify-content: center;\n  grid-column: 3/-1;\n  background-color: var(--dark-black);\n  position: relative;\n  gap: 35px;\n  overflow-y: scroll;\n}\n.view-container {\n  position: absolute;\n  display: flex;\n  justify-content: end;\n  align-items: center;\n  width: 100%;\n  padding-top: 10px;\n}\n.view-border {\n  display: flex;\n  gap: 5px;\n  padding: 2px;\n  margin-right: 11%;\n  position: relative;\n}\n.view-border:hover {\n  border: 1px solid var(--light-soft);\n  border-radius: 7px;\n  cursor: pointer;\n}\n.view-option-container {\n  position: absolute;\n  top: 30px;\n  left: -141px;\n  width: 250px;\n  display: flex;\n  flex-direction: column;\n  background-color: var(--dark-black);\n  z-index: 2;\n  border-radius: 10px;\n  color: var(--dark-soft);\n  box-shadow: 0px 0px 23px -2px #5c5950;\n  transition: transform 300ms ease;\n}\n.view-option-container.hide{\n  transform: scale(0);\n}\n.sort-container,\n.group-container {\n  display: flex;\n  flex-direction: column;\n}\n\n.sort-option[selected = 't'],\n.group-option[selected = 't']{\n  background-color: var(--dark-soft);\n  color: var(--dark-black);\n}\n\nh3.sort-option,\nh3.group-option {\n  padding: 10px;\n  justify-content: space-around;\n  display: flex;\n  position: relative;\n}\n\n.view-option-container i.bx {\n  position: absolute;\n  left: 10px;\n  color: var(--dark-soft);\n}\n.sort-option[selected = 't'] i.bx,\n.group-option[selected = 't']  i.bx{\n  color: var(--dark-black);\n}\nh3.sort-option:hover,\nh3.group-option:hover {\n  color: var(--dark-black);\n  background: var(--meduim-soft);\n}\nh3.sort-option:active h3.group-option:active {\n  color: var(--dark-black);\n  border: 1px solid var(--dark-black);\n}\nh2.header{\n  background-color: var(--dark-black);\n  margin-bottom: 7px;\n  color: var(--meduim-soft);\n  padding: 7px;\n}\n.p-container {\n  margin-bottom: 35px;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  padding: 7px;\n  position: relative;\n  gap: 5px;\n  background: var(--dark-soft);\n  box-shadow: 0 0 0.5rem var(--meduim-soft);\n  min-height: 50px;\n  border-radius: 10px;\n}\n.task-first-line {\n  display: flex;\n  gap: 7px;\n}\n.labels-list {\n  display: flex;\n  gap: 7px;\n}\n.labels-list > .label {\n  background: var(--light-soft);\n  color: var(--dark-soft);\n  border-radius: 7px;\n  padding: 2px;\n}\n.p-title {\n  font-weight: bold;\n  font-size: large;\n  align-self: center;\n  color: var(--dark-black);\n}\n.tdate{\n  margin-left: 2rem;\n  display: inline-flex;\n  border-radius: 0.2rem;\n  padding: 0.1rem 0.5rem;\n  font-weight: 600;\n  background-color: var(--dark-black);\n}\n.p-name {\n  position: absolute;\n  bottom: 7px;\n  right: 7px;\n  color: var(--dark-black);\n}\nh2.priority-header{\n  padding-bottom: 25px;\n}\n@media (max-width: 700px) {\n  .all-tasks {\n    grid-auto-rows: 64px;\n    grid-auto-columns: 400px;\n    padding-top: 40px;\n  }\n  .view-option-container {\n    width: 170px;\n  }\n/*   h3.sort-option {\n    font-size: medium;\n  }\n  h2.header {\n    font-size: medium;\n  } */\n}\n@media (max-width: 550px) {\n\n  .all-tasks {\n    grid-auto-rows: 59px;\n    grid-auto-columns: 282px;\n    padding-top: 40px;\n  }\n  .p-title {\n    font-weight: bold;\n    font-size: medium;\n    align-self: center;\n    color: var(--dark-black);\n  }\n  .p-name {\n    position: absolute;\n    bottom: 7px;\n    right: 7px;\n    font-size: small;\n  }\n}\n@media (max-width: 380px) {\n  .all-tasks {\n    grid-auto-rows: 40px;\n    grid-auto-columns: 192px;\n    padding-top: 40px;\n  }\n  .p-name {\n    position: absolute;\n    bottom: 7px;\n    right: 7px;\n  }\n\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1224,6 +1268,32 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".sidetrack{\n    grid-column: 1/span 2;\n    background-color: var(--dark-black);\n    display: grid;\n    justify-content: center;\n    border-right: 0.1rem solid var(--dark-soft);\n}\n.all-projects{\n    display: grid;\n    grid-auto-rows: 35px;\n    grid-auto-columns: 220px;\n    padding-top: 50px;\n}\n\n.Inbox , .projects{\n    font-weight: bold;\n    color: var(--dark-soft);\n    border-bottom: 0.1rem solid var(--dark-soft);\n}\n.projects-container{\n    display: flex;\n    justify-content: space-between;\n    height: 30px;\n    align-items: center;\n    margin-bottom: 2rem;\n}\n.projects-container > .new-project{\n    display: inline-flex;\n    justify-content: center;\n    align-items: center;\n    background-color: var(--dark-soft);\n    padding: 0.2rem;\n    border-radius: 50%;\n    font-size: 1rem;\n    color: var(--dark-black);\n    cursor: pointer;\n}\n.projects > .project{\n    color: var(--dark-soft);\n    padding-bottom: 2rem;\n    padding-left: 1rem;\n    margin-left: 0.5rem;\n    border-left: 1px solid;\n}\n.projects > .project:last-child{\n    padding-bottom: 0;\n}\n@media (max-width: 910px){\n    .all-projects{\n        display: grid;\n        grid-auto-rows: 24px;\n        grid-auto-columns: 189px;\n        padding-top: 50px;\n    }\n}\n@media (max-width: 650px){\n    .all-projects{\n        display: grid;\n        grid-auto-rows: 20px;\n        grid-auto-columns: 112px;\n        padding-top: 50px;\n    }\n    .projects > .project{\n        padding-left: 15px;\n        /* font-size: smaller; */\n    }\n    .Inbox , .projects{\n        font-weight: bold;\n        /* font-size: small; */\n    }\n}\n@media (max-width: 455px){\n    .all-projects{\n        display: grid;\n        grid-auto-rows: 20px;\n        grid-auto-columns: 78px;\n        padding-top: 50px;\n    }\n    .projects > .project{\n        padding-left: 15px;\n    }\n    .Inbox , .projects{\n        font-weight: bold;\n    }\n}", "",{"version":3,"sources":["webpack://./src/styles/sidetrack.css"],"names":[],"mappings":"AAAA;IACI,qBAAqB;IACrB,mCAAmC;IACnC,aAAa;IACb,uBAAuB;IACvB,2CAA2C;AAC/C;AACA;IACI,aAAa;IACb,oBAAoB;IACpB,wBAAwB;IACxB,iBAAiB;AACrB;;AAEA;IACI,iBAAiB;IACjB,uBAAuB;IACvB,4CAA4C;AAChD;AACA;IACI,aAAa;IACb,8BAA8B;IAC9B,YAAY;IACZ,mBAAmB;IACnB,mBAAmB;AACvB;AACA;IACI,oBAAoB;IACpB,uBAAuB;IACvB,mBAAmB;IACnB,kCAAkC;IAClC,eAAe;IACf,kBAAkB;IAClB,eAAe;IACf,wBAAwB;IACxB,eAAe;AACnB;AACA;IACI,uBAAuB;IACvB,oBAAoB;IACpB,kBAAkB;IAClB,mBAAmB;IACnB,sBAAsB;AAC1B;AACA;IACI,iBAAiB;AACrB;AACA;IACI;QACI,aAAa;QACb,oBAAoB;QACpB,wBAAwB;QACxB,iBAAiB;IACrB;AACJ;AACA;IACI;QACI,aAAa;QACb,oBAAoB;QACpB,wBAAwB;QACxB,iBAAiB;IACrB;IACA;QACI,kBAAkB;QAClB,wBAAwB;IAC5B;IACA;QACI,iBAAiB;QACjB,sBAAsB;IAC1B;AACJ;AACA;IACI;QACI,aAAa;QACb,oBAAoB;QACpB,uBAAuB;QACvB,iBAAiB;IACrB;IACA;QACI,kBAAkB;IACtB;IACA;QACI,iBAAiB;IACrB;AACJ","sourcesContent":[".sidetrack{\n    grid-column: 1/span 2;\n    background-color: var(--dark-black);\n    display: grid;\n    justify-content: center;\n    border-right: 0.1rem solid var(--dark-soft);\n}\n.all-projects{\n    display: grid;\n    grid-auto-rows: 35px;\n    grid-auto-columns: 220px;\n    padding-top: 50px;\n}\n\n.Inbox , .projects{\n    font-weight: bold;\n    color: var(--dark-soft);\n    border-bottom: 0.1rem solid var(--dark-soft);\n}\n.projects-container{\n    display: flex;\n    justify-content: space-between;\n    height: 30px;\n    align-items: center;\n    margin-bottom: 2rem;\n}\n.projects-container > .new-project{\n    display: inline-flex;\n    justify-content: center;\n    align-items: center;\n    background-color: var(--dark-soft);\n    padding: 0.2rem;\n    border-radius: 50%;\n    font-size: 1rem;\n    color: var(--dark-black);\n    cursor: pointer;\n}\n.projects > .project{\n    color: var(--dark-soft);\n    padding-bottom: 2rem;\n    padding-left: 1rem;\n    margin-left: 0.5rem;\n    border-left: 1px solid;\n}\n.projects > .project:last-child{\n    padding-bottom: 0;\n}\n@media (max-width: 910px){\n    .all-projects{\n        display: grid;\n        grid-auto-rows: 24px;\n        grid-auto-columns: 189px;\n        padding-top: 50px;\n    }\n}\n@media (max-width: 650px){\n    .all-projects{\n        display: grid;\n        grid-auto-rows: 20px;\n        grid-auto-columns: 112px;\n        padding-top: 50px;\n    }\n    .projects > .project{\n        padding-left: 15px;\n        /* font-size: smaller; */\n    }\n    .Inbox , .projects{\n        font-weight: bold;\n        /* font-size: small; */\n    }\n}\n@media (max-width: 455px){\n    .all-projects{\n        display: grid;\n        grid-auto-rows: 20px;\n        grid-auto-columns: 78px;\n        padding-top: 50px;\n    }\n    .projects > .project{\n        padding-left: 15px;\n    }\n    .Inbox , .projects{\n        font-weight: bold;\n    }\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/styles/taskContent.css":
+/*!**************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/styles/taskContent.css ***!
+  \**************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "div.overlay-container{\n    width: 100vw;\n    height: 100vh;\n    background-color: var(--dark-soft);\n    pointer-events: all;\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n  }\n  div.overlay-container.hide{\n    background-color: transparent;\n    pointer-events: none;\n  }\n  section.taskContent-container {\n    --line-color: rgba(49, 44, 44, 0.187);\n    padding: 1rem;\n    border: 1px solid var(--line-color);\n    border-radius: 1rem;\n    width: 800px;\n    background-color: var(--dark-black);\n    color: var(--dark-soft);\n    position: relative;\n    left: 50%;\n    top:  50%;\n    transform: scale(1) translate(-50%, -50%);\n    transition: transform 300ms ease;\n    z-index: 3;\n    pointer-events: all;\n  }\n  section.taskContent-container.hide{\n    transform:  scale(0);\n  }\n  .taskContent-header {\n    display: flex;\n    position: relative;\n    justify-content: center;\n    padding-bottom: 1rem;\n    border-bottom: 1px solid var(--line-color);\n  }\n  .textContent-cansel-task {\n    font-size: 2rem;\n    position: absolute;\n    right: 1rem;\n    cursor: pointer;\n  }\n  i{\n      color: var(--dark-soft);\n  }\n  \n  .taskContent-addSubTask {\n    border-radius: 0.5rem;\n    border: 1px solid var(--line-color);\n    padding: 0.2rem 1rem;\n    margin: 0 1rem 0 1rem;\n    cursor: pointer;\n    background-color: var(--dark-soft);\n    color: var(--dark-black);\n  }\n  .taskContent-addSubTask i{\n      color: var(--dark-black);\n  }\n  .taskContent-taskName {\n    display: flex;\n    align-items: center;\n    padding: 1rem 0;\n    border-bottom: 1px solid var(--line-color);\n    gap: 1rem;\n    font-size: 1.6rem;\n    font-weight: 600;\n  }\n  .taskContent-taskName input[type=\"checkbox\"]{\n      width: 1rem;\n      height: 1rem;\n  }\n  .taskContent-grid-container {\n    display: grid;\n    grid-template: 1fr / 2fr 1fr;\n    padding-top: 2rem;\n  }\n  .taskContent-input-container {\n    display: flex;\n    flex-direction: column;\n    padding: 2rem;\n    border-right: 1px solid var(--line-color);\n    gap: 2rem;\n  }\n  .textContent-comment-container {\n    position: relative;\n  }\n  .textContent-comment-submit {\n    position: absolute;\n    right: 1rem;\n    bottom: 1rem;\n    border-radius: 1rem;\n    border: 1px solid;\n    padding: 0.3rem 1rem;\n  }\n  .taskContent-input-container textarea {\n    padding: 0.5rem;\n    resize: none;\n    width: 100%;\n    border-radius: 0.5rem;\n  }\n  .taskContent-projectContent {\n    padding-left: 2rem;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n  }\n  .taskContent-box {\n    padding: 1rem 0;\n    border-bottom: 1px solid var(--line-color);\n  }\n  .taskContent-box-title {\n    margin-bottom: 0.5rem;\n  }\n  .taskContent-box:first-child {\n    padding: 0 0 1rem 0;\n  }\n  .taskContent-box:last-child {\n    border-bottom: 0;\n  }\n  .taskContent-box-container {\n    display: inline-flex;\n    justify-content: space-between;\n    width: 9rem;\n  }\n  .taskContent-updateContent{\n      position: absolute;\n      padding: 0.2rem 1rem;\n      border-radius: 1rem;\n      background-color: var(--dark-soft);\n      color: var(--dark-black);\n      bottom: 1.5rem;\n      right: 1.5rem;\n      cursor: pointer;\n  }\n  .textContent-comment-submit:hover,.textContent-cansel-task:hover,.taskContent-addSubTask:hover,.taskContent-updateContent:hover{\n      transform: scale(1.1);\n      cursor : pointer;\n  }", "",{"version":3,"sources":["webpack://./src/styles/taskContent.css"],"names":[],"mappings":"AAAA;IACI,YAAY;IACZ,aAAa;IACb,kCAAkC;IAClC,mBAAmB;IACnB,eAAe;IACf,MAAM;IACN,OAAO;IACP,QAAQ;IACR,SAAS;EACX;EACA;IACE,6BAA6B;IAC7B,oBAAoB;EACtB;EACA;IACE,qCAAqC;IACrC,aAAa;IACb,mCAAmC;IACnC,mBAAmB;IACnB,YAAY;IACZ,mCAAmC;IACnC,uBAAuB;IACvB,kBAAkB;IAClB,SAAS;IACT,SAAS;IACT,yCAAyC;IACzC,gCAAgC;IAChC,UAAU;IACV,mBAAmB;EACrB;EACA;IACE,oBAAoB;EACtB;EACA;IACE,aAAa;IACb,kBAAkB;IAClB,uBAAuB;IACvB,oBAAoB;IACpB,0CAA0C;EAC5C;EACA;IACE,eAAe;IACf,kBAAkB;IAClB,WAAW;IACX,eAAe;EACjB;EACA;MACI,uBAAuB;EAC3B;;EAEA;IACE,qBAAqB;IACrB,mCAAmC;IACnC,oBAAoB;IACpB,qBAAqB;IACrB,eAAe;IACf,kCAAkC;IAClC,wBAAwB;EAC1B;EACA;MACI,wBAAwB;EAC5B;EACA;IACE,aAAa;IACb,mBAAmB;IACnB,eAAe;IACf,0CAA0C;IAC1C,SAAS;IACT,iBAAiB;IACjB,gBAAgB;EAClB;EACA;MACI,WAAW;MACX,YAAY;EAChB;EACA;IACE,aAAa;IACb,4BAA4B;IAC5B,iBAAiB;EACnB;EACA;IACE,aAAa;IACb,sBAAsB;IACtB,aAAa;IACb,yCAAyC;IACzC,SAAS;EACX;EACA;IACE,kBAAkB;EACpB;EACA;IACE,kBAAkB;IAClB,WAAW;IACX,YAAY;IACZ,mBAAmB;IACnB,iBAAiB;IACjB,oBAAoB;EACtB;EACA;IACE,eAAe;IACf,YAAY;IACZ,WAAW;IACX,qBAAqB;EACvB;EACA;IACE,kBAAkB;IAClB,aAAa;IACb,sBAAsB;IACtB,mBAAmB;EACrB;EACA;IACE,eAAe;IACf,0CAA0C;EAC5C;EACA;IACE,qBAAqB;EACvB;EACA;IACE,mBAAmB;EACrB;EACA;IACE,gBAAgB;EAClB;EACA;IACE,oBAAoB;IACpB,8BAA8B;IAC9B,WAAW;EACb;EACA;MACI,kBAAkB;MAClB,oBAAoB;MACpB,mBAAmB;MACnB,kCAAkC;MAClC,wBAAwB;MACxB,cAAc;MACd,aAAa;MACb,eAAe;EACnB;EACA;MACI,qBAAqB;MACrB,gBAAgB;EACpB","sourcesContent":["div.overlay-container{\n    width: 100vw;\n    height: 100vh;\n    background-color: var(--dark-soft);\n    pointer-events: all;\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n  }\n  div.overlay-container.hide{\n    background-color: transparent;\n    pointer-events: none;\n  }\n  section.taskContent-container {\n    --line-color: rgba(49, 44, 44, 0.187);\n    padding: 1rem;\n    border: 1px solid var(--line-color);\n    border-radius: 1rem;\n    width: 800px;\n    background-color: var(--dark-black);\n    color: var(--dark-soft);\n    position: relative;\n    left: 50%;\n    top:  50%;\n    transform: scale(1) translate(-50%, -50%);\n    transition: transform 300ms ease;\n    z-index: 3;\n    pointer-events: all;\n  }\n  section.taskContent-container.hide{\n    transform:  scale(0);\n  }\n  .taskContent-header {\n    display: flex;\n    position: relative;\n    justify-content: center;\n    padding-bottom: 1rem;\n    border-bottom: 1px solid var(--line-color);\n  }\n  .textContent-cansel-task {\n    font-size: 2rem;\n    position: absolute;\n    right: 1rem;\n    cursor: pointer;\n  }\n  i{\n      color: var(--dark-soft);\n  }\n  \n  .taskContent-addSubTask {\n    border-radius: 0.5rem;\n    border: 1px solid var(--line-color);\n    padding: 0.2rem 1rem;\n    margin: 0 1rem 0 1rem;\n    cursor: pointer;\n    background-color: var(--dark-soft);\n    color: var(--dark-black);\n  }\n  .taskContent-addSubTask i{\n      color: var(--dark-black);\n  }\n  .taskContent-taskName {\n    display: flex;\n    align-items: center;\n    padding: 1rem 0;\n    border-bottom: 1px solid var(--line-color);\n    gap: 1rem;\n    font-size: 1.6rem;\n    font-weight: 600;\n  }\n  .taskContent-taskName input[type=\"checkbox\"]{\n      width: 1rem;\n      height: 1rem;\n  }\n  .taskContent-grid-container {\n    display: grid;\n    grid-template: 1fr / 2fr 1fr;\n    padding-top: 2rem;\n  }\n  .taskContent-input-container {\n    display: flex;\n    flex-direction: column;\n    padding: 2rem;\n    border-right: 1px solid var(--line-color);\n    gap: 2rem;\n  }\n  .textContent-comment-container {\n    position: relative;\n  }\n  .textContent-comment-submit {\n    position: absolute;\n    right: 1rem;\n    bottom: 1rem;\n    border-radius: 1rem;\n    border: 1px solid;\n    padding: 0.3rem 1rem;\n  }\n  .taskContent-input-container textarea {\n    padding: 0.5rem;\n    resize: none;\n    width: 100%;\n    border-radius: 0.5rem;\n  }\n  .taskContent-projectContent {\n    padding-left: 2rem;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n  }\n  .taskContent-box {\n    padding: 1rem 0;\n    border-bottom: 1px solid var(--line-color);\n  }\n  .taskContent-box-title {\n    margin-bottom: 0.5rem;\n  }\n  .taskContent-box:first-child {\n    padding: 0 0 1rem 0;\n  }\n  .taskContent-box:last-child {\n    border-bottom: 0;\n  }\n  .taskContent-box-container {\n    display: inline-flex;\n    justify-content: space-between;\n    width: 9rem;\n  }\n  .taskContent-updateContent{\n      position: absolute;\n      padding: 0.2rem 1rem;\n      border-radius: 1rem;\n      background-color: var(--dark-soft);\n      color: var(--dark-black);\n      bottom: 1.5rem;\n      right: 1.5rem;\n      cursor: pointer;\n  }\n  .textContent-comment-submit:hover,.textContent-cansel-task:hover,.taskContent-addSubTask:hover,.taskContent-updateContent:hover{\n      transform: scale(1.1);\n      cursor : pointer;\n  }"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1935,6 +2005,60 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./src/styles/taskContent.css":
+/*!************************************!*\
+  !*** ./src/styles/taskContent.css ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_taskContent_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js!./taskContent.css */ "./node_modules/css-loader/dist/cjs.js!./src/styles/taskContent.css");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_taskContent_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_taskContent_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_taskContent_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_taskContent_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
 /***/ "./src/styles/taskoverlay.css":
 /*!************************************!*\
   !*** ./src/styles/taskoverlay.css ***!
@@ -2363,7 +2487,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _script_components_taskoverlay__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./script/components/taskoverlay */ "./src/script/components/taskoverlay.js");
 /* harmony import */ var _script_components_projectoverlay__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./script/components/projectoverlay */ "./src/script/components/projectoverlay.js");
 /* harmony import */ var _script_components_labeloverlay__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./script/components/labeloverlay */ "./src/script/components/labeloverlay.js");
-/* harmony import */ var _script_functions_displayController__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./script/functions/displayController */ "./src/script/functions/displayController.js");
+/* harmony import */ var _script_components_taskContent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./script/components/taskContent */ "./src/script/components/taskContent.js");
+/* harmony import */ var _script_functions_displayController__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./script/functions/displayController */ "./src/script/functions/displayController.js");
+
 
 
 
@@ -2374,11 +2500,12 @@ content.appendChild(_script_components_main_container__WEBPACK_IMPORTED_MODULE_1
 content.appendChild(_script_components_taskoverlay__WEBPACK_IMPORTED_MODULE_2__.taskoverlay);
 content.appendChild(_script_components_projectoverlay__WEBPACK_IMPORTED_MODULE_3__.projectoverlay);
 content.appendChild(_script_components_labeloverlay__WEBPACK_IMPORTED_MODULE_4__.labeloverlay);
+content.appendChild(_script_components_taskContent__WEBPACK_IMPORTED_MODULE_5__.overlayContainer);
 
-(0,_script_functions_displayController__WEBPACK_IMPORTED_MODULE_5__.displayController)();
+(0,_script_functions_displayController__WEBPACK_IMPORTED_MODULE_6__.displayController)();
 console.log(" to finish");
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.5f121bbe6ccd73c58e1e.js.map
+//# sourceMappingURL=bundle.875ffcf333104adeb954.js.map

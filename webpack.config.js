@@ -1,8 +1,10 @@
-'use strict'
+"use strict";
 
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin =
+  require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -26,7 +28,7 @@ module.exports = {
     hot: true,
     compress: true,
     historyApiFallback: true,
-    port: 3000
+    port: 3000,
   },
   /* module for adding the loaders init*/
   module: {
@@ -35,29 +37,31 @@ module.exports = {
         test: /\.(scss)$/,
         use: [
           {
-            loader: 'style-loader'
+            loader: "style-loader",
           },
           {
-            loader: 'css-loader'
+            loader: "css-loader",
           },
           {
-            loader: 'postcss-loader',
+            loader: "postcss-loader",
             options: {
               postcssOptions: {
-                plugins: () => [
-                  autoprefixer
-                ]
-              }
-            }
+                plugins: () => [autoprefixer],
+              },
+            },
           },
           {
-            loader: 'sass-loader'
-          }
-        ]
+            loader: "sass-loader",
+          },
+        ],
       },
       {
         test: /\.(svg|jpeg|jpg|png|gif)$/i,
         type: "asset/resource",
+        /* bundle the imgs in dist/assets */
+        generator: {
+          filename: "assets/[name][ext]",
+        },
       },
       {
         test: /\.css$/,
@@ -83,6 +87,9 @@ module.exports = {
       filename: "index.html",
       template: "src/template.html",
     }),
-    new BundleAnalyzerPlugin(), 
+    new BundleAnalyzerPlugin(),
+    new CopyWebpackPlugin({
+      patterns: [{ from: "src/assets", to: "assets" }],
+    }),
   ],
 };
