@@ -961,16 +961,21 @@ var addNewTaskNode = function addNewTaskNode(taskName, project, date, labels, de
     newTaskNode = createNewTaskNode("1", taskName, project, date, labels);
   }
   /* showing task Content when clicked */
+  addTaskListners(newTaskNode, {
+    taskName: taskName,
+    project: project,
+    date: date,
+    labels: labels,
+    description: description,
+    priority: priority
+  });
+  taskContainer.appendChild(newTaskNode);
+};
+var addTaskListners = function addTaskListners(newTaskNode, taskData) {
   newTaskNode.addEventListener("click", function (event) {
-    if (event.target !== document.querySelector('.task-first-line input')) {
-      loadTaskContent({
-        taskName: taskName,
-        project: project,
-        date: date,
-        labels: labels,
-        description: description,
-        priority: priority
-      });
+    console.log(event.target);
+    if (event.target !== newTaskNode.querySelector(".task-first-line input")) {
+      loadTaskContent(taskData);
       (0,_formHandler__WEBPACK_IMPORTED_MODULE_2__.showForm)("section.taskContent-container");
       (0,_formHandler__WEBPACK_IMPORTED_MODULE_2__.showForm)(".overlay-container");
     }
@@ -978,7 +983,6 @@ var addNewTaskNode = function addNewTaskNode(taskName, project, date, labels, de
   newTaskNode.querySelector("input").addEventListener("change", function () {
     document.querySelector(".all-tasks").removeChild(newTaskNode);
   });
-  taskContainer.appendChild(newTaskNode);
 };
 var loadTaskContent = function loadTaskContent(taskData) {
   /* taskName, project, date, labels */
@@ -1035,6 +1039,7 @@ var addAllTasks = function addAllTasks(tasks) {
     var old = allTasksNode.querySelector("[index = '".concat(taskContainer[1], "']"));
     if (old) {
       var task = old.cloneNode(true);
+      /* addTaskListners(task); */
       old.remove();
       allTasksNode.appendChild(task);
     }
@@ -1076,6 +1081,7 @@ var addAllGroups = function addAllGroups(groupTasks) {
         var old = allTasksNode.querySelector("[index = '".concat(taskContainer[1], "']"));
         /* assume all tasks are added already to the dom (p error)*/
         var task = old.cloneNode(true);
+        /* addTaskListners(task); */
         old.remove();
         groupNode.appendChild(task);
       });
@@ -2508,4 +2514,4 @@ console.log(" to finish");
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.875ffcf333104adeb954.js.map
+//# sourceMappingURL=bundle.e9c021ee8dbb29965dfd.js.map

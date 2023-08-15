@@ -56,9 +56,9 @@ module.exports = {
         ],
       },
       {
+        /* bundle the imgs in dist/assets */
         test: /\.(svg|jpeg|jpg|png|gif)$/i,
         type: "asset/resource",
-        /* bundle the imgs in dist/assets */
         generator: {
           filename: "assets/[name][ext]",
         },

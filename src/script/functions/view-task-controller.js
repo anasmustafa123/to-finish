@@ -49,9 +49,21 @@ const addNewTaskNode = (
     newTaskNode = createNewTaskNode("1", taskName, project, date, labels);
   }
   /* showing task Content when clicked */
+  addTaskListners(newTaskNode, {
+    taskName,
+    project,
+    date,
+    labels,
+    description,
+    priority,
+  });
+  taskContainer.appendChild(newTaskNode);
+};
+const addTaskListners = (newTaskNode, taskData) => {
   newTaskNode.addEventListener("click", (event) => {
-    if(event.target !== document.querySelector('.task-first-line input')){
-      loadTaskContent({ taskName, project, date, labels, description, priority });
+    console.log(event.target)
+    if (event.target !== newTaskNode.querySelector(".task-first-line input")) {
+      loadTaskContent(taskData);
       showForm("section.taskContent-container");
       showForm(".overlay-container");
     }
@@ -59,9 +71,7 @@ const addNewTaskNode = (
   newTaskNode.querySelector("input").addEventListener("change", () => {
     document.querySelector(".all-tasks").removeChild(newTaskNode);
   });
-  taskContainer.appendChild(newTaskNode);
 };
-
 const loadTaskContent = (taskData) => {
   /* taskName, project, date, labels */
   document.querySelector(".taskContent-taskName-name").textContent =
@@ -69,9 +79,11 @@ const loadTaskContent = (taskData) => {
   document.querySelector(".taskContent-box-projectName").textContent =
     taskData.project;
   document.querySelector(".taskContent-box-date").textContent = taskData.date;
-  document.querySelector(".taskContent-box-priorityName").textContent =
-    `priority ${taskData.priority}`;
-    document.querySelector(".taskContent-description").textContent = taskData.description;
+  document.querySelector(
+    ".taskContent-box-priorityName"
+  ).textContent = `priority ${taskData.priority}`;
+  document.querySelector(".taskContent-description").textContent =
+    taskData.description;
 };
 const createNewTaskNode = (index, taskTitle, pName, taskdate_, labels) => {
   const labelsList = document.createElement("div");
@@ -120,6 +132,7 @@ const addAllTasks = (tasks) => {
     const old = allTasksNode.querySelector(`[index = '${taskContainer[1]}']`);
     if (old) {
       const task = old.cloneNode(true);
+      /* addTaskListners(task); */
       old.remove();
       allTasksNode.appendChild(task);
     }
@@ -165,6 +178,7 @@ const addAllGroups = (groupTasks) => {
         );
         /* assume all tasks are added already to the dom (p error)*/
         const task = old.cloneNode(true);
+        /* addTaskListners(task); */
         old.remove();
         groupNode.appendChild(task);
       });
