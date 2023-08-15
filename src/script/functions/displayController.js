@@ -33,8 +33,11 @@ import {
   appendNewTaskNode,
   appendAllTasksFromStorage
 } from './displayTasks'
+import { showForm, hideForm } from './formHandler'
 const displayController = () => {
 
+
+  /* load projects data from localstorage */
   const appendAllProjectsFromStorage = () => {
     Object.values(JSON.parse(localStorage.getItem('projects'))).forEach(project => {
       addProject(project.name);
@@ -42,7 +45,7 @@ const displayController = () => {
       addNewProjectNode(project.name);
     })
   };
-  
+
   const appendprojecttostorage = () => {
     localStorage.setItem('projects', JSON.stringify(theprojects));
   } 
@@ -53,8 +56,6 @@ const displayController = () => {
   if(localStorage.getItem('projects')){
     appendAllProjectsFromStorage();
 }
-
-
 
   /* selecting today as a default date */
   selectDefaultDate()
@@ -146,6 +147,11 @@ const displayController = () => {
       hideList(list)
     }
   }
+  /* clear the tastContent when exting */
+  document.querySelector('.textContent-cansel-task').addEventListener('click', () => {
+    hideForm('.overlay-container');
+    hideForm('.taskContent-container');
+  })
 
   document.querySelectorAll('.priority-list > li').forEach((priority) => {
     priority.addEventListener('click', (e) => {
@@ -190,7 +196,12 @@ const displayController = () => {
     clearAddLabel()
     showTaskForm()
   })
-
+  const canselTask = document.querySelector('.textContent-cansel-task');
+  const textContentContainer = document.querySelector('section.taskContent-container');
+  const overlayContainer = document.querySelector('.overlay-container');
+  canselTask.addEventListener('click', () => {
+    
+  })
 
   document.querySelector('.sort-container #s0')
     .addEventListener('click', () => {
