@@ -1,4 +1,4 @@
-import { addTask, addProject, projects as theprojects } from './taskList'
+import { addTask, tasks, addProject, projects as theprojects } from './taskList'
 import {linkClickable} from '../../../node_modules/linkclickablenode/src/scripts/linkClickable'
 import {
   clearAddProject,
@@ -118,8 +118,8 @@ const displayController = () => {
     /* first add to (default) tasks */
     /* HERE */
     addTask(newTask)
-    /* till here working */
-    appendNewTaskNode(newTask)
+    let newindex = tasks[tasks.length-1][1];
+    appendNewTaskNode(newTask, newindex);
     clearAddTask()
     hideTaskForm()
   })

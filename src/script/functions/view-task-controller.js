@@ -1,6 +1,5 @@
-import { group } from "./groupBy";
-import { getLastTaskIndex } from "./taskList";
-import { hideForm, showForm } from "./formHandler";
+import { getLastTaskIndex, tasks, appendtostorage } from "./taskList";
+import { showForm } from "./formHandler";
 const createGroupNode = (groupName) => {
   const groupContainer = document.createElement("div");
   groupContainer.classList.add(`${groupName}`);
@@ -19,13 +18,24 @@ const clearEmptyRGroupNodes = () => {
     }
   });
 };
+
+const searchKey = (arr, s, e, key) => {
+  if(s > e) return "not found";
+  else{
+      let mid = s + parseInt((e-s) / 2);
+      console.log(s);
+      console.log(e);
+      console.log(mid);
+      console.log(`value=  ${arr[mid][1]}`);
+      if(arr[mid][1] === key) return mid;
+      else if(arr[mid][1] > key) return searchKey(arr, s, mid-1, key);
+      else if(arr[mid][1] < key) return searchKey(arr, mid+1, e, key); 
+  }
+}
+
 const addNewTaskNode = (
-  taskName,
-  project,
-  date,
-  labels,
-  description,
-  priority
+  newTask,
+  newindex
 ) => {
   const taskContainer = document.querySelector(".all-tasks");
   const lastTask = document.querySelector(`[index = '${getLastTaskIndex()}']`);
@@ -34,32 +44,28 @@ const addNewTaskNode = (
     newTaskNode = lastTask.cloneNode(true);
     newTaskNode.setAttribute(
       "index",
-      `${Number(lastTask.getAttribute("index")) + 1}`
+      `${newindex}`
     );
-    newTaskNode.querySelector(".p-title").textContent = taskName;
-    newTaskNode.querySelector(".p-name").textContent = project;
-    newTaskNode.querySelector(".tdate").textContent = date;
+    newTaskNode.querySelector(".p-title").textContent = newTask.name;
+    newTaskNode.querySelector(".p-name").textContent = newTask.project;
+    newTaskNode.querySelector(".tdate").textContent = newTask.date;
     const labelList = newTaskNode.querySelector(".labels-list");
     newTaskNode.querySelector("#task").checked = false;
     labelList.textContent = "";
-    labels.forEach((label) => {
+    newTask.label.forEach((label) => {
       labelList.appendChild(createNewLabelNode(label));
     });
   } else {
-    newTaskNode = createNewTaskNode("1", taskName, project, date, labels);
+    newTaskNode = createNewTaskNode("1", newTask.name , newTask.project, newTask.date, newTask.label);
   }
   /* showing task Content when clicked */
-  addTaskListners(newTaskNode, {
-    taskName,
-    project,
-    date,
-    labels,
-    description,
-    priority,
-  });
+  console.log(taskContainer[0]);
+  console.log(newTaskNode);
+  addTaskListners(newTaskNode, newTask);
   taskContainer.appendChild(newTaskNode);
 };
 const addTaskListners = (newTaskNode, taskData) => {
+  console.log("entereeed")
   newTaskNode.addEventListener("click", (event) => {
     console.log(event.target)
     if (event.target !== newTaskNode.querySelector(".task-first-line input")) {
@@ -69,13 +75,18 @@ const addTaskListners = (newTaskNode, taskData) => {
     }
   });
   newTaskNode.querySelector("input").addEventListener("change", () => {
+    console.log(`tasks before: ${tasks}`);
     document.querySelector(".all-tasks").removeChild(newTaskNode);
+    let indexKey = searchKey(tasks, 0, tasks.length-1, parseInt(newTaskNode.getAttribute('index')));
+    tasks.splice(indexKey, 1);
+    appendtostorage();
+    console.log(`tasks after: ${tasks}`);
   });
 };
 const loadTaskContent = (taskData) => {
   /* taskName, project, date, labels */
   document.querySelector(".taskContent-taskName-name").textContent =
-    taskData.taskName;
+    taskData.name;
   document.querySelector(".taskContent-box-projectName").textContent =
     taskData.project;
   document.querySelector(".taskContent-box-date").textContent = taskData.date;
@@ -132,7 +143,7 @@ const addAllTasks = (tasks) => {
     const old = allTasksNode.querySelector(`[index = '${taskContainer[1]}']`);
     if (old) {
       const task = old.cloneNode(true);
-      /* addTaskListners(task); */
+      addTaskListners(task, taskContainer[0]);
       old.remove();
       allTasksNode.appendChild(task);
     }
@@ -178,7 +189,7 @@ const addAllGroups = (groupTasks) => {
         );
         /* assume all tasks are added already to the dom (p error)*/
         const task = old.cloneNode(true);
-        /* addTaskListners(task); */
+        addTaskListners(task, taskContainer[0]);
         old.remove();
         groupNode.appendChild(task);
       });

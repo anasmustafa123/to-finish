@@ -8,20 +8,17 @@ import {
 } from "./view-task-controller";
 
 const appendAllTasksFromStorage = () => {
+  console.log(Object.values(JSON.parse(localStorage.getItem("tasks"))))
   Object.values(JSON.parse(localStorage.getItem("tasks"))).forEach((task) => {
     tasks.push(task);
-    appendNewTaskNode(task[0]);
+    appendNewTaskNode(task[0], task[1]);
   });
 };
-const appendNewTaskNode = (newTask) => {
+const appendNewTaskNode = (newTask, newIndex) => {
   /* add to all tasks as default used with(appendGroups, appendTasks)  */
   addNewTaskNode(
-    newTask.name,
-    newTask.project,
-    newTask.date,
-    newTask.label,
-    newTask.description,
-    newTask.priority
+    newTask,
+    newIndex
   );
   if (isGrouped()) {
     const { key } = addOneTaskToGroup(newTask);
